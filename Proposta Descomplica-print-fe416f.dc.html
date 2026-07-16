@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style data-omelette-print-defaults>
+@media print {
+  @page { margin: 0.5in; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+  figure, table, pre, blockquote, img, svg, tr, [class~="card" i] { break-inside: avoid; }
+  img, svg { max-width: 100%; }
+  p { orphans: 3; widows: 3; }
+}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  :root {
+    --navy: #0e1c3d;
+    --navy-2: #16294a;
+    --steel: #3a5a8c;
+    --steel-soft: #6c86ad;
+    --copper: #c88a5b;
+    --copper-2: #b57343;
+    --cream: #f6f2ec;
+    --paper: #ffffff;
+    --line: #e6dccc;
+    --sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+<!-- ═══════════ SLIDE 1 · CAPA ═══════════ -->
+<section data-label="Capa" data-speaker-notes="Abertura. Proposta de plano de saúde empresarial para a Descomplica Recuperadora de Crédito. Apresentada pela Bem Melhor Seguros & Benefícios." style="background: radial-gradient(120% 120% at 15% 10%, #16294a 0%, #0e1c3d 55%, #0a1530 100%); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 96px 110px; display: flex; flex-direction: column; justify-content: space-between; font-family: var(--sans);">
+    <img src="assets/logo-white.png" alt="Bem Melhor" style="position: absolute; right: -140px; bottom: -220px; width: 760px; opacity: 0.06; pointer-events: none;">
+    <div style="position: absolute; left: 110px; top: 302px; width: 220px; height: 3px; background: var(--copper);"></div>
+
+    <img src="assets/logo-white.png" alt="Bem Melhor Seguros e Benefícios" style="width: 232px; height: auto;">
+
+    <div style="position: relative; max-width: 1200px;">
+      <div style="font-weight: 500; font-size: 27px; letter-spacing: 8px; color: var(--copper); text-transform: uppercase; margin-bottom: 30px;">Proposta de Plano de Saúde Empresarial</div>
+      <h1 style="font-weight: 700; font-size: 96px; line-height: 1.03; color: #ffffff; margin: 0; letter-spacing: -2px;">Descomplica<br>Recuperadora de Crédito</h1>
+      <div style="font-weight: 300; font-size: 30px; color: var(--steel-soft); margin-top: 26px; letter-spacing: 0.5px;">Comparativo de operadoras e valores por faixa etária</div>
+    </div>
+
+    <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end;">
+      <div style="font-weight: 400; font-size: 26px; color: rgba(255,255,255,0.7); letter-spacing: 0.5px;">Apresentado por <span style="color: #fff; font-weight: 500;">Bem Melhor Seguros &amp; Benefícios</span></div>
+      <div style="font-weight: 400; font-size: 26px; color: rgba(255,255,255,0.55); letter-spacing: 0.5px;">Julho de 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SLIDE 2 · QUEM SOMOS ═══════════ -->
+<section data-label="Quem Somos" data-speaker-notes="Quem somos: mais do que uma corretora, uma parceira estratégica do RH e dos colaboradores. Transformamos custos em benefícios e proteção em relacionamento." style="background: var(--cream); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 84px 96px; display: flex; flex-direction: column; justify-content: center; font-family: var(--sans);">
+    <div style="font-weight: 600; font-size: 25px; letter-spacing: 6px; color: var(--copper-2); text-transform: uppercase; margin-bottom: 18px;">Quem somos</div>
+    <h2 style="font-weight: 700; font-size: 66px; line-height: 1.05; color: var(--navy); margin: 0 0 40px; letter-spacing: -1.5px; max-width: 1280px;">Mais do que uma corretora, uma <span style="color: var(--copper-2);">parceira estratégica</span></h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 34px 64px; max-width: 1560px;">
+      <p style="font-weight: 300; font-size: 30px; line-height: 1.5; color: var(--steel); margin: 0;">Na Bem Melhor Seguros &amp; Benefícios, acreditamos que um plano de saúde vai muito além de uma obrigação corporativa: é uma ferramenta de <strong style="font-weight: 600; color: var(--navy);">cuidado, valorização e bem-estar</strong> para as pessoas que fazem a sua empresa acontecer.</p>
+      <p style="font-weight: 300; font-size: 30px; line-height: 1.5; color: var(--steel); margin: 0;">Nosso propósito é <strong style="font-weight: 600; color: var(--navy);">transformar custos em benefícios</strong>, construindo relacionamentos duradouros e proporcionando uma experiência diferenciada durante toda a jornada do cliente — com acompanhamento próximo do RH e dos colaboradores.</p>
+    </div>
+    <div style="margin-top: 52px; font-weight: 500; font-size: 34px; color: var(--navy); letter-spacing: -0.5px;">Transformamos proteção em <span style="color: var(--copper-2);">relacionamento</span>.</div>
+  </div>
+</section>
+
+<!-- ═══════════ NOSSA MISSÃO (QUOTE) ═══════════ -->
+<section data-label="Nossa Missão" data-speaker-notes="O mercado acostumou as pessoas a receber apenas um contrato. Decidimos construir uma experiência. Transformar proteção em relacionamento. No fim das contas, trabalhamos cuidando de pessoas." style="background: radial-gradient(120% 120% at 80% 10%, #16294a 0%, #0e1c3d 60%, #0a1530 100%); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 96px 110px; display: flex; flex-direction: column; justify-content: center; font-family: var(--sans);">
+    <img src="assets/logo-white.png" alt="" style="position: absolute; left: -170px; bottom: -190px; width: 600px; opacity: 0.05; pointer-events: none;">
+    <div style="position: relative; max-width: 1400px;">
+      <div style="font-weight: 600; font-size: 25px; letter-spacing: 6px; color: var(--copper); text-transform: uppercase; margin-bottom: 30px;">Nossa missão</div>
+      <div style="font-weight: 700; font-size: 42px; color: var(--copper); line-height: 1; margin-bottom: 10px;">“</div>
+      <blockquote style="font-weight: 300; font-size: 58px; line-height: 1.22; color: #fff; margin: 0; letter-spacing: -1px; max-width: 1360px;">No fim das contas, não trabalhamos só com seguros. Trabalhamos <span style="color: var(--copper); font-weight: 500;">cuidando de pessoas</span>.</blockquote>
+      <p style="font-weight: 300; font-size: 29px; line-height: 1.45; color: rgba(255,255,255,0.72); margin: 44px 0 0; max-width: 1180px;">O mercado acostumou muita gente a receber apenas um contrato. Nós decidimos construir algo diferente: uma experiência. Nosso propósito é transformar custos em benefícios reais — cuidando de pessoas com estratégia, proximidade e consistência.</p>
+      <div style="margin-top: 34px; font-weight: 500; font-size: 32px; color: #fff; letter-spacing: -0.5px;">Transformar proteção em <span style="color: var(--copper);">relacionamento</span>.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ O MERCADO HOJE ═══════════ -->
+<section data-label="O Mercado Hoje" data-speaker-notes="Existem três tipos de corretoras. Bronze: vende e desaparece. Prata: vende e dá suporte, consultiva. Ouro (nossa entrega): constrói relacionamento de verdade, ecossistema de acompanhamento, pioneiros em transformar custos em benefícios reais." style="background: var(--cream); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 74px 80px 64px; display: flex; flex-direction: column; font-family: var(--sans);">
+    <div style="margin-bottom: 40px;">
+      <div style="font-weight: 600; font-size: 25px; letter-spacing: 6px; color: var(--copper-2); text-transform: uppercase; margin-bottom: 14px;">O mercado hoje</div>
+      <h2 style="font-weight: 700; font-size: 58px; line-height: 1; color: var(--navy); margin: 0; letter-spacing: -1.5px;">Existem três tipos de corretoras</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1.15fr; gap: 28px; flex: 1;">
+      <div style="background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 34px 36px; display: flex; flex-direction: column; box-shadow: 0 12px 30px rgba(14,28,61,0.05);">
+        <div style="font-weight: 600; font-size: 24px; letter-spacing: 3px; text-transform: uppercase; color: #b08d6a; margin-bottom: 6px;">Bronze</div>
+        <div style="font-weight: 700; font-size: 34px; color: var(--navy); margin-bottom: 20px; letter-spacing: -0.5px;">Vende e desaparece</div>
+        <div style="font-weight: 300; font-size: 26px; line-height: 1.45; color: var(--steel);">Foca só na assinatura do contrato. Depois do fechamento, o cliente fica sem suporte, sem orientação e sem ninguém para acionar quando precisa usar o que contratou.</div>
+      </div>
+      <div style="background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 34px 36px; display: flex; flex-direction: column; box-shadow: 0 12px 30px rgba(14,28,61,0.05);">
+        <div style="font-weight: 600; font-size: 24px; letter-spacing: 3px; text-transform: uppercase; color: var(--steel-soft); margin-bottom: 6px;">Prata</div>
+        <div style="font-weight: 700; font-size: 34px; color: var(--navy); margin-bottom: 20px; letter-spacing: -0.5px;">Vende e dá suporte</div>
+        <div style="font-weight: 300; font-size: 26px; line-height: 1.45; color: var(--steel);">Atua de forma consultiva: analisa carências, rede credenciada e histórico de reajuste. Oferece suporte pós-venda, implantação e movimentações junto ao RH ou DP.</div>
+      </div>
+      <div style="background: var(--navy); border: 2px solid var(--copper); border-radius: 18px; padding: 34px 38px; display: flex; flex-direction: column; box-shadow: 0 18px 44px rgba(181,115,67,0.22); position: relative; overflow: hidden;">
+        <div style="position: absolute; right: -30px; top: -30px; width: 180px; height: 180px; border-radius: 50%; background: rgba(200,138,91,0.14);"></div>
+        <div style="position: relative; display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+          <div style="font-weight: 600; font-size: 24px; letter-spacing: 3px; text-transform: uppercase; color: var(--copper);">Ouro</div>
+          <div style="font-weight: 500; font-size: 20px; letter-spacing: 1px; color: var(--navy); background: var(--copper); border-radius: 999px; padding: 3px 12px;">Nossa entrega</div>
+        </div>
+        <div style="position: relative; font-weight: 700; font-size: 34px; color: #fff; margin-bottom: 20px; letter-spacing: -0.5px;">Constrói relacionamento de verdade</div>
+        <div style="position: relative; font-weight: 300; font-size: 26px; line-height: 1.45; color: rgba(255,255,255,0.82);">Tudo do modelo Prata e mais: um ecossistema de acompanhamento, reconhecimento e crescimento conjunto. Somos pioneiros em transformar custos em benefícios reais — dando novo sentido ao seu investimento.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ O QUE PROTEGEMOS (PILARES) ═══════════ -->
+<section data-label="O Que Protegemos" data-speaker-notes="Os quatro pilares da segurança: Vida e família, Saúde e bem-estar, Patrimônio e conquistas, Renda e atividade profissional. Proteção 360 graus." style="background: radial-gradient(120% 120% at 15% 0%, #16294a 0%, #0e1c3d 60%, #0a1530 100%); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 74px 80px 64px; display: flex; flex-direction: column; font-family: var(--sans);">
+    <div style="margin-bottom: 44px;">
+      <div style="font-weight: 600; font-size: 25px; letter-spacing: 6px; color: var(--copper); text-transform: uppercase; margin-bottom: 14px;">O que protegemos</div>
+      <h2 style="font-weight: 700; font-size: 58px; line-height: 1; color: #fff; margin: 0; letter-spacing: -1.5px;">Os quatro pilares da segurança</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; flex: 1;">
+      <div style="border-top: 3px solid var(--copper); padding-top: 26px; display: flex; flex-direction: column;">
+        <div style="font-weight: 700; font-size: 32px; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px;">Vida e família</div>
+        <div style="font-weight: 300; font-size: 25px; line-height: 1.45; color: rgba(255,255,255,0.75);">Proteção financeira para dependentes em casos de morte ou invalidez — continuidade de renda e segurança para quem você mais ama.</div>
+      </div>
+      <div style="border-top: 3px solid var(--copper); padding-top: 26px; display: flex; flex-direction: column;">
+        <div style="font-weight: 700; font-size: 32px; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px;">Saúde e bem-estar</div>
+        <div style="font-weight: 300; font-size: 25px; line-height: 1.45; color: rgba(255,255,255,0.75);">Acesso a cuidados médicos e redução das incertezas com despesas de saúde. Prevenção e tranquilidade para usar seu plano sem surpresas.</div>
+      </div>
+      <div style="border-top: 3px solid var(--copper); padding-top: 26px; display: flex; flex-direction: column;">
+        <div style="font-weight: 700; font-size: 32px; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px;">Patrimônio e conquistas</div>
+        <div style="font-weight: 300; font-size: 25px; line-height: 1.45; color: rgba(255,255,255,0.75);">Proteção do que você construiu — imóvel, veículo, empresa. Cobertura contra perdas, danos e imprevistos que comprometam o patrimônio.</div>
+      </div>
+      <div style="border-top: 3px solid var(--copper); padding-top: 26px; display: flex; flex-direction: column;">
+        <div style="font-weight: 700; font-size: 32px; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px;">Renda e atividade</div>
+        <div style="font-weight: 300; font-size: 25px; line-height: 1.45; color: rgba(255,255,255,0.75);">Estabilidade financeira em situações que afetem sua capacidade de gerar renda — acidentes, responsabilidades profissionais e imprevistos.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SLIDE 3 · DIFERENCIAL ═══════════ -->
+<section data-label="Diferencial" data-speaker-notes="Nosso diferencial: acompanhamento personalizado, suporte para agendamentos, protocolos junto às operadoras, reembolsos, movimentações cadastrais, demonstrativos e atendimento humanizado." style="background: var(--cream); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 80px 96px; display: flex; flex-direction: column; font-family: var(--sans);">
+    <div style="font-weight: 600; font-size: 25px; letter-spacing: 6px; color: var(--copper-2); text-transform: uppercase; margin-bottom: 16px;">Nosso diferencial</div>
+    <h2 style="font-weight: 700; font-size: 60px; line-height: 1; color: var(--navy); margin: 0 0 46px; letter-spacing: -1.5px;">O que fazemos por você</h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 26px 56px; flex: 1; align-content: center;">
+      <div style="display: flex; gap: 22px; align-items: flex-start;"><span style="color: var(--copper); font-size: 26px; line-height: 1.4;">◆</span><div style="font-weight: 300; font-size: 29px; line-height: 1.4; color: var(--steel);">Implantação e <strong style="font-weight: 600; color: var(--navy);">acompanhamento personalizado</strong> do plano de saúde.</div></div>
+      <div style="display: flex; gap: 22px; align-items: flex-start;"><span style="color: var(--copper); font-size: 26px; line-height: 1.4;">◆</span><div style="font-weight: 300; font-size: 29px; line-height: 1.4; color: var(--steel);">Suporte para <strong style="font-weight: 600; color: var(--navy);">agendamento</strong> de consultas, exames e procedimentos.</div></div>
+      <div style="display: flex; gap: 22px; align-items: flex-start;"><span style="color: var(--copper); font-size: 26px; line-height: 1.4;">◆</span><div style="font-weight: 300; font-size: 29px; line-height: 1.4; color: var(--steel);">Acompanhamento de protocolos e <strong style="font-weight: 600; color: var(--navy);">auxílio em liberações</strong> junto às operadoras.</div></div>
+      <div style="display: flex; gap: 22px; align-items: flex-start;"><span style="color: var(--copper); font-size: 26px; line-height: 1.4;">◆</span><div style="font-weight: 300; font-size: 29px; line-height: 1.4; color: var(--steel);">Suporte em solicitações de <strong style="font-weight: 600; color: var(--navy);">reembolso</strong>.</div></div>
+      <div style="display: flex; gap: 22px; align-items: flex-start;"><span style="color: var(--copper); font-size: 26px; line-height: 1.4;">◆</span><div style="font-weight: 300; font-size: 29px; line-height: 1.4; color: var(--steel);">Auxílio em <strong style="font-weight: 600; color: var(--navy);">inclusões, exclusões</strong> e movimentações cadastrais.</div></div>
+      <div style="display: flex; gap: 22px; align-items: flex-start;"><span style="color: var(--copper); font-size: 26px; line-height: 1.4;">◆</span><div style="font-weight: 300; font-size: 29px; line-height: 1.4; color: var(--steel);">Envio de <strong style="font-weight: 600; color: var(--navy);">demonstrativos</strong> de utilização e faturas detalhadas.</div></div>
+      <div style="display: flex; gap: 22px; align-items: flex-start; grid-column: 1 / -1;"><span style="color: var(--copper); font-size: 26px; line-height: 1.4;">◆</span><div style="font-weight: 300; font-size: 29px; line-height: 1.4; color: var(--steel);"><strong style="font-weight: 600; color: var(--navy);">Atendimento humanizado</strong> e suporte contínuo para a empresa e seus colaboradores.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PERTENCIMENTO ═══════════ -->
+<section data-label="Pertencimento" data-speaker-notes="Ecossistema de benefícios e pertencimento: campanhas, reconhecimento e experiências exclusivas. Quanto mais tempo na parceria, mais valor — inclusive redução do custo a zero por indicações qualificadas. Para empresas: gestão estratégica, revisão de contratos antigos, redução de custos." style="background: radial-gradient(120% 120% at 85% 100%, #16294a 0%, #0e1c3d 60%, #0a1530 100%); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 80px 100px; display: flex; flex-direction: column; justify-content: center; font-family: var(--sans);">
+    <div style="font-weight: 600; font-size: 25px; letter-spacing: 6px; color: var(--copper); text-transform: uppercase; margin-bottom: 16px;">Pertencimento</div>
+    <h2 style="font-weight: 700; font-size: 58px; line-height: 1.05; color: #fff; margin: 0 0 34px; letter-spacing: -1.5px; max-width: 1300px;">Quando falamos de benefícios, <span style="color: var(--copper);">estamos falando de verdade</span></h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-bottom: 34px; height: 190px;">
+      <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.25);"><img src="assets/cruzeiro.jpg" alt="Viagens" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+      <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.25);"><img src="assets/praia.jpg" alt="Experiências" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+      <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.25);"><img src="assets/familia.jpg" alt="Família" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block;"></div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+      <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(200,138,91,0.35); border-radius: 20px; padding: 36px 40px;">
+        <div style="font-weight: 600; font-size: 22px; letter-spacing: 2px; text-transform: uppercase; color: var(--copper); margin-bottom: 12px;">Para pessoas</div>
+        <div style="font-weight: 300; font-size: 27px; line-height: 1.45; color: rgba(255,255,255,0.82);">Campanhas, ações de reconhecimento e experiências exclusivas ao longo da jornada. Quanto mais tempo na parceria, mais valor gerado — inclusive com <strong style="font-weight: 600; color: #fff;">redução do custo a zero</strong> por indicações qualificadas.</div>
+      </div>
+      <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(200,138,91,0.35); border-radius: 20px; padding: 36px 40px;">
+        <div style="font-weight: 600; font-size: 22px; letter-spacing: 2px; text-transform: uppercase; color: var(--copper); margin-bottom: 12px;">Para empresas</div>
+        <div style="font-weight: 300; font-size: 27px; line-height: 1.45; color: rgba(255,255,255,0.82);">Revisamos contratos antigos, reestruturamos planos sem estratégia e identificamos oportunidades de <strong style="font-weight: 600; color: #fff;">reduzir custos</strong> enquanto melhoramos a experiência da equipe — benefício também é retenção e valorização de pessoas.</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+      <span style="font-weight: 500; font-size: 24px; letter-spacing: 1px; color: var(--navy); background: var(--copper); border-radius: 999px; padding: 8px 20px;">Viagens</span>
+      <span style="font-weight: 500; font-size: 24px; letter-spacing: 1px; color: var(--navy); background: var(--copper); border-radius: 999px; padding: 8px 20px;">Prêmios</span>
+      <span style="font-weight: 500; font-size: 24px; letter-spacing: 1px; color: var(--navy); background: var(--copper); border-radius: 999px; padding: 8px 20px;">Experiências</span>
+      <span style="font-weight: 500; font-size: 24px; letter-spacing: 1px; color: var(--navy); background: var(--copper); border-radius: 999px; padding: 8px 20px;">Mimos e incentivos</span>
+      <span style="font-weight: 300; font-size: 24px; color: rgba(255,255,255,0.7);">— de forma 100% personalizada.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ A EQUIPE ═══════════ -->
+<section data-label="A Equipe" data-speaker-notes="A equipe: Sabrina Gonçalves e Aline Ricarte, especialistas em benefícios. Backoffice especializado, uso de IA e mais de 7 anos de experiência no mercado de seguros." style="background: var(--cream); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 76px 96px 64px; display: flex; flex-direction: column; font-family: var(--sans);">
+    <div style="margin-bottom: 40px;">
+      <div style="font-weight: 600; font-size: 25px; letter-spacing: 6px; color: var(--copper-2); text-transform: uppercase; margin-bottom: 14px;">A equipe</div>
+      <h2 style="font-weight: 700; font-size: 58px; line-height: 1; color: var(--navy); margin: 0; letter-spacing: -1.5px;">Quem cuida de você</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 0.82fr 1.18fr; gap: 40px; flex: 1;">
+      <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 16px 38px rgba(14,28,61,0.16); background: #2a1a10;">
+        <img src="assets/equipe.jpg" alt="Sabrina Gonçalves e Aline Ricarte" style="width: 100%; height: 100%; object-fit: cover; object-position: center 22%; display: block;">
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 26px;">
+        <div style="background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 32px 38px; box-shadow: 0 12px 30px rgba(14,28,61,0.06); flex: 1; display: flex; flex-direction: column; justify-content: center;">
+          <div style="font-weight: 700; font-size: 34px; color: var(--navy); letter-spacing: -0.5px;">Sabrina Gonçalves</div>
+          <div style="font-weight: 600; font-size: 22px; letter-spacing: 2px; text-transform: uppercase; color: var(--copper-2); margin: 6px 0 16px;">Especialista em Benefícios</div>
+          <div style="font-weight: 300; font-size: 25px; line-height: 1.45; color: var(--steel);">Profissional multidisciplinar, orientada a resultados e com mais de 7 anos de experiência em planos de saúde e seguros. Conduz diagnósticos e negociações estratégicas, transformando o custo com seguros em benefícios genuínos.</div>
+        </div>
+        <div style="background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 32px 38px; box-shadow: 0 12px 30px rgba(14,28,61,0.06); flex: 1; display: flex; flex-direction: column; justify-content: center;">
+          <div style="font-weight: 700; font-size: 34px; color: var(--navy); letter-spacing: -0.5px;">Aline Ricarte</div>
+          <div style="font-weight: 600; font-size: 22px; letter-spacing: 2px; text-transform: uppercase; color: var(--copper-2); margin: 6px 0 16px;">Especialista em Benefícios</div>
+          <div style="font-weight: 300; font-size: 25px; line-height: 1.45; color: var(--steel);">Especialista em desenvolvimento de negócios e relacionamento comercial, é formada em Gestão de Recursos Humanos e soma mais de 4 anos de experiência em planos de saúde e seguros. Com atuação na liderança de equipes comerciais em diferentes regiões do Brasil, constrói relações de confiança duradouras.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SLIDE 4 · CONSIDERAÇÕES + CAMPANHA ═══════════ -->
+<section data-label="Considerações" data-speaker-notes="Considerações: CNPJ em Uberlândia/MG limita as operadoras a Bradesco, SulAmérica e Amil. Bradesco sujeito a critérios mais rigorosos para fora da praça. Melhores condições em SulAmérica e Amil. Campanha: isenção de 100% da 2ª fatura para propostas implantadas até 30/07/2026." style="background: var(--cream); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 80px 96px; display: flex; flex-direction: column; font-family: var(--sans);">
+    <div style="font-weight: 600; font-size: 25px; letter-spacing: 6px; color: var(--copper-2); text-transform: uppercase; margin-bottom: 16px;">Considerações importantes</div>
+    <h2 style="font-weight: 700; font-size: 60px; line-height: 1; color: var(--navy); margin: 0 0 44px; letter-spacing: -1.5px;">Cenário de contratação</h2>
+
+    <div style="display: flex; flex-direction: column; gap: 24px; max-width: 1620px;">
+      <div style="display: flex; gap: 22px; align-items: flex-start;"><span style="color: var(--copper); font-size: 24px; line-height: 1.4;">◆</span><div style="font-weight: 300; font-size: 29px; line-height: 1.45; color: var(--steel);">Como o CNPJ está registrado em <strong style="font-weight: 600; color: var(--navy);">Uberlândia/MG</strong>, as operadoras disponíveis para contratação são <strong style="font-weight: 600; color: var(--navy);">Bradesco Saúde, SulAmérica Saúde e Amil Saúde</strong>.</div></div>
+      <div style="display: flex; gap: 22px; align-items: flex-start;"><span style="color: var(--copper); font-size: 24px; line-height: 1.4;">◆</span><div style="font-weight: 300; font-size: 29px; line-height: 1.45; color: var(--steel);">A <strong style="font-weight: 600; color: var(--navy);">Bradesco Saúde</strong> foi incluída para análise comparativa e está sujeita aos critérios de aceitação da operadora, hoje mais rigorosos para empresas fora da praça de comercialização.</div></div>
+      <div style="display: flex; gap: 22px; align-items: flex-start;"><span style="color: var(--copper); font-size: 24px; line-height: 1.4;">◆</span><div style="font-weight: 300; font-size: 29px; line-height: 1.45; color: var(--steel);">Após análise comercial, identificamos excelentes condições na <strong style="font-weight: 600; color: var(--navy);">SulAmérica</strong> e na <strong style="font-weight: 600; color: var(--navy);">Amil</strong>, com destaque para SulAmérica Direto Nacional e Amil Prata QC.</div></div>
+    </div>
+
+    <div style="margin-top: auto; background: var(--navy); border-radius: 20px; padding: 40px 46px; display: flex; align-items: center; gap: 40px; overflow: hidden; position: relative;">
+      <div style="position: absolute; right: -40px; top: -40px; width: 220px; height: 220px; border-radius: 50%; background: rgba(200,138,91,0.14);"></div>
+      <div style="font-weight: 700; font-size: 60px; color: var(--copper); line-height: 1; white-space: nowrap;">100%</div>
+      <div style="width: 1px; height: 84px; background: rgba(255,255,255,0.18);"></div>
+      <div style="position: relative;">
+        <div style="font-weight: 600; font-size: 26px; letter-spacing: 3px; text-transform: uppercase; color: var(--copper); margin-bottom: 8px;">Campanha exclusiva SulAmérica</div>
+        <div style="font-weight: 300; font-size: 29px; line-height: 1.4; color: rgba(255,255,255,0.9);">Propostas implantadas até <strong style="font-weight: 600; color: #fff;">30/07/2026</strong> recebem <strong style="font-weight: 600; color: #fff;">isenção total da 2ª fatura</strong> — benefício da Bem Melhor em parceria com a SulAmérica.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SLIDE 5 · MATRIZ FAIXA ETÁRIA ═══════════ -->
+<section data-label="Valores por Faixa" data-speaker-notes="Comparativo de valores por faixa etária. Sete produtos: SulAmérica Direto Nacional (com e sem copart), Amil Prata QC (copart terapias e total), Amil S450 QC (copart terapias e total) e Bradesco Top Nacional (sem copart). Destaque para SulAmérica Direto Nacional e Amil Prata QC, nossa recomendação." style="background: var(--cream); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 44px 60px 30px; display: flex; flex-direction: column; font-family: var(--sans);">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 16px;">
+      <div>
+        <div style="font-weight: 600; font-size: 23px; letter-spacing: 6px; color: var(--copper-2); text-transform: uppercase; margin-bottom: 8px;">Comparativo</div>
+        <h2 style="font-weight: 700; font-size: 44px; line-height: 1; color: var(--navy); margin: 0; letter-spacing: -1.5px;">Valores por Faixa Etária</h2>
+      </div>
+      <div style="display: flex; align-items: center; gap: 20px; font-weight: 400; font-size: 22px; color: var(--steel-soft);">
+        <span style="display: inline-flex; align-items: center; gap: 8px;"><span style="width: 22px; height: 14px; background: rgba(200,138,91,0.22); border-radius: 3px; display: inline-block;"></span> Recomendado</span>
+        <span>Valores mensais por vida · R$</span>
+      </div>
+    </div>
+
+    <div style="flex: 1; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: 0 12px 30px rgba(14,28,61,0.06);">
+      <!-- Tier 1: operator groups -->
+      <div style="display: grid; grid-template-columns: 200px repeat(7, 1fr); background: var(--navy);">
+        <div style="border-right: 1px solid rgba(255,255,255,0.12);"></div>
+        <div style="grid-column: span 2; text-align: center; padding: 12px 6px 6px; color: #fff; border-left: 2px solid rgba(255,255,255,0.2); border-bottom: 2px solid var(--copper);">
+          <div style="font-weight: 700; font-size: 24px; letter-spacing: -0.3px;">SulAmérica</div>
+          <div style="font-weight: 400; font-size: 20px; color: var(--steel-soft);">Direto Nacional</div>
+        </div>
+        <div style="grid-column: span 2; text-align: center; padding: 12px 6px 6px; color: #fff; border-left: 2px solid rgba(255,255,255,0.2); border-bottom: 2px solid var(--copper);">
+          <div style="font-weight: 700; font-size: 24px; letter-spacing: -0.3px;">Amil</div>
+          <div style="font-weight: 400; font-size: 20px; color: var(--steel-soft);">Prata QC</div>
+        </div>
+        <div style="grid-column: span 2; text-align: center; padding: 12px 6px 6px; color: #fff; border-left: 2px solid rgba(255,255,255,0.2);">
+          <div style="font-weight: 700; font-size: 24px; letter-spacing: -0.3px;">Amil</div>
+          <div style="font-weight: 400; font-size: 20px; color: var(--steel-soft);">S450 QC</div>
+        </div>
+        <div style="text-align: center; padding: 12px 6px 6px; color: #fff; border-left: 2px solid rgba(255,255,255,0.2);">
+          <div style="font-weight: 700; font-size: 24px; letter-spacing: -0.3px;">Bradesco</div>
+          <div style="font-weight: 400; font-size: 20px; color: var(--steel-soft);">Top Nacional</div>
+        </div>
+      </div>
+      <!-- Tier 2: sub labels -->
+      <div style="display: grid; grid-template-columns: 200px repeat(7, 1fr); background: var(--navy-2);">
+        <div style="padding: 8px 16px; font-weight: 600; font-size: 20px; color: var(--steel-soft); text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center;">Faixa</div>
+        <div style="padding: 8px 6px; text-align: center; font-weight: 600; font-size: 20px; color: var(--copper); border-left: 1px solid rgba(255,255,255,0.08); line-height: 1.15;">Com copart.</div>
+        <div style="padding: 8px 6px; text-align: center; font-weight: 600; font-size: 20px; color: var(--copper); border-left: 1px solid rgba(255,255,255,0.08); line-height: 1.15;">Sem copart.</div>
+        <div style="padding: 8px 6px; text-align: center; font-weight: 600; font-size: 20px; color: var(--copper); border-left: 1px solid rgba(255,255,255,0.08); line-height: 1.15;">Copart. terapias</div>
+        <div style="padding: 8px 6px; text-align: center; font-weight: 600; font-size: 20px; color: var(--copper); border-left: 1px solid rgba(255,255,255,0.08); line-height: 1.15;">Copart. total</div>
+        <div style="padding: 8px 6px; text-align: center; font-weight: 600; font-size: 20px; color: var(--steel-soft); border-left: 1px solid rgba(255,255,255,0.08); line-height: 1.15;">Copart. terapias</div>
+        <div style="padding: 8px 6px; text-align: center; font-weight: 600; font-size: 20px; color: var(--steel-soft); border-left: 1px solid rgba(255,255,255,0.08); line-height: 1.15;">Copart. total</div>
+        <div style="padding: 8px 6px; text-align: center; font-weight: 600; font-size: 20px; color: var(--steel-soft); border-left: 1px solid rgba(255,255,255,0.08); line-height: 1.15;">Sem copart.</div>
+      </div>
+      <!-- Body rows -->
+      <sc-for list="{{ rows }}" as="row" hint-placeholder-count="10">
+        <div style="display: grid; grid-template-columns: 200px repeat(7, 1fr); flex: 1; background: {{ row.bg }}; border-top: 1px solid var(--line);">
+          <div style="padding: 0 16px; font-weight: 600; font-size: 22px; color: var(--navy); display: flex; align-items: center;">{{ row.band }}</div>
+          <div style="border-left: 1px solid var(--line); padding: 3px; display: flex; align-items: center; justify-content: center;"><div style="width: calc(100% - 8px); height: calc(100% - 6px); display: flex; align-items: center; justify-content: center; background: rgba(200,138,91,0.20); border-radius: 4px; font-weight: 700; font-size: 22px; color: var(--navy);">{{ row.v0 }}</div></div>
+          <div style="border-left: 1px solid var(--line); padding: 3px; display: flex; align-items: center; justify-content: center;"><div style="width: calc(100% - 8px); height: calc(100% - 6px); display: flex; align-items: center; justify-content: center; background: rgba(200,138,91,0.20); border-radius: 4px; font-weight: 700; font-size: 22px; color: var(--navy);">{{ row.v1 }}</div></div>
+          <div style="border-left: 1px solid var(--line); padding: 3px; display: flex; align-items: center; justify-content: center;"><div style="width: calc(100% - 8px); height: calc(100% - 6px); display: flex; align-items: center; justify-content: center; background: rgba(200,138,91,0.20); border-radius: 4px; font-weight: 700; font-size: 22px; color: var(--navy);">{{ row.v2 }}</div></div>
+          <div style="border-left: 1px solid var(--line); padding: 3px; display: flex; align-items: center; justify-content: center;"><div style="width: calc(100% - 8px); height: calc(100% - 6px); display: flex; align-items: center; justify-content: center; background: rgba(200,138,91,0.20); border-radius: 4px; font-weight: 700; font-size: 22px; color: var(--navy);">{{ row.v3 }}</div></div>
+          <div style="border-left: 1px solid var(--line); padding: 0 6px; font-weight: 600; font-size: 22px; color: var(--steel); display: flex; align-items: center; justify-content: center;">{{ row.v4 }}</div>
+          <div style="border-left: 1px solid var(--line); padding: 0 6px; font-weight: 600; font-size: 22px; color: var(--steel); display: flex; align-items: center; justify-content: center;">{{ row.v5 }}</div>
+          <div style="border-left: 1px solid var(--line); padding: 0 6px; font-weight: 600; font-size: 22px; color: var(--steel); display: flex; align-items: center; justify-content: center;">{{ row.v6 }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="font-weight: 400; font-size: 20px; color: var(--steel-soft); margin-top: 12px;">Colunas destacadas em cobre indicam os produtos recomendados. Bradesco Top Nacional sujeito a critérios de aceitação da operadora.</div>
+  </div>
+</section>
+
+<!-- ═══════════ SLIDE 6 · RECOMENDAÇÃO ═══════════ -->
+<section data-label="Recomendação" data-speaker-notes="Nossa recomendação: SulAmérica Direto Nacional e Amil Prata QC — melhor equilíbrio entre custo, cobertura, rede credenciada e condições comerciais." style="background: radial-gradient(120% 120% at 80% 0%, #16294a 0%, #0e1c3d 60%, #0a1530 100%); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 84px 100px; display: flex; flex-direction: column; justify-content: center; font-family: var(--sans);">
+    <img src="assets/logo-white.png" alt="" style="position: absolute; right: -170px; top: -180px; width: 620px; opacity: 0.05; pointer-events: none;">
+    <div style="position: relative;">
+      <div style="font-weight: 600; font-size: 26px; letter-spacing: 8px; color: var(--copper); text-transform: uppercase; margin-bottom: 20px;">Nossa recomendação</div>
+      <h2 style="font-weight: 700; font-size: 72px; line-height: 1.02; color: #fff; margin: 0 0 18px; letter-spacing: -2px;">Melhor equilíbrio entre custo e cobertura</h2>
+      <p style="font-weight: 300; font-size: 29px; line-height: 1.4; color: rgba(255,255,255,0.75); margin: 0; max-width: 1180px;">Após análise técnica e comercial, destacamos dois produtos com excelente relação entre custo, cobertura, rede credenciada e condições comerciais para a Descomplica.</p>
+    </div>
+
+    <div style="position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 34px; margin-top: 50px;">
+      <div style="background: linear-gradient(140deg, rgba(200,138,91,0.24), rgba(181,115,67,0.10)); border: 2px solid var(--copper); border-radius: 20px; padding: 38px 42px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+          <div style="font-weight: 500; font-size: 24px; letter-spacing: 2px; color: var(--copper); text-transform: uppercase;">SulAmérica</div>
+          <div style="font-weight: 600; font-size: 23px; letter-spacing: 1px; color: var(--navy); background: var(--copper); border-radius: 999px; padding: 5px 16px;">★ Recomendado</div>
+        </div>
+        <div style="font-weight: 700; font-size: 46px; color: #fff; letter-spacing: -0.5px; margin-bottom: 18px;">Direto Nacional</div>
+        <div style="font-weight: 300; font-size: 26px; line-height: 1.45; color: rgba(255,255,255,0.82);">Rede nacional robusta e a campanha exclusiva de isenção da 2ª fatura. Disponível com e sem coparticipação.</div>
+      </div>
+      <div style="background: linear-gradient(140deg, rgba(200,138,91,0.24), rgba(181,115,67,0.10)); border: 2px solid var(--copper); border-radius: 20px; padding: 38px 42px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+          <div style="font-weight: 500; font-size: 24px; letter-spacing: 2px; color: var(--copper); text-transform: uppercase;">Amil</div>
+          <div style="font-weight: 600; font-size: 23px; letter-spacing: 1px; color: var(--navy); background: var(--copper); border-radius: 999px; padding: 5px 16px;">★ Recomendado</div>
+        </div>
+        <div style="font-weight: 700; font-size: 46px; color: #fff; letter-spacing: -0.5px; margin-bottom: 18px;">Prata QC</div>
+        <div style="font-weight: 300; font-size: 26px; line-height: 1.45; color: rgba(255,255,255,0.82);">Melhor custo de entrada da comparação, com opções de coparticipação para terapias ou total conforme o perfil de uso.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SLIDE 7 · PRÓXIMOS PASSOS ═══════════ -->
+<section data-label="Próximos Passos" data-speaker-notes="Próximos passos: definição da operadora e produto, envio da relação de vidas e documentos, implantação e início da vigência. Encerramento Bem Melhor." style="background: radial-gradient(120% 120% at 15% 100%, #16294a 0%, #0e1c3d 58%, #0a1530 100%); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 90px 100px 80px; display: flex; flex-direction: column; justify-content: space-between; font-family: var(--sans);">
+    <img src="assets/logo-white.png" alt="" style="position: absolute; left: -160px; top: -160px; width: 560px; opacity: 0.05; pointer-events: none;">
+    <div style="position: relative;">
+      <div style="font-weight: 600; font-size: 26px; letter-spacing: 8px; color: var(--copper); text-transform: uppercase; margin-bottom: 20px;">Próximos passos</div>
+      <h2 style="font-weight: 700; font-size: 66px; line-height: 1.02; color: #fff; margin: 0; letter-spacing: -2px; max-width: 1100px;">Vamos avançar com a proposta</h2>
+    </div>
+
+    <div style="position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px;">
+      <div style="border-top: 3px solid var(--copper); padding-top: 26px;">
+        <div style="font-weight: 700; font-size: 34px; color: var(--copper); margin-bottom: 14px;">1</div>
+        <div style="font-weight: 600; font-size: 30px; color: #fff; margin-bottom: 10px;">Definição</div>
+        <div style="font-weight: 300; font-size: 25px; line-height: 1.4; color: rgba(255,255,255,0.72);">Escolha da operadora e do produto que melhor atende a Descomplica.</div>
+      </div>
+      <div style="border-top: 3px solid var(--copper); padding-top: 26px;">
+        <div style="font-weight: 700; font-size: 34px; color: var(--copper); margin-bottom: 14px;">2</div>
+        <div style="font-weight: 600; font-size: 30px; color: #fff; margin-bottom: 10px;">Documentação</div>
+        <div style="font-weight: 300; font-size: 25px; line-height: 1.4; color: rgba(255,255,255,0.72);">Envio da relação de vidas e dos documentos da empresa.</div>
+      </div>
+      <div style="border-top: 3px solid var(--copper); padding-top: 26px;">
+        <div style="font-weight: 700; font-size: 34px; color: var(--copper); margin-bottom: 14px;">3</div>
+        <div style="font-weight: 600; font-size: 30px; color: #fff; margin-bottom: 10px;">Implantação</div>
+        <div style="font-weight: 300; font-size: 25px; line-height: 1.4; color: rgba(255,255,255,0.72);">Formalização e início da vigência do benefício.</div>
+      </div>
+    </div>
+
+    <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; border-top: 1px solid rgba(255,255,255,0.14); padding-top: 34px;">
+      <div>
+        <div style="font-weight: 700; font-size: 30px; color: #fff; letter-spacing: -0.5px;">Bem Melhor Seguros &amp; Benefícios</div>
+        <div style="font-weight: 300; font-size: 25px; color: var(--steel-soft); margin-top: 8px;">Cuidando da saúde da sua empresa e de quem faz ela acontecer.</div>
+      </div>
+      <img src="assets/logo-white.png" alt="Bem Melhor" style="width: 150px; height: auto; opacity: 0.92;">
+    </div>
+  </div>
+</section>
+<!-- ═══════════ CONTATOS ═══════════ -->
+<section data-label="Contatos" data-speaker-notes="Encerramento e contatos. Nossa proposta começa com uma conversa. Contatos gerais e das especialistas Sabrina e Aline." style="background: radial-gradient(120% 120% at 15% 100%, #16294a 0%, #0e1c3d 58%, #0a1530 100%); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 84px 100px 72px; display: flex; flex-direction: column; justify-content: space-between; font-family: var(--sans);">
+    <img src="assets/logo-white.png" alt="" style="position: absolute; left: -160px; top: -160px; width: 540px; opacity: 0.05; pointer-events: none;">
+    <div style="position: relative;">
+      <div style="font-weight: 600; font-size: 26px; letter-spacing: 8px; color: var(--copper); text-transform: uppercase; margin-bottom: 20px;">Vamos conversar</div>
+      <h2 style="font-weight: 700; font-size: 62px; line-height: 1.05; color: #fff; margin: 0; letter-spacing: -2px; max-width: 1200px;">Você não precisa só de um plano —<br>precisa de <span style="color: var(--copper);">alguém do seu lado</span></h2>
+    </div>
+
+    <div style="position: relative; display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 40px; align-items: start;">
+      <div>
+        <div style="font-weight: 600; font-size: 22px; letter-spacing: 2px; text-transform: uppercase; color: var(--copper); margin-bottom: 20px;">Atendimento</div>
+        <div style="font-weight: 500; font-size: 30px; color: #fff; margin-bottom: 12px;">61 98173-9796</div>
+        <div style="font-weight: 300; font-size: 26px; color: rgba(255,255,255,0.8); margin-bottom: 8px;">atendimento@bemmelhorseguros.com</div>
+        <div style="font-weight: 300; font-size: 26px; color: rgba(255,255,255,0.8); margin-bottom: 8px;">@bemmelhorseguros</div>
+        <div style="font-weight: 300; font-size: 24px; color: var(--steel-soft);">bemmelhorseguros.com</div>
+      </div>
+      <div>
+        <div style="font-weight: 700; font-size: 28px; color: #fff; letter-spacing: -0.5px;">Sabrina Gonçalves</div>
+        <div style="font-weight: 600; font-size: 20px; letter-spacing: 2px; text-transform: uppercase; color: var(--copper); margin: 6px 0 16px;">Especialista em Benefícios</div>
+        <div style="font-weight: 500; font-size: 27px; color: #fff; margin-bottom: 8px;">61 98171-6109</div>
+        <div style="font-weight: 300; font-size: 24px; color: rgba(255,255,255,0.8);">sabrinagoncalves@bemmelhorseguros.com</div>
+      </div>
+      <div>
+        <div style="font-weight: 700; font-size: 28px; color: #fff; letter-spacing: -0.5px;">Aline Ricarte</div>
+        <div style="font-weight: 600; font-size: 20px; letter-spacing: 2px; text-transform: uppercase; color: var(--copper); margin: 6px 0 16px;">Especialista em Benefícios</div>
+        <div style="font-weight: 500; font-size: 27px; color: #fff; margin-bottom: 8px;">61 99258-4203</div>
+        <div style="font-weight: 300; font-size: 24px; color: rgba(255,255,255,0.8);">alinericarte@bemmelhorseguros.com</div>
+      </div>
+    </div>
+
+    <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; border-top: 1px solid rgba(255,255,255,0.14); padding-top: 30px;">
+      <div style="font-weight: 300; font-size: 24px; color: var(--steel-soft);">Vida &amp; Família · Saúde · Patrimônio · Renda &nbsp;·&nbsp; SUSEP 262180461</div>
+      <img src="assets/logo-white.png" alt="Bem Melhor" style="width: 150px; height: auto; opacity: 0.92;">
+    </div>
+  </div>
+</section>
+
+</x-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const bands = ['0 a 18','19 a 23','24 a 28','29 a 33','34 a 38','39 a 43','44 a 48','49 a 53','54 a 58','59 ou +'];
+    // columns: SA com, SA sem, AmilP terapias, AmilP total, AmilS terapias, AmilS total, Bradesco sem
+    const data = [
+      ['150,05','214,36','226,64','169,98','330,23','247,68','288,16'],
+      ['187,57','267,95','265,17','198,88','386,37','289,79','340,03'],
+      ['232,58','332,25','323,51','242,63','471,37','353,54','411,44'],
+      ['258,16','368,80','388,21','291,16','565,64','424,25','493,73'],
+      ['276,24','394,62','407,62','305,72','593,92','445,46','562,85'],
+      ['320,43','457,76','448,38','336,29','653,31','490,01','579,73'],
+      ['383,05','547,21','560,48','420,36','816,64','612,51','705,86'],
+      ['448,94','641,33','616,53','462,40','898,30','673,76','830,23'],
+      ['534,46','763,52','770,66','578,00','1.122,88','842,20','987,97'],
+      ['900,30','1.286,14','1.348,66','1.011,50','1.965,04','1.473,85','1.728,85'],
+    ];
+    const rows = bands.map((band, i) => ({
+      band,
+      bg: i % 2 === 0 ? '#ffffff' : '#faf7f1',
+      v0: data[i][0], v1: data[i][1], v2: data[i][2], v3: data[i][3],
+      v4: data[i][4], v5: data[i][5], v6: data[i][6],
+    }));
+    return { rows };
+  }
+}
+</script>
+<script>
+(async () => {
+  if (!document.title || !document.title.trim()) document.title = "Proposta Descomplica";
+  // Prepend so page-supplied @page / break rules (deck-stage's margin:0,
+  // author CSS) keep source-order precedence over the baseline.
+  const baseCss = document.createElement('style');
+  baseCss.textContent = "@media print {\n  figure, table { break-inside: avoid; }\n  *, *::before, *::after {\n    print-color-adjust: exact; -webkit-print-color-adjust: exact;\n    backdrop-filter: none !important; -webkit-backdrop-filter: none !important;\n    animation-delay: -99s !important; animation-duration: .001s !important;\n    animation-iteration-count: 1 !important; animation-fill-mode: both !important;\n    animation-play-state: running !important; transition-duration: 0s !important;\n  }\n}";
+  document.head.prepend(baseCss);
+  if (document.readyState === 'loading') {
+    await new Promise((r) => document.addEventListener('DOMContentLoaded', r, { once: true }));
+  }
+  let ds = document.querySelector('deck-stage');
+  // whenDefined never resolves when nothing registers the element, so only
+  // await it when a <deck-stage> tag exists (and race a timeout regardless).
+  if (ds && !customElements.get('deck-stage')) {
+    try {
+      await Promise.race([
+        customElements.whenDefined('deck-stage'),
+        new Promise((r) => setTimeout(r, 3000)),
+      ]);
+    } catch (e) {}
+    ds = document.querySelector('deck-stage');
+  }
+  // dc-runtime assigns window.DCLogic at init and mounts into #dc-root on
+  // DOMContentLoaded; settle on that subtree so React has rendered before
+  // print(). Non-DC pages fall through to weighing body.
+  const isDc = !ds && 'DCLogic' in window;
+  const settleRoot = ds || (isDc ? document.getElementById('dc-root') : null) || document.body;
+  if (settleRoot) {
+    // Weigh only content children — skip script/style/template so inline
+    // Babel/CSS doesn't register as stable "content" before the framework
+    // has mounted anything.
+    const MEDIA = 'img,svg,canvas,video,picture,iframe,embed,object';
+    const weigh = () => {
+      let text = 0, media = 0;
+      for (const c of settleRoot.children) {
+        const t = c.tagName;
+        if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+        text += (c.textContent || '').trim().length;
+        media += c.querySelectorAll(MEDIA).length + (c.matches(MEDIA) ? 1 : 0);
+      }
+      return text + media * 100;
+    };
+    // "Non-zero and stable" alone is not sufficient to mean rendered: generic
+    // body can carry a static shell while async main content is pending, and
+    // #dc-root can carry the root DC's static text while child refs are still
+    // .sc-placeholder boxes. Gate generic on readyState 'complete', and never
+    // accept stability while a dc-runtime placeholder is present.
+    const isGeneric = settleRoot === document.body;
+    const deadline = Date.now() + 15000;
+    let last = -1, stable = 0;
+    while (Date.now() < deadline) {
+      const n = weigh();
+      const ready =
+        (!isGeneric || document.readyState === 'complete') &&
+        !settleRoot.querySelector('.sc-placeholder');
+      if (n > 0 && n === last && ready) { if (++stable >= 2) break; } else { stable = 0; }
+      last = n;
+      await new Promise((r) => setTimeout(r, 250));
+    }
+  }
+  // Project support.js may predate runtime default-seeding; push via bridge.
+  if (isDc && window.__dcSetProps && window.__dcRootName) {
+    try {
+      const dpEl = document.querySelector('script[data-dc-script]');
+      const meta = JSON.parse((dpEl && dpEl.getAttribute('data-props')) || '{}');
+      const bag = {};
+      for (const k in meta)
+        if (k[0] !== '$' && meta[k] && meta[k].default !== undefined)
+          bag[k] = meta[k].default;
+      if (Object.keys(bag).length) {
+        window.__dcSetProps(window.__dcRootName(), bag);
+        await new Promise((r) => setTimeout(r, 50));
+      }
+    } catch (e) {}
+  }
+  // Reveal content gated on scroll or visibility before printing. Lazy <img>,
+  // IntersectionObserver fade-ins, and collapsed <details> don't render while
+  // off-screen, so a long page would print with them blank or closed. Open
+  // every <details>, force native-lazy images eager, and scroll the document
+  // through its full height to trip lazy-load + IO; then wait (bounded) for the
+  // newly-triggered images. Inert for deck-stage (slides aren't scroll-gated).
+  try {
+    for (const d of document.querySelectorAll('details')) d.open = true;
+    for (const img of document.querySelectorAll('img[loading="lazy"]'))
+      img.loading = 'eager';
+    const scroller = document.scrollingElement || document.documentElement;
+    const full = Math.max(scroller.scrollHeight, document.body.scrollHeight);
+    const step = window.innerHeight || 800;
+    for (let y = 0; y <= full; y += step) {
+      window.scrollTo(0, y);
+      await new Promise((r) => requestAnimationFrame(r));
+    }
+    window.scrollTo(0, 0);
+    await Promise.race([
+      Promise.all(
+        [...document.images].map((img) =>
+          img.complete
+            ? null
+            : new Promise((res) => {
+                img.addEventListener('load', res, { once: true });
+                img.addEventListener('error', res, { once: true });
+              })
+        )
+      ),
+      new Promise((r) => setTimeout(r, 4000)),
+    ]);
+  } catch (e) {}
+  try { await document.fonts.ready; } catch (e) {}
+  // Jump every animation to its end state so print() never captures a slide
+  // mid-entrance. Ordering matters: the 0s-transition style must be live
+  // BEFORE data-deck-active is set so attribute-keyed transitions don't
+  // start a (now-0s) run from the pre-active base.
+  const st = document.createElement('style');
+  st.textContent = '*,*::before,*::after{animation-delay:-99s !important;animation-duration:.001s !important;animation-iteration-count:1 !important;animation-fill-mode:both !important;animation-play-state:running !important;transition-duration:0s !important}';
+  document.head.appendChild(st);
+  for (const d of document.querySelectorAll('deck-stage')) {
+    for (const c of d.children) {
+      const t = c.tagName;
+      if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+      c.setAttribute('data-deck-active', '');
+    }
+  }
+  // Re-append deck-stage's @page last so no author @page can add a margin and
+  // spill each full-bleed slide onto two sheets. Backstop for old copies.
+  if (ds) {
+    let pg = document.getElementById('deck-stage-print-page');
+    if (!pg) {
+      pg = document.createElement('style');
+      pg.textContent = '@page{size:' + (+ds.getAttribute('width') || 1920) +
+        'px ' + (+ds.getAttribute('height') || 1080) + 'px;margin:0}';
+    }
+    document.body.appendChild(pg);
+  }
+  try {
+    const sweep = () => {
+      for (const a of document.getAnimations()) {
+        try { a.finish(); } catch (e) {
+          try { a.currentTime = (a.effect && a.effect.getComputedTiming().duration) || 0; a.pause(); } catch (e2) {}
+        }
+      }
+    };
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+  } catch (e) {}
+  // Size the PDF page to the rendered design unless the file opted into
+  // standard paper via @page{size:letter|A4|…}. Decks own their own @page.
+  // Wrappers (body, …) lose padding+margin so the frame sits at (0,0); the
+  // frame itself loses only margin — its padding is INSIDE the measured
+  // rect and must stay, or content shifts and leaves a gap at bottom/right.
+  var __m = null;
+  try { __m = (() => {
+  var STAMP = true;
+  var docEl = document.documentElement;
+  var doc = { width: docEl.scrollWidth, height: docEl.scrollHeight };
+
+  var ds = document.querySelector('deck-stage');
+  if (ds) {
+    var dw = Number(ds.getAttribute('width')) || 1920;
+    var dh = Number(ds.getAttribute('height')) || 1080;
+    var n = typeof ds.length === 'number' ? ds.length : ds.children.length;
+    var idx = typeof ds.index === 'number' ? ds.index : 0;
+    var frames = [];
+    for (var i = 0; i < n; i++) frames.push({ left: 0, top: 0, width: dw, height: dh });
+    return { kind: 'deck', source: 'declared', doc: doc, frames: frames,
+      authored: frames.map(function(){return{width:true,height:true}}),
+      deck: { width: dw, height: dh, slideCount: n, index: idx },
+      signals: { paperPage: false, pxPage: false } };
+  }
+
+  // Declared kind: a doc-page tag names the kind outright, so no signal
+  // heuristics run (like the deck branch above, signals report false —
+  // they describe inferred classifications only). The tag alone is not
+  // trusted: the element must have upgraded (shadowRoot present), so a
+  // leftover tag whose script was deleted falls through to the heuristics
+  // that handle plain markup.
+  var stageSx = window.scrollX || 0, stageSy = window.scrollY || 0;
+  var dp = document.querySelector('doc-page');
+  if (dp && dp.shadowRoot) {
+    // Crop to the sheet, not the host — the desk around it is screen-only
+    // chrome that must not land in PNG exports.
+    var sheet = dp.shadowRoot.querySelector('.sheet');
+    var sr = (sheet || dp).getBoundingClientRect();
+    return { kind: 'paper-doc', source: 'declared', doc: doc,
+      frames: [{ left: sr.left + stageSx, top: sr.top + stageSy,
+        width: sr.width, height: sr.height }],
+      authored: [{ width: false, height: false }],
+      signals: { paperPage: false, pxPage: false } };
+  }
+  var paperPage = false, pxPage = false;
+  var eachRule = function (fn) {
+    for (var s = 0; s < document.styleSheets.length; s++) {
+      var rs; try { rs = document.styleSheets[s].cssRules; } catch (e) { continue; }
+      for (var r = 0; r < rs.length; r++) {
+        fn(rs[r]);
+        if (rs[r].cssRules) for (var n = 0; n < rs[r].cssRules.length; n++) fn(rs[r].cssRules[n]);
+      }
+    }
+  };
+  eachRule(function (r) {
+    if (r.type !== 6) return;
+    var m = /\bsize\s*:\s*([^;}]+)/i.exec(r.cssText || '');
+    if (!m) return;
+    if (/\b(letter|a[3-5]|legal|ledger)\b/i.test(m[1])) paperPage = true;
+    if (/\d+(?:\.\d+)?px\b/i.test(m[1])) pxPage = true;
+  });
+  var signals = { paperPage: paperPage, pxPage: pxPage };
+
+  var pxVal = function (v) {
+    var m = /^(\d+(?:\.\d+)?)px$/.exec(v || ''); return m ? +m[1] : 0;
+  };
+  var authoredPx = function (el, prop) {
+    if (pxVal(el.style[prop])) return true;
+    var attr = el.getAttribute(prop);
+    if (attr && /^\d+$/.test(attr)) return true;
+    var hit = false;
+    eachRule(function (r) {
+      if (hit || r.type !== 1 || !r.style) return;
+      try { if (el.matches(r.selectorText) && pxVal(r.style[prop])) hit = true; } catch (e) {}
+    });
+    return hit;
+  };
+
+  var el = document.body, rootPxW = false;
+  for (;;) {
+    var kids = [];
+    for (var c = 0; c < el.children.length; c++) {
+      var t = el.children[c].tagName;
+      if (t !== 'SCRIPT' && t !== 'STYLE' && t !== 'TEMPLATE') kids.push(el.children[c]);
+    }
+    if (kids.length !== 1 || !(kids[0] instanceof HTMLElement)) break;
+    if (STAMP) el.setAttribute('data-om-frame-wrap', '');
+    el = kids[0];
+    rootPxW = authoredPx(el, 'width');
+    if (rootPxW) break;
+  }
+  if (!rootPxW) rootPxW = authoredPx(el, 'width');
+
+  // @page{size:letter} alone is a flowing doc; with a px-width root it's a
+  // fixed sheet pretending to be paper — fall through and size to render.
+  if (paperPage && !rootPxW) {
+    return { kind: 'paper-doc', source: 'inferred', doc: doc, signals: signals,
+      frames: [{ left: 0, top: 0, width: doc.width, height: doc.height }],
+      authored: [{ width: false, height: false }] };
+  }
+
+  var sx = window.scrollX || 0, sy = window.scrollY || 0;
+  var rectOf = function (e) {
+    var r = e.getBoundingClientRect();
+    var oy; try { oy = getComputedStyle(e).overflowY; } catch (err) {}
+    var h = oy === 'visible' ? Math.max(r.height, e.scrollHeight || 0) : r.height;
+    return { left: r.left + sx, top: r.top + sy, width: r.width, height: h };
+  };
+
+  // Multi-frame: ≥2 visible non-fixed children, each with authored px width
+  // AND height, all within ±2px of each other. Off unless the page opts in
+  // via data-om-multi-frame on the stop element — guards against card grids
+  // and pricing tables that match the geometry but aren't separate canvases.
+  if (el.hasAttribute('data-om-multi-frame')) {
+    var cands = [];
+    for (var k = 0; k < el.children.length; k++) {
+      var ch = el.children[k];
+      var cs; try { cs = getComputedStyle(ch); } catch (e) { continue; }
+      if (cs.display === 'none' || cs.visibility === 'hidden' || cs.position === 'fixed') continue;
+      var rc = rectOf(ch);
+      if (rc.width < 2 || rc.height < 2) continue;
+      if (!authoredPx(ch, 'width') || !authoredPx(ch, 'height')) continue;
+      cands.push(rc);
+    }
+    if (cands.length >= 2) {
+      var w0 = cands[0].width, h0 = cands[0].height, ok = true;
+      for (var q = 1; q < cands.length; q++)
+        if (Math.abs(cands[q].width - w0) > 2 || Math.abs(cands[q].height - h0) > 2) ok = false;
+      if (ok) return { kind: 'multi-frame', source: 'inferred', doc: doc, signals: signals,
+        frames: cands, authored: cands.map(function(){return{width:true,height:true}}) };
+    }
+  }
+
+  if (STAMP) el.setAttribute('data-om-frame', '');
+  return { kind: 'single-canvas', source: 'inferred', doc: doc, signals: signals,
+    frames: [rectOf(el)],
+    authored: [{ width: rootPxW, height: authoredPx(el, 'height') }] };
+})(); } catch (e) {}
+  var frame = null;
+  if (__m && __m.kind === 'single-canvas') {
+    var f = __m.frames && __m.frames[0];
+    if (f && f.width >= 200 && f.height >= 200) {
+      frame = f;
+      var fst = document.createElement('style');
+      fst.textContent = '@media print{@page{size:' + Math.ceil(f.width) + 'px ' +
+        Math.ceil(f.height) + 'px;margin:0}' +
+        'html,body,[data-om-frame-wrap]{padding:0!important;margin:0!important;background:none!important}' +
+        '[data-om-frame]{margin:0!important}}';
+      document.body.appendChild(fst);
+    }
+  }
+  // Relax break-inside on oversized elements. An element taller than a
+  // printable page can't honor break-inside: avoid — browsers either overflow
+  // it or push it whole to the next page, leaving a blank gap, then break it
+  // anyway at an arbitrary point. After the final layout (content revealed,
+  // animations jumped), find elements taller than a page that still compute
+  // break-inside: avoid and reset them to auto, so the browser breaks them at
+  // their children's boundaries instead (children keep their own avoid). PAGE_PX
+  // is a conservative portrait estimate at 96 CSS px/in — Letter/A4 usable
+  // height minus our 0.5in margins — so only clearly-oversized elements are
+  // touched and under-page elements still stay whole. Skipped for decks (slides
+  // are sized to the page) and for fixed-size canvases (frame set, or an author
+  // px-based @page) — runs as before for flowing docs on letter/A4.
+  try {
+    if (!ds && !frame && !(__m && __m.signals && __m.signals.pxPage)) {
+      const PAGE_PX = 1024;
+      // Our print defaults add a real @page margin only when the source has
+      // no @page of its own; computed style can't tell us (it reports screen
+      // media), so read the injected rule directly.
+      const defaults = document.querySelector('style[data-omelette-print-defaults]');
+      const pageInset = /@page\s*\{[^}]*margin/.test(defaults ? defaults.textContent || '' : '');
+      const SEL = 'section,article,figure,table,pre,blockquote,[class~="card" i],[class~="page" i],[class~="sheet" i]';
+      for (const el of document.body.querySelectorAll(SEL)) {
+        if (el instanceof HTMLElement && el.offsetHeight > PAGE_PX) {
+          el.setAttribute('data-om-oversized', '');
+          // Fake-paged docs simulate sheets with over-tall break-after:page
+          // boxes; honoring the break spills half-blank pages and ends a
+          // colored box mid-sheet. Flow them, and (only when we own the page
+          // inset) drop the redundant padding/background via the rule below.
+          const cs = getComputedStyle(el);
+          if (cs.breakAfter === 'page' || cs.pageBreakAfter === 'always') {
+            el.setAttribute('data-om-fakepage', '');
+          }
+        }
+      }
+      const ost = document.createElement('style');
+      ost.textContent = '@media print{' +
+        '[data-om-oversized]{break-inside:auto !important;page-break-inside:auto !important}' +
+        '[data-om-fakepage]{break-after:auto !important;page-break-after:auto !important}' +
+        (pageInset ? '[data-om-fakepage]{padding:0 !important;background:none !important}' : '') +
+        '}';
+      document.head.appendChild(ost);
+    }
+  } catch (e) {}
+  // macOS Preview renders Skia-PDF Luminosity soft-masks as opaque grey boxes;
+  // swap the CSS that triggers them for Preview-safe forms.
+  try {
+    for (const el of document.body.querySelectorAll('*')) {
+      const cs = getComputedStyle(el);
+
+      if (cs.boxShadow !== 'none' && cs.filter === 'none') {
+        const outs = [], kept = [];
+        for (const s of cs.boxShadow.split(/,(?![^(]*[)])/)) {
+          const t = s.trim();
+          const m = t.match(/^(rgba?[(][^)]+[)]) (-?[0-9.]+px) (-?[0-9.]+px) ([0-9.]+px) -?[0-9.]+px$/);
+          if (m && parseFloat(m[4]) > 0) outs.push('drop-shadow(' + m[2] + ' ' + m[3] + ' ' + m[4] + ' ' + m[1] + ')');
+          else kept.push(t);
+        }
+        if (outs.length) {
+          el.style.setProperty('filter', outs.join(' '), 'important');
+          el.style.setProperty('box-shadow', kept.join(', ') || 'none', 'important');
+        }
+      }
+
+      const mask = cs.maskImage && cs.maskImage !== 'none' ? cs.maskImage : cs.webkitMaskImage;
+      if (mask && mask !== 'none' && cs.filter === 'none') el.style.setProperty('filter', 'opacity(1)', 'important');
+    }
+  } catch (e) {}
+  setTimeout(() => { try { window.print(); } catch (e) {} }, 200);
+})();
+</script>
+</body>
+</html>

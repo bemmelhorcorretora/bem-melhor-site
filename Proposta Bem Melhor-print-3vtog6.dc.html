@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style data-omelette-print-defaults>
+@media print {
+  @page { margin: 0.5in; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+  figure, table, pre, blockquote, img, svg, tr, [class~="card" i] { break-inside: avoid; }
+  img, svg { max-width: 100%; }
+  p { orphans: 3; widows: 3; }
+}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  :root {
+    --navy: #0e1c3d;
+    --navy-2: #16294a;
+    --steel: #3a5a8c;
+    --steel-soft: #6c86ad;
+    --copper: #c88a5b;
+    --copper-2: #b57343;
+    --cream: #f6f2ec;
+    --paper: #ffffff;
+    --line: #e6dccc;
+    --sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+<!-- ═══════════ SLIDE 1 · CAPA ═══════════ -->
+<section data-label="Capa" data-speaker-notes="Abertura. Apresentar a Bem Melhor e o objetivo: comparativo de planos de saúde empresarial para a FACE Serviços Médicos. Reforçar que os valores são totais mensais da apólice." style="background: radial-gradient(120% 120% at 15% 10%, #16294a 0%, #0e1c3d 55%, #0a1530 100%); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 96px 110px; display: flex; flex-direction: column; justify-content: space-between; font-family: var(--sans);">
+    <img src="assets/logo-white.png" alt="Bem Melhor" style="position: absolute; right: -140px; bottom: -220px; width: 760px; opacity: 0.06; pointer-events: none;">
+    <div style="position: absolute; left: 110px; top: 302px; width: 220px; height: 3px; background: var(--copper);"></div>
+
+    <img src="assets/logo-white.png" alt="Bem Melhor Seguros e Benefícios" style="width: 232px; height: auto;">
+
+    <div style="position: relative; max-width: 1200px;">
+      <div style="font-weight: 500; font-size: 27px; letter-spacing: 8px; color: var(--copper); text-transform: uppercase; margin-bottom: 30px;">Proposta de Plano de Saúde Empresarial</div>
+      <h1 style="font-weight: 700; font-size: 90px; line-height: 1.03; color: #ffffff; margin: 0; letter-spacing: -2px;">FACE Serviços Médicos<br>e Cirurgias Hospitalares</h1>
+      <div style="font-weight: 300; font-size: 30px; color: var(--steel-soft); margin-top: 26px; letter-spacing: 0.5px;">Comparativo de operadoras · Categorias Intermediária e Top</div>
+    </div>
+
+    <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end;">
+      <div style="font-weight: 400; font-size: 26px; color: rgba(255,255,255,0.7); letter-spacing: 0.5px;">Apresentado por <span style="color: #fff; font-weight: 500;">Bem Melhor Seguros e Benefícios</span></div>
+      <div style="font-weight: 400; font-size: 26px; color: rgba(255,255,255,0.55); letter-spacing: 0.5px;">Julho de 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SLIDE 2 · COMO LER ═══════════ -->
+<section data-label="Como Ler" data-speaker-notes="Explicar as duas regras de contratação. Compulsória: cerca de 80% da massa CLT adere — valor mais competitivo. Flex: adesão parcial, valor ~10% superior. E a diferença entre com e sem coparticipação. Ponto de atenção: Porto Seguro só trabalha na modalidade compulsória." style="background: var(--cream); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 80px 96px 72px; display: flex; flex-direction: column; font-family: var(--sans);">
+    <div style="font-weight: 600; font-size: 25px; letter-spacing: 6px; color: var(--copper-2); text-transform: uppercase; margin-bottom: 16px;">Entenda a proposta</div>
+    <h2 style="font-weight: 700; font-size: 60px; line-height: 1; color: var(--navy); margin: 0 0 14px; letter-spacing: -1.5px;">Como Ler Esta Proposta</h2>
+    <p style="font-weight: 300; font-size: 30px; line-height: 1.4; color: var(--steel); margin: 0 0 40px; max-width: 1200px;">Cada plano é apresentado em duas dimensões: a <strong style="font-weight: 600; color: var(--navy);">regra de contratação</strong> e a <strong style="font-weight: 600; color: var(--navy);">coparticipação</strong>. Entender essas duas variáveis é o que permite comparar as operadoras de forma justa.</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 32px;">
+      <div style="background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 34px 36px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 12px 34px rgba(14,28,61,0.06);">
+        <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+          <div style="font-weight: 700; font-size: 38px; color: var(--navy); letter-spacing: -0.5px;">Regra Compulsória</div>
+          <div style="font-weight: 500; font-size: 24px; letter-spacing: 0.5px; color: var(--copper-2); background: rgba(200,138,91,0.12); padding: 5px 14px; border-radius: 999px;">≈ 80% da massa CLT</div>
+        </div>
+        <div style="font-weight: 300; font-size: 27px; line-height: 1.45; color: var(--steel);">Aproximadamente 80% dos colaboradores CLT aderem ao plano. Por reunir mais vidas, entrega o <strong style="font-weight: 600; color: var(--navy);">valor mais competitivo</strong>.</div>
+      </div>
+      <div style="background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 34px 36px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 12px 34px rgba(14,28,61,0.06);">
+        <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+          <div style="font-weight: 700; font-size: 38px; color: var(--navy); letter-spacing: -0.5px;">Regra Flex</div>
+          <div style="font-weight: 500; font-size: 24px; letter-spacing: 0.5px; color: var(--copper-2); background: rgba(200,138,91,0.12); padding: 5px 14px; border-radius: 999px;">adesão opcional</div>
+        </div>
+        <div style="font-weight: 300; font-size: 27px; line-height: 1.45; color: var(--steel);">Quando nem todos os colaboradores entram no benefício. A adesão parcial gera um valor <strong style="font-weight: 600; color: var(--navy);">cerca de 10% superior</strong>.</div>
+      </div>
+    </div>
+
+    <div style="background: var(--navy); border-radius: 18px; padding: 30px 40px; display: flex; align-items: center; gap: 44px;">
+      <div style="font-weight: 600; font-size: 25px; letter-spacing: 3px; text-transform: uppercase; color: var(--copper); white-space: nowrap;">Coparticipação</div>
+      <div style="width: 1px; height: 52px; background: rgba(255,255,255,0.18);"></div>
+      <div style="font-weight: 300; font-size: 26px; line-height: 1.4; color: rgba(255,255,255,0.82);"><strong style="font-weight: 600; color: #fff;">Sem coparticipação:</strong> mensalidade mais alta, sem custo por uso.&nbsp;&nbsp;·&nbsp;&nbsp;<strong style="font-weight: 600; color: #fff;">Com coparticipação:</strong> mensalidade menor, com pequena participação a cada uso.</div>
+    </div>
+
+    <div style="font-weight: 400; font-size: 24px; color: var(--steel-soft); margin-top: 26px; display: flex; align-items: center; gap: 12px;"><span style="color: var(--copper-2); font-size: 24px;">◆</span> Porto Seguro atua <strong style="font-weight: 600; color: var(--steel);">somente na modalidade compulsória</strong> — não oferece regra Flex.</div>
+  </div>
+</section>
+
+<!-- ═══════════ SLIDE 3 · INTERMEDIÁRIA ═══════════ -->
+<section data-label="Cat. Intermediária" data-speaker-notes="Categoria Intermediária: quatro opções. SulAmérica Direto Nacional, Porto P320 e P420 (só compulsório), e Bradesco Efetivo Plus. Destacar que o Bradesco Efetivo Plus é a opção Bradesco desta faixa, com Flex disponível. Valores totais mensais da apólice." style="background: var(--cream); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 74px 72px 58px; display: flex; flex-direction: column; font-family: var(--sans);">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 34px;">
+      <div>
+        <div style="font-weight: 600; font-size: 25px; letter-spacing: 6px; color: var(--copper-2); text-transform: uppercase; margin-bottom: 14px;">Categoria</div>
+        <h2 style="font-weight: 700; font-size: 60px; line-height: 1; color: var(--navy); margin: 0; letter-spacing: -1.5px;">Categoria Intermediária</h2>
+      </div>
+      <div style="font-weight: 400; font-size: 24px; color: var(--steel-soft); text-align: right;">Valores mensais totais da apólice · R$</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; flex: 1;">
+
+      <!-- SulAmérica -->
+      <div style="background: var(--paper); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 12px 30px rgba(14,28,61,0.06);">
+        <div style="background: var(--navy); padding: 22px 24px;">
+          <div style="font-weight: 500; font-size: 24px; letter-spacing: 2px; color: var(--steel-soft); text-transform: uppercase;">SulAmérica</div>
+          <div style="font-weight: 700; font-size: 32px; color: #fff; margin-top: 3px; letter-spacing: -0.5px;">Direto Nacional</div>
+        </div>
+        <div style="padding: 8px 24px 24px; display: grid; grid-template-columns: 1.15fr 1fr 1fr; align-items: center; flex: 1;">
+          <div style="border-bottom: 2px solid var(--copper); padding: 14px 6px;"></div>
+          <div style="border-bottom: 2px solid var(--copper); padding: 14px 6px; text-align: right; font-weight: 600; font-size: 24px; letter-spacing: .3px; color: var(--copper-2);">Compuls.</div>
+          <div style="border-bottom: 2px solid var(--copper); padding: 14px 6px; text-align: right; font-weight: 600; font-size: 24px; letter-spacing: .3px; color: var(--copper-2);">Flex</div>
+
+          <div style="border-bottom: 1px solid var(--line); padding: 18px 6px; font-weight: 500; font-size: 24px; color: var(--steel);">Sem copart.</div>
+          <div style="border-bottom: 1px solid var(--line); padding: 18px 6px; text-align: right; font-weight: 700; font-size: 33px; color: var(--navy); line-height: 1;">2.194,58</div>
+          <div style="border-bottom: 1px solid var(--line); padding: 18px 6px; text-align: right; font-weight: 700; font-size: 33px; color: var(--navy); line-height: 1;">2.414,40</div>
+
+          <div style="padding: 18px 6px; font-weight: 500; font-size: 24px; color: var(--steel);">Com copart.</div>
+          <div style="padding: 18px 6px; text-align: right; font-weight: 700; font-size: 33px; color: var(--navy); line-height: 1;">1.536,21</div>
+          <div style="padding: 18px 6px; text-align: right; font-weight: 700; font-size: 33px; color: var(--navy); line-height: 1;">1.689,82</div>
+        </div>
+      </div>
+
+      <!-- Porto P320 -->
+      <div style="background: var(--paper); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 12px 30px rgba(14,28,61,0.06);">
+        <div style="background: var(--navy); padding: 22px 24px;">
+          <div style="font-weight: 500; font-size: 24px; letter-spacing: 2px; color: var(--steel-soft); text-transform: uppercase;">Porto Seguro</div>
+          <div style="font-weight: 700; font-size: 32px; color: #fff; margin-top: 3px; letter-spacing: -0.5px;">P320</div>
+        </div>
+        <div style="padding: 8px 24px 24px; display: grid; grid-template-columns: 1.15fr 1fr 1fr; align-items: center; flex: 1;">
+          <div style="border-bottom: 2px solid var(--copper); padding: 14px 6px;"></div>
+          <div style="border-bottom: 2px solid var(--copper); padding: 14px 6px; text-align: right; font-weight: 600; font-size: 24px; letter-spacing: .3px; color: var(--copper-2);">Compuls.</div>
+          <div style="border-bottom: 2px solid var(--copper); padding: 14px 6px; text-align: right; font-weight: 600; font-size: 24px; letter-spacing: .3px; color: var(--copper-2);">Flex</div>
+
+          <div style="border-bottom: 1px solid var(--line); padding: 18px 6px; font-weight: 500; font-size: 24px; color: var(--steel);">Sem copart.</div>
+          <div style="border-bottom: 1px solid var(--line); padding: 18px 6px; text-align: right; font-weight: 700; font-size: 33px; color: var(--navy); line-height: 1;">1.662,36</div>
+          <div style="border-bottom: 1px solid var(--line); padding: 18px 6px; text-align: right; font-weight: 500; font-size: 30px; color: var(--steel-soft); line-height: 1;">—</div>
+
+          <div style="padding: 18px 6px; font-weight: 500; font-size: 24px; color: var(--steel);">Com copart.</div>
+          <div style="padding: 18px 6px; text-align: right; font-weight: 700; font-size: 33px; color: var(--navy); line-height: 1;">1.246,00</div>
+          <div style="padding: 18px 6px; text-align: right; font-weight: 500; font-size: 30px; color: var(--steel-soft); line-height: 1;">—</div>
+        </div>
+      </div>
+
+      <!-- Porto P420 -->
+      <div style="background: var(--paper); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 12px 30px rgba(14,28,61,0.06);">
+        <div style="background: var(--navy); padding: 22px 24px;">
+          <div style="font-weight: 500; font-size: 24px; letter-spacing: 2px; color: var(--steel-soft); text-transform: uppercase;">Porto Seguro</div>
+          <div style="font-weight: 700; font-size: 32px; color: #fff; margin-top: 3px; letter-spacing: -0.5px;">P420</div>
+        </div>
+        <div style="padding: 8px 24px 24px; display: grid; grid-template-columns: 1.15fr 1fr 1fr; align-items: center; flex: 1;">
+          <div style="border-bottom: 2px solid var(--copper); padding: 14px 6px;"></div>
+          <div style="border-bottom: 2px solid var(--copper); padding: 14px 6px; text-align: right; font-weight: 600; font-size: 24px; letter-spacing: .3px; color: var(--copper-2);">Compuls.</div>
+          <div style="border-bottom: 2px solid var(--copper); padding: 14px 6px; text-align: right; font-weight: 600; font-size: 24px; letter-spacing: .3px; color: var(--copper-2);">Flex</div>
+
+          <div style="border-bottom: 1px solid var(--line); padding: 18px 6px; font-weight: 500; font-size: 24px; color: var(--steel);">Sem copart.</div>
+          <div style="border-bottom: 1px solid var(--line); padding: 18px 6px; text-align: right; font-weight: 700; font-size: 33px; color: var(--navy); line-height: 1;">2.113,98</div>
+          <div style="border-bottom: 1px solid var(--line); padding: 18px 6px; text-align: right; font-weight: 500; font-size: 30px; color: var(--steel-soft); line-height: 1;">—</div>
+
+          <div style="padding: 18px 6px; font-weight: 500; font-size: 24px; color: var(--steel);">Com copart.</div>
+          <div style="padding: 18px 6px; text-align: right; font-weight: 700; font-size: 33px; color: var(--navy); line-height: 1;">1.691,00</div>
+          <div style="padding: 18px 6px; text-align: right; font-weight: 500; font-size: 30px; color: var(--steel-soft); line-height: 1;">—</div>
+        </div>
+      </div>
+
+      <!-- Bradesco Efetivo Plus (destaque) -->
+      <div style="background: var(--paper); border: 2px solid var(--copper); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 16px 38px rgba(181,115,67,0.20);">
+        <div style="background: linear-gradient(140deg, #c88a5b, #b57343); padding: 22px 24px; position: relative;">
+          <div style="font-weight: 500; font-size: 24px; letter-spacing: 2px; color: rgba(255,255,255,0.82); text-transform: uppercase;">Bradesco</div>
+          <div style="font-weight: 700; font-size: 32px; color: #fff; margin-top: 3px; letter-spacing: -0.5px;">Efetivo Plus</div>
+          <div style="position: absolute; top: 20px; right: 22px; font-weight: 500; font-size: 22px; letter-spacing: 1px; color: #fff; border: 1px solid rgba(255,255,255,0.6); border-radius: 999px; padding: 3px 12px;">Destaque</div>
+        </div>
+        <div style="padding: 8px 24px 24px; display: grid; grid-template-columns: 1.15fr 1fr 1fr; align-items: center; flex: 1;">
+          <div style="border-bottom: 2px solid var(--copper); padding: 14px 6px;"></div>
+          <div style="border-bottom: 2px solid var(--copper); padding: 14px 6px; text-align: right; font-weight: 600; font-size: 24px; letter-spacing: .3px; color: var(--copper-2);">Compuls.</div>
+          <div style="border-bottom: 2px solid var(--copper); padding: 14px 6px; text-align: right; font-weight: 600; font-size: 24px; letter-spacing: .3px; color: var(--copper-2);">Flex</div>
+
+          <div style="border-bottom: 1px solid var(--line); padding: 18px 6px; font-weight: 500; font-size: 24px; color: var(--steel);">Sem copart.</div>
+          <div style="border-bottom: 1px solid var(--line); padding: 18px 6px; text-align: right; font-weight: 700; font-size: 33px; color: var(--navy); line-height: 1;">2.404,53</div>
+          <div style="border-bottom: 1px solid var(--line); padding: 18px 6px; text-align: right; font-weight: 700; font-size: 33px; color: var(--navy); line-height: 1;">2.664,32</div>
+
+          <div style="padding: 18px 6px; font-weight: 500; font-size: 24px; color: var(--steel);">Com copart.</div>
+          <div style="padding: 18px 6px; text-align: right; font-weight: 700; font-size: 33px; color: var(--navy); line-height: 1;">1.773,24</div>
+          <div style="padding: 18px 6px; text-align: right; font-weight: 700; font-size: 33px; color: var(--navy); line-height: 1;">1.962,89</div>
+        </div>
+      </div>
+
+    </div>
+    <div style="font-weight: 400; font-size: 24px; color: var(--steel-soft); margin-top: 22px; display: flex; align-items: center; gap: 12px;"><span style="color: var(--copper-2); font-size: 24px;">◆</span> Porto Seguro atua somente na modalidade compulsória (adesão de ≈ 80% da massa CLT) — regra Flex indisponível.</div>
+  </div>
+</section>
+
+<!-- ═══════════ SLIDE 4 · TOP ═══════════ -->
+<section data-label="Cat. Top" data-speaker-notes="Categoria Top: as duas opções premium. SulAmérica Especial 100 e Bradesco Top Nacional. Ambas com Compulsória e Flex. O Bradesco Top Nacional é a opção Bradesco desta faixa e o plano que recomendamos." style="background: var(--cream); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 74px 96px 64px; display: flex; flex-direction: column; font-family: var(--sans);">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 44px;">
+      <div>
+        <div style="font-weight: 600; font-size: 25px; letter-spacing: 6px; color: var(--copper-2); text-transform: uppercase; margin-bottom: 14px;">Categoria</div>
+        <h2 style="font-weight: 700; font-size: 60px; line-height: 1; color: var(--navy); margin: 0; letter-spacing: -1.5px;">Categoria Top</h2>
+      </div>
+      <div style="font-weight: 400; font-size: 24px; color: var(--steel-soft); text-align: right;">Valores mensais totais da apólice · R$</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; flex: 1;">
+
+      <!-- SulAmérica Especial 100 -->
+      <div style="background: var(--paper); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 14px 34px rgba(14,28,61,0.07);">
+        <div style="background: var(--navy); padding: 30px 40px;">
+          <div style="font-weight: 500; font-size: 26px; letter-spacing: 3px; color: var(--steel-soft); text-transform: uppercase;">SulAmérica</div>
+          <div style="font-weight: 700; font-size: 44px; color: #fff; margin-top: 3px; letter-spacing: -0.5px;">Especial 100</div>
+        </div>
+        <div style="padding: 14px 40px 34px; display: grid; grid-template-columns: 1.2fr 1fr 1fr; align-items: center; flex: 1;">
+          <div style="border-bottom: 2px solid var(--copper); padding: 18px 8px;"></div>
+          <div style="border-bottom: 2px solid var(--copper); padding: 18px 8px; text-align: right; font-weight: 600; font-size: 25px; letter-spacing: .5px; color: var(--copper-2);">Compulsória</div>
+          <div style="border-bottom: 2px solid var(--copper); padding: 18px 8px; text-align: right; font-weight: 600; font-size: 25px; letter-spacing: .5px; color: var(--copper-2);">Flex</div>
+
+          <div style="border-bottom: 1px solid var(--line); padding: 24px 8px; font-weight: 500; font-size: 26px; color: var(--steel);">Sem copart.</div>
+          <div style="border-bottom: 1px solid var(--line); padding: 24px 8px; text-align: right; font-weight: 700; font-size: 48px; color: var(--navy); line-height: 1;">3.947,00</div>
+          <div style="border-bottom: 1px solid var(--line); padding: 24px 8px; text-align: right; font-weight: 700; font-size: 48px; color: var(--navy); line-height: 1;">4.378,51</div>
+
+          <div style="padding: 24px 8px; font-weight: 500; font-size: 26px; color: var(--steel);">Com copart.</div>
+          <div style="padding: 24px 8px; text-align: right; font-weight: 700; font-size: 48px; color: var(--navy); line-height: 1;">2.985,36</div>
+          <div style="padding: 24px 8px; text-align: right; font-weight: 700; font-size: 48px; color: var(--navy); line-height: 1;">3.283,88</div>
+        </div>
+      </div>
+
+      <!-- Bradesco Top Nacional (destaque) -->
+      <div style="background: var(--paper); border: 2px solid var(--copper); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 18px 44px rgba(181,115,67,0.22);">
+        <div style="background: linear-gradient(140deg, #c88a5b, #b57343); padding: 30px 40px; position: relative;">
+          <div style="font-weight: 500; font-size: 26px; letter-spacing: 3px; color: rgba(255,255,255,0.85); text-transform: uppercase;">Bradesco</div>
+          <div style="font-weight: 700; font-size: 44px; color: #fff; margin-top: 3px; letter-spacing: -0.5px;">Top Nacional</div>
+          <div style="position: absolute; top: 30px; right: 36px; font-weight: 500; font-size: 22px; letter-spacing: 1px; color: #fff; border: 1px solid rgba(255,255,255,0.65); border-radius: 999px; padding: 5px 16px;">★ Recomendado</div>
+        </div>
+        <div style="padding: 14px 40px 34px; display: grid; grid-template-columns: 1.2fr 1fr 1fr; align-items: center; flex: 1;">
+          <div style="border-bottom: 2px solid var(--copper); padding: 18px 8px;"></div>
+          <div style="border-bottom: 2px solid var(--copper); padding: 18px 8px; text-align: right; font-weight: 600; font-size: 25px; letter-spacing: .5px; color: var(--copper-2);">Compulsória</div>
+          <div style="border-bottom: 2px solid var(--copper); padding: 18px 8px; text-align: right; font-weight: 600; font-size: 25px; letter-spacing: .5px; color: var(--copper-2);">Flex</div>
+
+          <div style="border-bottom: 1px solid var(--line); padding: 24px 8px; font-weight: 500; font-size: 26px; color: var(--steel);">Sem copart.</div>
+          <div style="border-bottom: 1px solid var(--line); padding: 24px 8px; text-align: right; font-weight: 700; font-size: 48px; color: var(--navy); line-height: 1;">3.303,10</div>
+          <div style="border-bottom: 1px solid var(--line); padding: 24px 8px; text-align: right; font-weight: 700; font-size: 48px; color: var(--navy); line-height: 1;">3.662,72</div>
+
+          <div style="padding: 24px 8px; font-weight: 500; font-size: 26px; color: var(--steel);">Com copart.</div>
+          <div style="padding: 24px 8px; text-align: right; font-weight: 700; font-size: 48px; color: var(--navy); line-height: 1;">2.493,92</div>
+          <div style="padding: 24px 8px; text-align: right; font-weight: 700; font-size: 48px; color: var(--navy); line-height: 1;">2.763,64</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SLIDE · REDE 1/2 ═══════════ -->
+<section data-label="Rede Credenciada" data-speaker-notes="Rede credenciada por operadora — parte 1 (Águas Claras a Ceilândia). O ✓ indica hospital ou laboratório credenciado no plano. Note a amplitude do Bradesco Enf/Apt e da SulAmérica Especial 100." style="background: var(--cream); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 38px 60px 26px; display: flex; flex-direction: column; font-family: var(--sans);">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 14px;">
+      <div>
+        <div style="font-weight: 600; font-size: 24px; letter-spacing: 6px; color: var(--copper-2); text-transform: uppercase; margin-bottom: 10px;">Rede Credenciada · 26 unidades</div>
+        <h2 style="font-weight: 700; font-size: 44px; line-height: 1; color: var(--navy); margin: 0; letter-spacing: -1.5px;">Hospitais e Laboratórios</h2>
+      </div>
+      <div style="display: flex; gap: 30px; align-items: center;">
+        <div style="display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; width: 34px; height: 34px; align-items: center; justify-content: center; background: rgba(200,138,91,0.16); color: var(--copper-2); font-size: 24px; font-weight: 700; border-radius: 6px;">✓</span><span style="font-weight: 500; font-size: 24px; color: var(--steel);">Credenciado</span></div>
+        <div style="display: flex; align-items: center; gap: 10px;"><span style="color: #cfc5b4; font-size: 23px; width: 34px; text-align: center;">–</span><span style="font-weight: 500; font-size: 24px; color: var(--steel);">Não credenciado</span></div>
+      </div>
+    </div>
+
+    <div style="flex: 1; min-height: 0; display: flex; flex-direction: column; border-top: 2px solid var(--navy); border-right: 1px solid var(--line); overflow: hidden;">
+      <div style="display: grid; grid-template-columns: 236px 656px repeat(6, 150px);">
+        <div style="grid-row: 1 / 3; background: var(--navy); color: #fff; font-weight: 600; font-size: 22px; letter-spacing: 1px; display: flex; align-items: center; padding: 0 16px;">REGIÃO</div>
+        <div style="grid-row: 1 / 3; background: var(--navy); color: #fff; font-weight: 600; font-size: 22px; letter-spacing: 1px; display: flex; align-items: center; padding: 0 16px; border-left: 1px solid rgba(255,255,255,0.14);">REDE CREDENCIADA</div>
+        <div style="grid-column: span 2; background: var(--navy); color: var(--copper); font-weight: 700; font-size: 24px; text-align: center; padding: 8px 0 5px; border-left: 2px solid rgba(255,255,255,0.24);">Bradesco</div>
+        <div style="grid-column: span 2; background: var(--navy); color: var(--copper); font-weight: 700; font-size: 24px; text-align: center; padding: 8px 0 5px; border-left: 2px solid rgba(255,255,255,0.24);">SulAmérica</div>
+        <div style="grid-column: span 2; background: var(--navy); color: var(--copper); font-weight: 700; font-size: 24px; text-align: center; padding: 8px 0 5px; border-left: 2px solid rgba(255,255,255,0.24);">Porto Seguro</div>
+        <div style="background: var(--navy); color: rgba(255,255,255,0.82); font-weight: 500; font-size: 22px; text-align: center; padding: 0 6px 9px; line-height: 1.05; border-left: 2px solid rgba(255,255,255,0.24);">Efetivo Plus</div>
+        <div style="background: var(--navy); color: rgba(255,255,255,0.82); font-weight: 500; font-size: 22px; text-align: center; padding: 0 6px 9px; line-height: 1.05; border-left: 1px solid rgba(255,255,255,0.1);">Top Nacional</div>
+        <div style="background: var(--navy); color: rgba(255,255,255,0.82); font-weight: 500; font-size: 22px; text-align: center; padding: 0 6px 9px; line-height: 1.05; border-left: 2px solid rgba(255,255,255,0.24);">Direto Nacional</div>
+        <div style="background: var(--navy); color: rgba(255,255,255,0.82); font-weight: 500; font-size: 22px; text-align: center; padding: 0 6px 9px; line-height: 1.05; border-left: 1px solid rgba(255,255,255,0.1);">Especial 100</div>
+        <div style="background: var(--navy); color: rgba(255,255,255,0.82); font-weight: 500; font-size: 22px; text-align: center; padding: 0 6px 9px; line-height: 1.05; border-left: 2px solid rgba(255,255,255,0.24);">P320</div>
+        <div style="background: var(--navy); color: rgba(255,255,255,0.82); font-weight: 500; font-size: 22px; text-align: center; padding: 0 6px 9px; line-height: 1.05; border-left: 1px solid rgba(255,255,255,0.1);">P420</div>
+      </div>
+      <div style="flex: 1; min-height: 0; display: flex; flex-direction: column;">
+        <sc-for list="{{ net }}" as="row" hint-placeholder-count="26">
+          <div style="flex: 1; display: grid; grid-template-columns: 236px 656px repeat(6, 150px); align-items: stretch; min-height: 0;">
+            <div style="display: flex; align-items: center; padding: 0 16px; font-weight: 500; font-size: 22px; color: var(--steel); border-bottom: 1px solid var(--line); line-height: 1.05; white-space: nowrap; overflow: hidden;">{{ row.regiao }}</div>
+            <div style="display: flex; align-items: center; padding: 0 16px; font-weight: 600; font-size: 22px; color: var(--navy); border-bottom: 1px solid var(--line); border-left: 1px solid var(--line); line-height: 1.05; white-space: nowrap; overflow: hidden;">{{ row.hospital }}</div>
+            <sc-for list="{{ row.cells }}" as="c" hint-placeholder-count="6">
+              <div style="display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--line); border-left: 1px solid var(--line); padding: 0;">
+                <sc-if value="{{ c.s }}" hint-placeholder-val="{{ true }}"><div style="width: calc(100% - 12px); height: calc(100% - 8px); display: flex; align-items: center; justify-content: center; background: rgba(200,138,91,0.22); color: var(--copper-2); font-size: 22px; font-weight: 700; line-height: 1; border-radius: 5px;">✓</div></sc-if>
+                <sc-if value="{{ c.n }}"><span style="color: #cfc5b4; font-size: 23px;">–</span></sc-if>
+                <sc-if value="{{ c.o }}"><span style="color: var(--copper-2); font-size: 22px; font-weight: 600;">onc.*</span></sc-if>
+              </div>
+            </sc-for>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="font-weight: 400; font-size: 24px; color: var(--steel-soft); margin-top: 10px;">* Hospital Sírio Libanês (SulAmérica Especial 100): cobertura apenas para oncologia.</div>
+  </div>
+</section>
+
+<!-- ═══════════ SLIDE 5 · RECOMENDAÇÃO ═══════════ -->
+<section data-label="Recomendação" data-speaker-notes="Recomendação Bem Melhor: Bradesco. Rede nacional ampla, disponível nas duas modalidades (Compulsória e Flex) e melhor equilíbrio entre cobertura e custo. Apresentar as duas opções Bradesco — Efetivo Plus (Intermediária) e Top Nacional (Top)." style="background: radial-gradient(120% 120% at 80% 0%, #16294a 0%, #0e1c3d 60%, #0a1530 100%); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 84px 100px 72px; display: flex; flex-direction: column; font-family: var(--sans);">
+    <img src="assets/logo-white.png" alt="" style="position: absolute; right: -170px; top: -180px; width: 620px; opacity: 0.05; pointer-events: none;">
+    <div style="position: relative;">
+      <div style="font-weight: 600; font-size: 26px; letter-spacing: 8px; color: var(--copper); text-transform: uppercase; margin-bottom: 20px;">Nossa recomendação</div>
+      <h2 style="font-weight: 700; font-size: 72px; line-height: 1.02; color: #fff; margin: 0 0 18px; letter-spacing: -2px;">A escolha Bem Melhor é a <span style="color: var(--copper);">Bradesco</span></h2>
+      <p style="font-weight: 300; font-size: 29px; line-height: 1.4; color: rgba(255,255,255,0.75); margin: 0; max-width: 1140px;">Rede nacional ampla, disponibilidade nas duas modalidades de contratação e o melhor equilíbrio entre cobertura e custo para o perfil da FACE Serviços Médicos.</p>
+    </div>
+
+    <div style="position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 34px; margin-top: 48px;">
+      <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(200,138,91,0.4); border-radius: 20px; padding: 34px 38px;">
+        <div style="font-weight: 500; font-size: 24px; letter-spacing: 2px; color: var(--copper); text-transform: uppercase; margin-bottom: 6px;">Intermediária</div>
+        <div style="font-weight: 700; font-size: 44px; color: #fff; margin-bottom: 28px; letter-spacing: -0.5px;">Bradesco Efetivo Plus</div>
+        <div style="display: flex; gap: 48px;">
+          <div>
+            <div style="font-weight: 400; font-size: 24px; color: rgba(255,255,255,0.6); margin-bottom: 10px;">Compulsória · com copart.</div>
+            <div style="font-weight: 700; font-size: 50px; color: #fff; line-height: 1;"><span style="font-weight: 400; font-size: 26px; color: var(--copper);">R$ </span>1.773,24</div>
+          </div>
+          <div>
+            <div style="font-weight: 400; font-size: 24px; color: rgba(255,255,255,0.6); margin-bottom: 10px;">Compulsória · sem copart.</div>
+            <div style="font-weight: 700; font-size: 50px; color: #fff; line-height: 1;"><span style="font-weight: 400; font-size: 26px; color: var(--copper);">R$ </span>2.404,53</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: linear-gradient(140deg, rgba(200,138,91,0.24), rgba(181,115,67,0.10)); border: 2px solid var(--copper); border-radius: 20px; padding: 34px 38px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+          <div style="font-weight: 500; font-size: 24px; letter-spacing: 2px; color: var(--copper); text-transform: uppercase;">Top</div>
+          <div style="font-weight: 600; font-size: 22px; letter-spacing: 1px; color: var(--navy); background: var(--copper); border-radius: 999px; padding: 5px 16px;">★ Destaque</div>
+        </div>
+        <div style="font-weight: 700; font-size: 44px; color: #fff; margin-bottom: 28px; letter-spacing: -0.5px;">Bradesco Top Nacional</div>
+        <div style="display: flex; gap: 48px;">
+          <div>
+            <div style="font-weight: 400; font-size: 24px; color: rgba(255,255,255,0.65); margin-bottom: 10px;">Compulsória · com copart.</div>
+            <div style="font-weight: 700; font-size: 50px; color: #fff; line-height: 1;"><span style="font-weight: 400; font-size: 26px; color: var(--copper);">R$ </span>2.493,92</div>
+          </div>
+          <div>
+            <div style="font-weight: 400; font-size: 24px; color: rgba(255,255,255,0.65); margin-bottom: 10px;">Compulsória · sem copart.</div>
+            <div style="font-weight: 700; font-size: 50px; color: #fff; line-height: 1;"><span style="font-weight: 400; font-size: 26px; color: var(--copper);">R$ </span>3.303,10</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position: relative; display: flex; gap: 40px; margin-top: 46px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 14px; font-weight: 300; font-size: 26px; color: rgba(255,255,255,0.85);"><span style="color: var(--copper); font-size: 24px;">◆</span> Rede nacional ampla</div>
+      <div style="display: flex; align-items: center; gap: 14px; font-weight: 300; font-size: 26px; color: rgba(255,255,255,0.85);"><span style="color: var(--copper); font-size: 24px;">◆</span> Modalidades Compulsória e Flex</div>
+      <div style="display: flex; align-items: center; gap: 14px; font-weight: 300; font-size: 26px; color: rgba(255,255,255,0.85);"><span style="color: var(--copper); font-size: 24px;">◆</span> Melhor custo-benefício</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SLIDE 6 · PONTOS IMPORTANTES ═══════════ -->
+<section data-label="Pontos Importantes" data-speaker-notes="Recapitular as regras e os pontos de atenção antes do fechamento: definição de Compulsória e Flex, restrição da Porto, lógica da coparticipação e a base dos valores (totais mensais da apólice)." style="background: var(--cream); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 80px 96px 76px; display: flex; flex-direction: column; font-family: var(--sans);">
+    <div style="font-weight: 600; font-size: 25px; letter-spacing: 6px; color: var(--copper-2); text-transform: uppercase; margin-bottom: 16px;">Antes de decidir</div>
+    <h2 style="font-weight: 700; font-size: 60px; line-height: 1; color: var(--navy); margin: 0 0 46px; letter-spacing: -1.5px;">Pontos Importantes</h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px 56px; flex: 1;">
+      <div style="display: flex; gap: 24px; align-items: flex-start;">
+        <div style="font-weight: 700; font-size: 40px; color: var(--copper); line-height: 1; min-width: 54px;">01</div>
+        <div>
+          <div style="font-weight: 700; font-size: 33px; color: var(--navy); margin-bottom: 8px; letter-spacing: -0.5px;">Regra Compulsória</div>
+          <div style="font-weight: 300; font-size: 27px; line-height: 1.42; color: var(--steel);">Adesão de aproximadamente 80% da massa de colaboradores CLT ao plano. Condição para o valor mais competitivo.</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 24px; align-items: flex-start;">
+        <div style="font-weight: 700; font-size: 40px; color: var(--copper); line-height: 1; min-width: 54px;">02</div>
+        <div>
+          <div style="font-weight: 700; font-size: 33px; color: var(--navy); margin-bottom: 8px; letter-spacing: -0.5px;">Regra Flex (Opcional)</div>
+          <div style="font-weight: 300; font-size: 27px; line-height: 1.42; color: var(--steel);">Quando nem todos os colaboradores entram no benefício, o valor fica aproximadamente 10% superior ao da regra compulsória.</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 24px; align-items: flex-start;">
+        <div style="font-weight: 700; font-size: 40px; color: var(--copper); line-height: 1; min-width: 54px;">03</div>
+        <div>
+          <div style="font-weight: 700; font-size: 33px; color: var(--navy); margin-bottom: 8px; letter-spacing: -0.5px;">Porto Seguro</div>
+          <div style="font-weight: 300; font-size: 27px; line-height: 1.42; color: var(--steel);">Trabalha exclusivamente na modalidade compulsória, exigindo adesão de ≈ 80% da massa CLT. Não oferece regra Flex.</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 24px; align-items: flex-start;">
+        <div style="font-weight: 700; font-size: 40px; color: var(--copper); line-height: 1; min-width: 54px;">04</div>
+        <div>
+          <div style="font-weight: 700; font-size: 33px; color: var(--navy); margin-bottom: 8px; letter-spacing: -0.5px;">Coparticipação e valores</div>
+          <div style="font-weight: 300; font-size: 27px; line-height: 1.42; color: var(--steel);">Com coparticipação reduz a mensalidade, com pequena participação por uso. Todos os valores são totais mensais da apólice.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SLIDE 7 · PRÓXIMOS PASSOS ═══════════ -->
+<section data-label="Próximos Passos" data-speaker-notes="Fechamento. Definir categoria, operadora e modalidade; seguir para documentação e cadastro; implantação e vigência. Abrir para contato com a Bem Melhor." style="background: radial-gradient(120% 120% at 15% 100%, #16294a 0%, #0e1c3d 58%, #0a1530 100%); overflow: hidden;">
+  <div style="position: relative; width: 100%; height: 100%; box-sizing: border-box; padding: 90px 100px 80px; display: flex; flex-direction: column; justify-content: space-between; font-family: var(--sans);">
+    <img src="assets/logo-white.png" alt="" style="position: absolute; left: -160px; top: -160px; width: 560px; opacity: 0.05; pointer-events: none;">
+    <div style="position: relative;">
+      <div style="font-weight: 600; font-size: 26px; letter-spacing: 8px; color: var(--copper); text-transform: uppercase; margin-bottom: 20px;">Próximos passos</div>
+      <h2 style="font-weight: 700; font-size: 66px; line-height: 1.02; color: #fff; margin: 0; letter-spacing: -2px; max-width: 1100px;">Vamos avançar com a proposta</h2>
+    </div>
+
+    <div style="position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px;">
+      <div style="border-top: 3px solid var(--copper); padding-top: 26px;">
+        <div style="font-weight: 700; font-size: 34px; color: var(--copper); margin-bottom: 14px;">1</div>
+        <div style="font-weight: 600; font-size: 30px; color: #fff; margin-bottom: 10px;">Definição</div>
+        <div style="font-weight: 300; font-size: 25px; line-height: 1.4; color: rgba(255,255,255,0.72);">Escolha da categoria, operadora e modalidade de contratação.</div>
+      </div>
+      <div style="border-top: 3px solid var(--copper); padding-top: 26px;">
+        <div style="font-weight: 700; font-size: 34px; color: var(--copper); margin-bottom: 14px;">2</div>
+        <div style="font-weight: 600; font-size: 30px; color: #fff; margin-bottom: 10px;">Documentação</div>
+        <div style="font-weight: 300; font-size: 25px; line-height: 1.4; color: rgba(255,255,255,0.72);">Coleta de documentos e cadastro dos colaboradores.</div>
+      </div>
+      <div style="border-top: 3px solid var(--copper); padding-top: 26px;">
+        <div style="font-weight: 700; font-size: 34px; color: var(--copper); margin-bottom: 14px;">3</div>
+        <div style="font-weight: 600; font-size: 30px; color: #fff; margin-bottom: 10px;">Implantação</div>
+        <div style="font-weight: 300; font-size: 25px; line-height: 1.4; color: rgba(255,255,255,0.72);">Formalização, vigência do plano e início dos benefícios.</div>
+      </div>
+    </div>
+
+    <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; border-top: 1px solid rgba(255,255,255,0.14); padding-top: 34px;">
+      <div>
+        <div style="font-weight: 700; font-size: 30px; color: #fff; letter-spacing: -0.5px;">Bem Melhor Seguros e Benefícios</div>
+        <div style="font-weight: 300; font-size: 25px; color: var(--steel-soft); margin-top: 8px;">Estamos à disposição para avançar com a sua proposta.</div>
+      </div>
+      <img src="assets/logo-white.png" alt="Bem Melhor" style="width: 150px; height: auto; opacity: 0.92;">
+    </div>
+  </div>
+</section>
+
+</x-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const mk = (regiao, hospital, arr) => ({
+      regiao, hospital,
+      cells: arr.split(' ').map(v => ({ s: v === 's', n: v === 'n', o: v === 'o' }))
+    });
+    const all = [
+      mk('Águas Claras', 'Hospital Águas Claras', 's s n s s s'),
+      mk('Asa Norte', 'Hospital Santa Helena', 'n s s s n n'),
+      mk('Asa Norte', 'Hospital Prontonorte / Santa Lúcia Norte', 's s n s s s'),
+      mk('Asa Sul', 'Hospital do Coração', 'n s n s n n'),
+      mk('Asa Sul', 'Hospital DF Star', 'n n n s n n'),
+      mk('Asa Sul', 'Hospital Santa Luzia', 'n s s s n n'),
+      mk('Asa Sul', 'Hospital Alvorada', 'n s n s s s'),
+      mk('Asa Sul', 'Hospital Home', 's s n s n n'),
+      mk('Asa Sul', 'Hospital Santa Lúcia', 's s n s s s'),
+      mk('Asa Sul', 'Hospital Pacini', 'n s n n s s'),
+      mk('Asa Sul', 'Hospital PAI', 'n s n s n n'),
+      mk('Asa Sul', 'Hospital Sírio Libanês', 'n n n o n s'),
+      mk('Ceilândia', 'Hospital Anchieta Ceilândia (Antigo São Francisco)', 's s s s s s'),
+      mk('Ceilândia', 'Hospital das Clínicas e Fraturas', 'n s n s n n'),
+      mk('Cruzeiro', 'Hospital São Mateus', 'n s n s n n'),
+      mk('Gama', 'Hospital Maria Auxiliadora', 's s s s n n'),
+      mk('Lago Sul', 'Hospital Brasília', 's s n s s s'),
+      mk('Lago Sul', 'Hospital Daher', 'n s s s s s'),
+      mk('Lago Sul', 'Hospital Urológico', 'n s n s n n'),
+      mk('Sudoeste', 'Maternidade Brasília', 'n s n s s s'),
+      mk('Tag. Norte', 'Hospital Anchieta', 's s n s n s'),
+      mk('Tag. Sul', 'Hospital Ana Nery', 'n s n s n n'),
+      mk('Tag. Sul', 'Santa Lúcia Sul', 's s n s n n'),
+      mk('Tag. Sul', 'Hospital Santa Marta', 's s s s s s'),
+      mk('Todas Unidades', 'Laboratório Sabin', 's s s s s s'),
+      mk('Todas Unidades', 'Laboratório Exame', 'n s n s s s')
+    ];
+    return { net: all };
+  }
+}
+</script>
+<script>
+(async () => {
+  if (!document.title || !document.title.trim()) document.title = "Proposta Bem Melhor";
+  // Prepend so page-supplied @page / break rules (deck-stage's margin:0,
+  // author CSS) keep source-order precedence over the baseline.
+  const baseCss = document.createElement('style');
+  baseCss.textContent = "@media print {\n  figure, table { break-inside: avoid; }\n  *, *::before, *::after {\n    print-color-adjust: exact; -webkit-print-color-adjust: exact;\n    backdrop-filter: none !important; -webkit-backdrop-filter: none !important;\n    animation-delay: -99s !important; animation-duration: .001s !important;\n    animation-iteration-count: 1 !important; animation-fill-mode: both !important;\n    animation-play-state: running !important; transition-duration: 0s !important;\n  }\n}";
+  document.head.prepend(baseCss);
+  if (document.readyState === 'loading') {
+    await new Promise((r) => document.addEventListener('DOMContentLoaded', r, { once: true }));
+  }
+  let ds = document.querySelector('deck-stage');
+  // whenDefined never resolves when nothing registers the element, so only
+  // await it when a <deck-stage> tag exists (and race a timeout regardless).
+  if (ds && !customElements.get('deck-stage')) {
+    try {
+      await Promise.race([
+        customElements.whenDefined('deck-stage'),
+        new Promise((r) => setTimeout(r, 3000)),
+      ]);
+    } catch (e) {}
+    ds = document.querySelector('deck-stage');
+  }
+  // dc-runtime assigns window.DCLogic at init and mounts into #dc-root on
+  // DOMContentLoaded; settle on that subtree so React has rendered before
+  // print(). Non-DC pages fall through to weighing body.
+  const isDc = !ds && 'DCLogic' in window;
+  const settleRoot = ds || (isDc ? document.getElementById('dc-root') : null) || document.body;
+  if (settleRoot) {
+    // Weigh only content children — skip script/style/template so inline
+    // Babel/CSS doesn't register as stable "content" before the framework
+    // has mounted anything.
+    const MEDIA = 'img,svg,canvas,video,picture,iframe,embed,object';
+    const weigh = () => {
+      let text = 0, media = 0;
+      for (const c of settleRoot.children) {
+        const t = c.tagName;
+        if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+        text += (c.textContent || '').trim().length;
+        media += c.querySelectorAll(MEDIA).length + (c.matches(MEDIA) ? 1 : 0);
+      }
+      return text + media * 100;
+    };
+    // "Non-zero and stable" alone is not sufficient to mean rendered: generic
+    // body can carry a static shell while async main content is pending, and
+    // #dc-root can carry the root DC's static text while child refs are still
+    // .sc-placeholder boxes. Gate generic on readyState 'complete', and never
+    // accept stability while a dc-runtime placeholder is present.
+    const isGeneric = settleRoot === document.body;
+    const deadline = Date.now() + 15000;
+    let last = -1, stable = 0;
+    while (Date.now() < deadline) {
+      const n = weigh();
+      const ready =
+        (!isGeneric || document.readyState === 'complete') &&
+        !settleRoot.querySelector('.sc-placeholder');
+      if (n > 0 && n === last && ready) { if (++stable >= 2) break; } else { stable = 0; }
+      last = n;
+      await new Promise((r) => setTimeout(r, 250));
+    }
+  }
+  // Project support.js may predate runtime default-seeding; push via bridge.
+  if (isDc && window.__dcSetProps && window.__dcRootName) {
+    try {
+      const dpEl = document.querySelector('script[data-dc-script]');
+      const meta = JSON.parse((dpEl && dpEl.getAttribute('data-props')) || '{}');
+      const bag = {};
+      for (const k in meta)
+        if (k[0] !== '$' && meta[k] && meta[k].default !== undefined)
+          bag[k] = meta[k].default;
+      if (Object.keys(bag).length) {
+        window.__dcSetProps(window.__dcRootName(), bag);
+        await new Promise((r) => setTimeout(r, 50));
+      }
+    } catch (e) {}
+  }
+  // Reveal content gated on scroll or visibility before printing. Lazy <img>,
+  // IntersectionObserver fade-ins, and collapsed <details> don't render while
+  // off-screen, so a long page would print with them blank or closed. Open
+  // every <details>, force native-lazy images eager, and scroll the document
+  // through its full height to trip lazy-load + IO; then wait (bounded) for the
+  // newly-triggered images. Inert for deck-stage (slides aren't scroll-gated).
+  try {
+    for (const d of document.querySelectorAll('details')) d.open = true;
+    for (const img of document.querySelectorAll('img[loading="lazy"]'))
+      img.loading = 'eager';
+    const scroller = document.scrollingElement || document.documentElement;
+    const full = Math.max(scroller.scrollHeight, document.body.scrollHeight);
+    const step = window.innerHeight || 800;
+    for (let y = 0; y <= full; y += step) {
+      window.scrollTo(0, y);
+      await new Promise((r) => requestAnimationFrame(r));
+    }
+    window.scrollTo(0, 0);
+    await Promise.race([
+      Promise.all(
+        [...document.images].map((img) =>
+          img.complete
+            ? null
+            : new Promise((res) => {
+                img.addEventListener('load', res, { once: true });
+                img.addEventListener('error', res, { once: true });
+              })
+        )
+      ),
+      new Promise((r) => setTimeout(r, 4000)),
+    ]);
+  } catch (e) {}
+  try { await document.fonts.ready; } catch (e) {}
+  // Jump every animation to its end state so print() never captures a slide
+  // mid-entrance. Ordering matters: the 0s-transition style must be live
+  // BEFORE data-deck-active is set so attribute-keyed transitions don't
+  // start a (now-0s) run from the pre-active base.
+  const st = document.createElement('style');
+  st.textContent = '*,*::before,*::after{animation-delay:-99s !important;animation-duration:.001s !important;animation-iteration-count:1 !important;animation-fill-mode:both !important;animation-play-state:running !important;transition-duration:0s !important}';
+  document.head.appendChild(st);
+  for (const d of document.querySelectorAll('deck-stage')) {
+    for (const c of d.children) {
+      const t = c.tagName;
+      if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+      c.setAttribute('data-deck-active', '');
+    }
+  }
+  // Re-append deck-stage's @page last so no author @page can add a margin and
+  // spill each full-bleed slide onto two sheets. Backstop for old copies.
+  if (ds) {
+    let pg = document.getElementById('deck-stage-print-page');
+    if (!pg) {
+      pg = document.createElement('style');
+      pg.textContent = '@page{size:' + (+ds.getAttribute('width') || 1920) +
+        'px ' + (+ds.getAttribute('height') || 1080) + 'px;margin:0}';
+    }
+    document.body.appendChild(pg);
+  }
+  try {
+    const sweep = () => {
+      for (const a of document.getAnimations()) {
+        try { a.finish(); } catch (e) {
+          try { a.currentTime = (a.effect && a.effect.getComputedTiming().duration) || 0; a.pause(); } catch (e2) {}
+        }
+      }
+    };
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+  } catch (e) {}
+  // Size the PDF page to the rendered design unless the file opted into
+  // standard paper via @page{size:letter|A4|…}. Decks own their own @page.
+  // Wrappers (body, …) lose padding+margin so the frame sits at (0,0); the
+  // frame itself loses only margin — its padding is INSIDE the measured
+  // rect and must stay, or content shifts and leaves a gap at bottom/right.
+  var __m = null;
+  try { __m = (() => {
+  var STAMP = true;
+  var docEl = document.documentElement;
+  var doc = { width: docEl.scrollWidth, height: docEl.scrollHeight };
+
+  var ds = document.querySelector('deck-stage');
+  if (ds) {
+    var dw = Number(ds.getAttribute('width')) || 1920;
+    var dh = Number(ds.getAttribute('height')) || 1080;
+    var n = typeof ds.length === 'number' ? ds.length : ds.children.length;
+    var idx = typeof ds.index === 'number' ? ds.index : 0;
+    var frames = [];
+    for (var i = 0; i < n; i++) frames.push({ left: 0, top: 0, width: dw, height: dh });
+    return { kind: 'deck', source: 'declared', doc: doc, frames: frames,
+      authored: frames.map(function(){return{width:true,height:true}}),
+      deck: { width: dw, height: dh, slideCount: n, index: idx },
+      signals: { paperPage: false, pxPage: false } };
+  }
+
+  // Declared kind: a doc-page tag names the kind outright, so no signal
+  // heuristics run (like the deck branch above, signals report false —
+  // they describe inferred classifications only). The tag alone is not
+  // trusted: the element must have upgraded (shadowRoot present), so a
+  // leftover tag whose script was deleted falls through to the heuristics
+  // that handle plain markup.
+  var stageSx = window.scrollX || 0, stageSy = window.scrollY || 0;
+  var dp = document.querySelector('doc-page');
+  if (dp && dp.shadowRoot) {
+    // Crop to the sheet, not the host — the desk around it is screen-only
+    // chrome that must not land in PNG exports.
+    var sheet = dp.shadowRoot.querySelector('.sheet');
+    var sr = (sheet || dp).getBoundingClientRect();
+    return { kind: 'paper-doc', source: 'declared', doc: doc,
+      frames: [{ left: sr.left + stageSx, top: sr.top + stageSy,
+        width: sr.width, height: sr.height }],
+      authored: [{ width: false, height: false }],
+      signals: { paperPage: false, pxPage: false } };
+  }
+  var paperPage = false, pxPage = false;
+  var eachRule = function (fn) {
+    for (var s = 0; s < document.styleSheets.length; s++) {
+      var rs; try { rs = document.styleSheets[s].cssRules; } catch (e) { continue; }
+      for (var r = 0; r < rs.length; r++) {
+        fn(rs[r]);
+        if (rs[r].cssRules) for (var n = 0; n < rs[r].cssRules.length; n++) fn(rs[r].cssRules[n]);
+      }
+    }
+  };
+  eachRule(function (r) {
+    if (r.type !== 6) return;
+    var m = /\bsize\s*:\s*([^;}]+)/i.exec(r.cssText || '');
+    if (!m) return;
+    if (/\b(letter|a[3-5]|legal|ledger)\b/i.test(m[1])) paperPage = true;
+    if (/\d+(?:\.\d+)?px\b/i.test(m[1])) pxPage = true;
+  });
+  var signals = { paperPage: paperPage, pxPage: pxPage };
+
+  var pxVal = function (v) {
+    var m = /^(\d+(?:\.\d+)?)px$/.exec(v || ''); return m ? +m[1] : 0;
+  };
+  var authoredPx = function (el, prop) {
+    if (pxVal(el.style[prop])) return true;
+    var attr = el.getAttribute(prop);
+    if (attr && /^\d+$/.test(attr)) return true;
+    var hit = false;
+    eachRule(function (r) {
+      if (hit || r.type !== 1 || !r.style) return;
+      try { if (el.matches(r.selectorText) && pxVal(r.style[prop])) hit = true; } catch (e) {}
+    });
+    return hit;
+  };
+
+  var el = document.body, rootPxW = false;
+  for (;;) {
+    var kids = [];
+    for (var c = 0; c < el.children.length; c++) {
+      var t = el.children[c].tagName;
+      if (t !== 'SCRIPT' && t !== 'STYLE' && t !== 'TEMPLATE') kids.push(el.children[c]);
+    }
+    if (kids.length !== 1 || !(kids[0] instanceof HTMLElement)) break;
+    if (STAMP) el.setAttribute('data-om-frame-wrap', '');
+    el = kids[0];
+    rootPxW = authoredPx(el, 'width');
+    if (rootPxW) break;
+  }
+  if (!rootPxW) rootPxW = authoredPx(el, 'width');
+
+  // @page{size:letter} alone is a flowing doc; with a px-width root it's a
+  // fixed sheet pretending to be paper — fall through and size to render.
+  if (paperPage && !rootPxW) {
+    return { kind: 'paper-doc', source: 'inferred', doc: doc, signals: signals,
+      frames: [{ left: 0, top: 0, width: doc.width, height: doc.height }],
+      authored: [{ width: false, height: false }] };
+  }
+
+  var sx = window.scrollX || 0, sy = window.scrollY || 0;
+  var rectOf = function (e) {
+    var r = e.getBoundingClientRect();
+    var oy; try { oy = getComputedStyle(e).overflowY; } catch (err) {}
+    var h = oy === 'visible' ? Math.max(r.height, e.scrollHeight || 0) : r.height;
+    return { left: r.left + sx, top: r.top + sy, width: r.width, height: h };
+  };
+
+  // Multi-frame: ≥2 visible non-fixed children, each with authored px width
+  // AND height, all within ±2px of each other. Off unless the page opts in
+  // via data-om-multi-frame on the stop element — guards against card grids
+  // and pricing tables that match the geometry but aren't separate canvases.
+  if (el.hasAttribute('data-om-multi-frame')) {
+    var cands = [];
+    for (var k = 0; k < el.children.length; k++) {
+      var ch = el.children[k];
+      var cs; try { cs = getComputedStyle(ch); } catch (e) { continue; }
+      if (cs.display === 'none' || cs.visibility === 'hidden' || cs.position === 'fixed') continue;
+      var rc = rectOf(ch);
+      if (rc.width < 2 || rc.height < 2) continue;
+      if (!authoredPx(ch, 'width') || !authoredPx(ch, 'height')) continue;
+      cands.push(rc);
+    }
+    if (cands.length >= 2) {
+      var w0 = cands[0].width, h0 = cands[0].height, ok = true;
+      for (var q = 1; q < cands.length; q++)
+        if (Math.abs(cands[q].width - w0) > 2 || Math.abs(cands[q].height - h0) > 2) ok = false;
+      if (ok) return { kind: 'multi-frame', source: 'inferred', doc: doc, signals: signals,
+        frames: cands, authored: cands.map(function(){return{width:true,height:true}}) };
+    }
+  }
+
+  if (STAMP) el.setAttribute('data-om-frame', '');
+  return { kind: 'single-canvas', source: 'inferred', doc: doc, signals: signals,
+    frames: [rectOf(el)],
+    authored: [{ width: rootPxW, height: authoredPx(el, 'height') }] };
+})(); } catch (e) {}
+  var frame = null;
+  if (__m && __m.kind === 'single-canvas') {
+    var f = __m.frames && __m.frames[0];
+    if (f && f.width >= 200 && f.height >= 200) {
+      frame = f;
+      var fst = document.createElement('style');
+      fst.textContent = '@media print{@page{size:' + Math.ceil(f.width) + 'px ' +
+        Math.ceil(f.height) + 'px;margin:0}' +
+        'html,body,[data-om-frame-wrap]{padding:0!important;margin:0!important;background:none!important}' +
+        '[data-om-frame]{margin:0!important}}';
+      document.body.appendChild(fst);
+    }
+  }
+  // Relax break-inside on oversized elements. An element taller than a
+  // printable page can't honor break-inside: avoid — browsers either overflow
+  // it or push it whole to the next page, leaving a blank gap, then break it
+  // anyway at an arbitrary point. After the final layout (content revealed,
+  // animations jumped), find elements taller than a page that still compute
+  // break-inside: avoid and reset them to auto, so the browser breaks them at
+  // their children's boundaries instead (children keep their own avoid). PAGE_PX
+  // is a conservative portrait estimate at 96 CSS px/in — Letter/A4 usable
+  // height minus our 0.5in margins — so only clearly-oversized elements are
+  // touched and under-page elements still stay whole. Skipped for decks (slides
+  // are sized to the page) and for fixed-size canvases (frame set, or an author
+  // px-based @page) — runs as before for flowing docs on letter/A4.
+  try {
+    if (!ds && !frame && !(__m && __m.signals && __m.signals.pxPage)) {
+      const PAGE_PX = 1024;
+      // Our print defaults add a real @page margin only when the source has
+      // no @page of its own; computed style can't tell us (it reports screen
+      // media), so read the injected rule directly.
+      const defaults = document.querySelector('style[data-omelette-print-defaults]');
+      const pageInset = /@page\s*\{[^}]*margin/.test(defaults ? defaults.textContent || '' : '');
+      const SEL = 'section,article,figure,table,pre,blockquote,[class~="card" i],[class~="page" i],[class~="sheet" i]';
+      for (const el of document.body.querySelectorAll(SEL)) {
+        if (el instanceof HTMLElement && el.offsetHeight > PAGE_PX) {
+          el.setAttribute('data-om-oversized', '');
+          // Fake-paged docs simulate sheets with over-tall break-after:page
+          // boxes; honoring the break spills half-blank pages and ends a
+          // colored box mid-sheet. Flow them, and (only when we own the page
+          // inset) drop the redundant padding/background via the rule below.
+          const cs = getComputedStyle(el);
+          if (cs.breakAfter === 'page' || cs.pageBreakAfter === 'always') {
+            el.setAttribute('data-om-fakepage', '');
+          }
+        }
+      }
+      const ost = document.createElement('style');
+      ost.textContent = '@media print{' +
+        '[data-om-oversized]{break-inside:auto !important;page-break-inside:auto !important}' +
+        '[data-om-fakepage]{break-after:auto !important;page-break-after:auto !important}' +
+        (pageInset ? '[data-om-fakepage]{padding:0 !important;background:none !important}' : '') +
+        '}';
+      document.head.appendChild(ost);
+    }
+  } catch (e) {}
+  // macOS Preview renders Skia-PDF Luminosity soft-masks as opaque grey boxes;
+  // swap the CSS that triggers them for Preview-safe forms.
+  try {
+    for (const el of document.body.querySelectorAll('*')) {
+      const cs = getComputedStyle(el);
+
+      if (cs.boxShadow !== 'none' && cs.filter === 'none') {
+        const outs = [], kept = [];
+        for (const s of cs.boxShadow.split(/,(?![^(]*[)])/)) {
+          const t = s.trim();
+          const m = t.match(/^(rgba?[(][^)]+[)]) (-?[0-9.]+px) (-?[0-9.]+px) ([0-9.]+px) -?[0-9.]+px$/);
+          if (m && parseFloat(m[4]) > 0) outs.push('drop-shadow(' + m[2] + ' ' + m[3] + ' ' + m[4] + ' ' + m[1] + ')');
+          else kept.push(t);
+        }
+        if (outs.length) {
+          el.style.setProperty('filter', outs.join(' '), 'important');
+          el.style.setProperty('box-shadow', kept.join(', ') || 'none', 'important');
+        }
+      }
+
+      const mask = cs.maskImage && cs.maskImage !== 'none' ? cs.maskImage : cs.webkitMaskImage;
+      if (mask && mask !== 'none' && cs.filter === 'none') el.style.setProperty('filter', 'opacity(1)', 'important');
+    }
+  } catch (e) {}
+  setTimeout(() => { try { window.print(); } catch (e) {} }, 200);
+})();
+</script>
+</body>
+</html>
