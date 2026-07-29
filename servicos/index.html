@@ -228,21 +228,21 @@
           <form onSubmit="{{ submit }}" style="padding: 30px 34px 36px; display: flex; flex-direction: column; gap: 16px;">
             <label style="display: flex; flex-direction: column; gap: 7px;">
               <span style="font-weight: 600; font-size: 14px; color: #fff;">Nome</span>
-              <input type="text" required placeholder="Como podemos te chamar?" style="font-family: inherit; font-size: 16px; color: #fff; padding: 13px 16px; border: 1px solid var(--line-d); border-radius: 12px; background: rgba(255,255,255,0.04); outline: none;" style-focus="border-color: var(--gold);">
+              <input type="text" name="nome" required placeholder="Como podemos te chamar?" style="font-family: inherit; font-size: 16px; color: #fff; padding: 13px 16px; border: 1px solid var(--line-d); border-radius: 12px; background: rgba(255,255,255,0.04); outline: none;" style-focus="border-color: var(--gold);">
             </label>
             <div style="display: flex; flex-wrap: wrap; gap: 16px;">
               <label style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 7px;">
                 <span style="font-weight: 600; font-size: 14px; color: #fff;">WhatsApp</span>
-                <input type="tel" required placeholder="(61) 90000-0000" style="width: 100%; font-family: inherit; font-size: 16px; color: #fff; padding: 13px 16px; border: 1px solid var(--line-d); border-radius: 12px; background: rgba(255,255,255,0.04); outline: none;" style-focus="border-color: var(--gold);">
+                <input type="tel" name="telefone" required placeholder="(61) 90000-0000" style="width: 100%; font-family: inherit; font-size: 16px; color: #fff; padding: 13px 16px; border: 1px solid var(--line-d); border-radius: 12px; background: rgba(255,255,255,0.04); outline: none;" style-focus="border-color: var(--gold);">
               </label>
               <label style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 7px;">
                 <span style="font-weight: 600; font-size: 14px; color: #fff;">E-mail</span>
-                <input type="email" placeholder="opcional" style="width: 100%; font-family: inherit; font-size: 16px; color: #fff; padding: 13px 16px; border: 1px solid var(--line-d); border-radius: 12px; background: rgba(255,255,255,0.04); outline: none;" style-focus="border-color: var(--gold);">
+                <input type="email" name="email" required placeholder="seu@email.com" style="width: 100%; font-family: inherit; font-size: 16px; color: #fff; padding: 13px 16px; border: 1px solid var(--line-d); border-radius: 12px; background: rgba(255,255,255,0.04); outline: none;" style-focus="border-color: var(--gold);">
               </label>
             </div>
             <label style="display: flex; flex-direction: column; gap: 7px;">
               <span style="font-weight: 600; font-size: 14px; color: #fff;">Qual serviço te interessa?</span>
-              <select required style="font-family: inherit; font-size: 16px; color: #fff; padding: 13px 16px; border: 1px solid var(--line-d); border-radius: 12px; background: rgba(255,255,255,0.04); outline: none;" style-focus="border-color: var(--gold);">
+              <select name="interesse" required style="font-family: inherit; font-size: 16px; color: #fff; padding: 13px 16px; border: 1px solid var(--line-d); border-radius: 12px; background: rgba(255,255,255,0.04); outline: none;" style-focus="border-color: var(--gold);">
                 <option value="" style="color: #333;">Selecione um serviço</option>
                 <option style="color: #333;">Consultoria em Planos de Saúde</option>
                 <option style="color: #333;">Gestão e Administração de Contratos</option>
@@ -253,7 +253,10 @@
                 <option style="color: #333;">Cursos, Mentorias e Treinamentos</option>
               </select>
             </label>
-            <button type="submit" class="bm-btn-glow" style="cursor: pointer; margin-top: 6px; font-family: var(--disp); font-weight: 600; font-size: 18px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink); background: var(--goldgrad); border: none; padding: 16px; border-radius: 12px; box-shadow: 0 12px 26px rgba(198,142,106,0.28);" style-hover="filter: brightness(1.05);">Quero conversar</button>
+            <sc-if value="{{ error }}">
+              <div style="font-weight: 400; font-size: 14px; line-height: 1.45; color: #ffd9d0; background: rgba(190,60,45,0.18); border: 1px solid rgba(255,140,120,0.35); border-radius: 12px; padding: 12px 14px;">{{ error }}</div>
+            </sc-if>
+            <button type="submit" class="bm-btn-glow" style="cursor: pointer; margin-top: 6px; font-family: var(--disp); font-weight: 600; font-size: 18px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink); background: var(--goldgrad); border: none; padding: 16px; border-radius: 12px; box-shadow: 0 12px 26px rgba(198,142,106,0.28);" style-hover="filter: brightness(1.05);">{{ submitLabel }}</button>
             <div style="font-weight: 300; font-size: 13px; color: rgba(244,237,224,0.5); text-align: center;">Sem compromisso. A gente começa entendendo a sua realidade.</div>
           </form>
         </sc-if>
@@ -265,7 +268,37 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { open: false, sent: false };
+  state = { open: false, sent: false, sending: false, error: '' };
+  async enviarLead(form, origem) {
+    if (this.state.sending) return;
+    const dados = new FormData(form);
+    const campo = (k) => (dados.get(k) || '').toString().trim();
+    this.setState({ sending: true, error: '' });
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nome: campo('nome'),
+          email: campo('email'),
+          telefone: campo('telefone'),
+          interesse: campo('interesse'),
+          origem: origem
+        })
+      });
+      if (!res.ok) {
+        const corpo = await res.json().catch(() => ({}));
+        throw new Error(corpo.error || 'Não foi possível enviar agora.');
+      }
+      this.setState({ sending: false, sent: true, error: '' });
+    } catch (err) {
+      this.setState({
+        sending: false,
+        error: (err && err.message ? err.message : 'Não foi possível enviar agora.') +
+          ' Tente novamente ou chame a gente no WhatsApp.'
+      });
+    }
+  }
 
   services() {
     const rowLite = "display: flex; gap: clamp(18px, 3vw, 40px); align-items: flex-start; flex-wrap: wrap; padding: 36px 4px; border-bottom: 1px solid rgba(18,32,71,0.12);";
@@ -299,9 +332,11 @@ class Component extends DCLogic {
       open: this.state.open,
       sent: this.state.sent,
       showForm: this.state.open && !this.state.sent,
-      openModal: () => this.setState({ open: true, sent: false }),
+      error: this.state.error,
+      submitLabel: this.state.sending ? 'Enviando...' : 'Quero conversar',
+      openModal: () => this.setState({ open: true, sent: false, sending: false, error: '' }),
       closeModal: () => this.setState({ open: false }),
-      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      submit: (e) => { e.preventDefault(); this.enviarLead(e.currentTarget, 'Site Bem Melhor - Serviços'); },
       stop: (e) => e.stopPropagation()
     };
   }
