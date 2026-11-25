@@ -1,1 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Aline Ricarte | Bem Melhor Seguros</title>
+<meta name="description" content="Aline Ricarte, sócia da Bem Melhor Seguros. Planos de saúde empresariais no Distrito Federal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500;600&display=swap">
+<style>
+:root{
+  --bg:#0a1730;--bg-deep:#06101f;--panel:#13213a;--panel-line:#26354f;
+  --gold:#d39a6e;--gold-soft:#b07d58;--cream:#f3ead8;--ink:#f4f1ea;
+  --muted:#a7b1c3;--faint:#6c7890;--navy-ink:#0e1a30;
+  --font-display:"Cormorant Garamond","Times New Roman",Georgia,serif;
+  --font-body:"Jost","Helvetica Neue",Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;min-width:0}
+html{background:var(--bg-deep)}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:var(--font-body);font-weight:300;
+  background:radial-gradient(120% 60% at 50% 0%,#2f5a8a 0%,var(--bg) 45%,var(--bg-deep) 100%) fixed,var(--bg-deep);overflow-x:clip;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.wm{position:fixed;top:-60px;right:-300px;width:600px;height:auto;opacity:.06;pointer-events:none;z-index:0}
+@media(max-width:600px){.wm{top:-40px;right:-230px;width:440px}}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(60% 40% at 100% 0%,rgba(211,154,110,.10),transparent 70%)}
+.card{position:relative;z-index:1;max-width:440px;margin:0 auto;padding-block:28px 32px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;align-items:center;text-align:center}
+.logo img{display:block;width:150px;height:auto}
+.photo{margin-top:24px;position:relative;padding:6px;border:1px solid var(--gold-soft);border-radius:22px;
+  background:linear-gradient(160deg,rgba(211,154,110,.18),rgba(211,154,110,0) 60%);box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.photo .ph{display:block;width:168px;aspect-ratio:140/186;object-fit:cover;object-position:50% 18%;border-radius:16px;
+  background:radial-gradient(90% 70% at 50% 20%,#24427a 0%,#13213a 70%)}
+h1{margin:20px 0 0;font-family:var(--font-display);font-weight:600;font-size:38px;line-height:1.05;letter-spacing:.01em;text-wrap:balance}
+.role{margin-top:10px;font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.rule{width:48px;height:1px;background:var(--gold-soft);margin:16px 0;border:0}
+.bio{margin:0;max-width:34ch;font-size:14.5px;line-height:1.6;color:var(--muted)}
+.bio strong{color:var(--ink);font-weight:600}
+.actions{width:100%;display:flex;flex-direction:column;gap:10px;margin-top:26px}
+.action{display:flex;align-items:center;gap:14px;width:100%;padding:14px 16px;border-radius:14px;
+  background:var(--panel);border:1px solid var(--panel-line);color:var(--ink);text-decoration:none;text-align:left;
+  font:inherit;cursor:pointer;transition:border-color .2s,transform .2s;min-height:44px}
+.action:hover{border-color:var(--gold-soft);transform:translateY(-1px)}
+.action:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.ico{flex:none;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.07);color:var(--ink)}
+.ico svg{width:18px;height:18px}
+.txt{flex:1;display:flex;flex-direction:column;gap:3px}
+.lbl{font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
+.val{font-size:14px;font-weight:500;overflow-wrap:anywhere}
+#email-val{font-size:13px}
+.go{flex:none;color:var(--faint);font-size:18px;line-height:1}
+.action.primary{background:linear-gradient(135deg,#1b3463,#122545);border-color:var(--gold);
+  box-shadow:0 10px 28px rgba(0,0,0,.35),inset 0 0 0 1px rgba(211,154,110,.15)}
+.action.primary .lbl{color:var(--gold)}
+.action.primary .val{font-size:17px}
+.action.primary .go{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.hint{flex:none;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);font-weight:500}
+.hint.copied{color:var(--gold)}
+.action.light{margin-top:10px;background:var(--cream);border-color:var(--cream);color:var(--navy-ink)}
+.action.light .ico{background:var(--navy-ink);color:var(--cream)}
+.action.light .lbl{color:#7a6f5c}
+.action.light .val{font-size:15px}
+.action.light .go{color:var(--navy-ink)}
+.ops{width:100%;margin-top:34px}
+.ops-title{display:flex;align-items:center;gap:12px;justify-content:center;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.ops-title::before,.ops-title::after{content:"";width:34px;height:1px;background:var(--panel-line)}
+.grid{margin-top:16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.op{aspect-ratio:1/1;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.25);background:#f7f3ea;color:var(--navy-ink);display:grid;place-items:center;align-content:center;
+  padding:4px;font-size:12px;font-weight:600;line-height:1.1;letter-spacing:-.01em}
+.op small{display:block;font-size:9px;font-weight:400;color:#6d6455;margin-top:2px}
+.op.red{color:#cc092f}.op.red small{color:#cc092f}
+.op.green{color:#00995d}.op.green small{color:#00995d}
+.op.blue{color:#0a3d8f}.op.orange{color:#e35205}.op.teal{color:#007d7a}.op.amil{color:#1a3fa8}
+footer{margin-top:30px;display:flex;flex-direction:column;gap:8px}
+.place{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
+.note{font-size:11px;color:var(--faint);opacity:.8}
+@media(max-width:380px){h1{font-size:34px}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){.action{transition:none}.action:hover{transform:none}}
+</style></head><body>
+<img class="wm" src="logo-white.png" alt="" aria-hidden="true">
+<main class="card">
+  <div class="logo"><img src="logo-white.png" alt="Bem Melhor Seguros e Benefícios"></div>
 
+  <div class="photo"><img class="ph" src="aline.jpg" alt="Foto de Aline Ricarte"></div>
+
+  <h1>Aline Ricarte</h1>
+  <div class="role">Planos de saúde empresariais</div>
+  <hr class="rule">
+  <p class="bio">Sócia da <strong>Bem Melhor Seguros</strong>.<br>Quer transformar o custo do seu plano de saúde em um <strong>verdadeiro benefício</strong>?</p>
+
+  <div class="actions">
+    <a class="action primary" href="https://wa.me/message/CTTKBWJ6FYZ5K1" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.6z"/><path d="M9 8.5c0 3 2.5 6.5 6 6.5l1.2-1.4-1.8-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-1.8z"/></svg></span>
+      <span class="txt"><span class="lbl">WhatsApp</span><span class="val">Fale comigo</span></span>
+      <span class="go">Fale agora</span>
+    </a>
+
+    <a class="action" href="https://www.instagram.com/alinemoreira.ricarte/" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r=".9" fill="currentColor" stroke="none"/></svg></span>
+      <span class="txt"><span class="lbl">Instagram</span><span class="val">@alinemoreira.ricarte</span></span>
+      <span class="go">›</span>
+    </a>
+
+    <a class="action" href="https://www.linkedin.com/in/aline-ricarte/" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 10.5V16M8.5 7.8v.1M12 16v-5.5M12 13c0-1.6 1-2.6 2.2-2.6s2 .8 2 2.4V16"/></svg></span>
+      <span class="txt"><span class="lbl">LinkedIn</span><span class="val">Aline Ricarte</span></span>
+      <span class="go">›</span>
+    </a>
+
+    <button class="action" type="button" id="email-btn" aria-label="Copiar e-mail alinericarte@bemmelhorseguros.com">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="M4 7l8 6 8-6"/></svg></span>
+      <span class="txt"><span class="lbl">E-mail</span><span class="val" id="email-val">alinericarte@bemmelhorseguros.com</span></span>
+      <span class="hint" id="email-hint">Copiar</span>
+    </button>
+
+    <button class="action light" type="button" id="fs-btn">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="6" y="3.5" width="12" height="17" rx="2"/><path d="M9 8h6M9 11.5h6M9 15h3.5"/></svg></span>
+      <span class="txt"><span class="lbl">Cartão completo</span><span class="val" id="fs-label">Ver em tela cheia</span></span>
+      <span class="go">›</span>
+    </button>
+  </div>
+
+  <section class="ops" aria-label="Principais operadoras">
+    <div class="ops-title">Principais operadoras</div>
+    <div class="grid">
+      <div class="op amil">Amil</div>
+      <div class="op red">Bradesco<small>Saúde</small></div>
+      <div class="op orange">SulAmérica</div>
+      <div class="op blue">Porto<small>Saúde</small></div>
+      <div class="op green">Seguros<small>Unimed</small></div>
+      <div class="op teal">MedSênior</div>
+      <div class="op blue">Unity<small>Saúde</small></div>
+      <div class="op">e outras<small>consulte</small></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="place">Distrito Federal &nbsp;·&nbsp; Bem Melhor Seguros</div>
+    <div class="note">Cartão digital · toque em qualquer botão para falar com a Aline</div>
+  </footer>
+</main>
+
+<script>
+{
+  const btn=document.getElementById('email-btn'),hint=document.getElementById('email-hint'),val=document.getElementById('email-val');
+  const email='alinericarte@bemmelhorseguros.com';
+  const selectText=()=>{try{const r=document.createRange();r.selectNodeContents(val);const s=getSelection();s.removeAllRanges();s.addRange(r)}catch(e){}};
+  btn.addEventListener('click',()=>{
+    const done=()=>{hint.textContent='Copiado';hint.className='hint copied';setTimeout(()=>{hint.textContent='Copiar';hint.className='hint'},1800)};
+    try{navigator.clipboard.writeText(email).then(done,selectText)}catch(e){selectText()}
+  });
+  const fs=document.getElementById('fs-btn'),fsLabel=document.getElementById('fs-label'),root=document.documentElement;
+  if(!root.requestFullscreen)fs.hidden=true;
+  fs.addEventListener('click',()=>{
+    try{
+      if(document.fullscreenElement)document.exitFullscreen();
+      else{const p=root.requestFullscreen();if(p&&p.catch)p.catch(()=>{fs.hidden=true})}
+    }catch(e){fs.hidden=true}
+  });
+  document.addEventListener('fullscreenchange',()=>{fsLabel.textContent=document.fullscreenElement?'Sair da tela cheia':'Ver em tela cheia'});
+}
+</script>
+</body></html>
