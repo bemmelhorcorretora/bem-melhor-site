@@ -1,164 +1,499 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Aline Ricarte | Bem Melhor Seguros</title>
-<meta name="description" content="Aline Ricarte, sócia da Bem Melhor Seguros. Planos de saúde empresariais no Distrito Federal.">
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0a1836"/><text x="50" y="46" font-family="Georgia, serif" font-size="30" fill="#c68e6a" text-anchor="middle">BM</text><text x="50" y="66" font-family="Helvetica, sans-serif" font-size="8" letter-spacing="1.5" fill="#f4ede0" text-anchor="middle">SEGUROS</text></svg></template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Transformamos custos em benefícios reais. Seguros e benefícios para empresas, MEIs e famílias, com diagnóstico, implantação e suporte contínuo.">
+<title>Bem Melhor Seguros e Benefícios | Cuidamos de pessoas, muito além da venda</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#0a1730;--bg-deep:#06101f;--panel:#13213a;--panel-line:#26354f;
-  --gold:#d39a6e;--gold-soft:#b07d58;--cream:#f3ead8;--ink:#f4f1ea;
-  --muted:#a7b1c3;--faint:#6c7890;--navy-ink:#0e1a30;
-  --font-display:"Cormorant Garamond","Times New Roman",Georgia,serif;
-  --font-body:"Jost","Helvetica Neue",Arial,sans-serif;
-  color-scheme:dark;
-}
-*{box-sizing:border-box;min-width:0}
-html{background:var(--bg-deep)}
-body{margin:0;min-height:100vh;color:var(--ink);font-family:var(--font-body);font-weight:300;
-  background:radial-gradient(120% 60% at 50% 0%,#2f5a8a 0%,var(--bg) 45%,var(--bg-deep) 100%) fixed,var(--bg-deep);overflow-x:clip;
-  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-.wm{position:fixed;top:-60px;right:-300px;width:600px;height:auto;opacity:.06;pointer-events:none;z-index:0}
-@media(max-width:600px){.wm{top:-40px;right:-230px;width:440px}}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
-  background:radial-gradient(60% 40% at 100% 0%,rgba(211,154,110,.10),transparent 70%)}
-.card{position:relative;z-index:1;max-width:440px;margin:0 auto;padding-block:28px 32px;
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
-  display:flex;flex-direction:column;align-items:center;text-align:center}
-.logo img{display:block;width:150px;height:auto}
-.photo{margin-top:24px;position:relative;padding:6px;border:1px solid var(--gold-soft);border-radius:22px;
-  background:linear-gradient(160deg,rgba(211,154,110,.18),rgba(211,154,110,0) 60%);box-shadow:0 18px 50px rgba(0,0,0,.45)}
-.photo .ph{display:block;width:168px;aspect-ratio:140/186;object-fit:cover;object-position:50% 18%;border-radius:16px;
-  background:radial-gradient(90% 70% at 50% 20%,#24427a 0%,#13213a 70%)}
-h1{margin:20px 0 0;font-family:var(--font-display);font-weight:600;font-size:38px;line-height:1.05;letter-spacing:.01em;text-wrap:balance}
-.role{margin-top:10px;font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
-.rule{width:48px;height:1px;background:var(--gold-soft);margin:16px 0;border:0}
-.bio{margin:0;max-width:34ch;font-size:14.5px;line-height:1.6;color:var(--muted)}
-.bio strong{color:var(--ink);font-weight:600}
-.actions{width:100%;display:flex;flex-direction:column;gap:10px;margin-top:26px}
-.action{display:flex;align-items:center;gap:14px;width:100%;padding:14px 16px;border-radius:14px;
-  background:var(--panel);border:1px solid var(--panel-line);color:var(--ink);text-decoration:none;text-align:left;
-  font:inherit;cursor:pointer;transition:border-color .2s,transform .2s;min-height:44px}
-.action:hover{border-color:var(--gold-soft);transform:translateY(-1px)}
-.action:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-.ico{flex:none;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.07);color:var(--ink)}
-.ico svg{width:18px;height:18px}
-.txt{flex:1;display:flex;flex-direction:column;gap:3px}
-.lbl{font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
-.val{font-size:14px;font-weight:500;overflow-wrap:anywhere}
-#email-val{font-size:13px}
-.go{flex:none;color:var(--faint);font-size:18px;line-height:1}
-.action.primary{background:linear-gradient(135deg,#1b3463,#122545);border-color:var(--gold);
-  box-shadow:0 10px 28px rgba(0,0,0,.35),inset 0 0 0 1px rgba(211,154,110,.15)}
-.action.primary .lbl{color:var(--gold)}
-.action.primary .val{font-size:17px}
-.action.primary .go{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500}
-.hint{flex:none;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);font-weight:500}
-.hint.copied{color:var(--gold)}
-.action.light{margin-top:10px;background:var(--cream);border-color:var(--cream);color:var(--navy-ink)}
-.action.light .ico{background:var(--navy-ink);color:var(--cream)}
-.action.light .lbl{color:#7a6f5c}
-.action.light .val{font-size:15px}
-.action.light .go{color:var(--navy-ink)}
-.ops{width:100%;margin-top:34px}
-.ops-title{display:flex;align-items:center;gap:12px;justify-content:center;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
-.ops-title::before,.ops-title::after{content:"";width:34px;height:1px;background:var(--panel-line)}
-.grid{margin-top:16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
-.op{aspect-ratio:1/1;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.25);background:#f7f3ea;color:var(--navy-ink);display:grid;place-items:center;align-content:center;
-  padding:4px;font-size:12px;font-weight:600;line-height:1.1;letter-spacing:-.01em}
-.op small{display:block;font-size:9px;font-weight:400;color:#6d6455;margin-top:2px}
-.op.red{color:#cc092f}.op.red small{color:#cc092f}
-.op.green{color:#00995d}.op.green small{color:#00995d}
-.op.blue{color:#0a3d8f}.op.orange{color:#e35205}.op.teal{color:#007d7a}.op.amil{color:#1a3fa8}
-footer{margin-top:30px;display:flex;flex-direction:column;gap:8px}
-.place{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
-.note{font-size:11px;color:var(--faint);opacity:.8}
-@media(max-width:380px){h1{font-size:34px}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(prefers-reduced-motion:reduce){.action{transition:none}.action:hover{transform:none}}
-</style></head><body>
-<img class="wm" src="logo-white.png" alt="" aria-hidden="true">
-<main class="card">
-  <div class="logo"><img src="logo-white.png" alt="Bem Melhor Seguros e Benefícios"></div>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 20px; overflow-x: hidden; }
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #f4ede0;
+    background: #0a1836;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  :root {
+    --ink: #0a1836;
+    --ink-2: #10204a;
+    --ink-3: #16295c;
+    --gold: #c68e6a;
+    --gold-lite: #e0b492;
+    --gold-deep: #a56f4b;
+    --steel-soft: #9fb1d6;
+    --line-d: rgba(198,142,106,0.30);
+    --disp: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+    --goldgrad: linear-gradient(150deg, #e6bd9a 0%, #c68e6a 50%, #a56f4b 100%);
+  }
+  @keyframes bmOverlay { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes bmPop { from { opacity: 0; transform: translateY(18px) scale(.98); } to { opacity: 1; transform: none; } }
+  @keyframes bmMarqueeL { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes bmMarqueeR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  @keyframes bmCarousel { 0% { opacity: 0; } 2.5% { opacity: 1; } 12% { opacity: 1; } 14.5% { opacity: 0; } 100% { opacity: 0; } }
+  a { text-decoration: none; color: inherit; }
+  .bm-glow { transition: box-shadow .35s ease, transform .35s ease, border-color .35s ease; }
+  .bm-glow:hover { transform: translateY(-6px); box-shadow: 0 0 0 1px rgba(198,142,106,0.55), 0 20px 54px rgba(198,142,106,0.32); border-color: rgba(198,142,106,0.65); }
+  .bm-btn-glow { transition: box-shadow .3s ease, transform .3s ease, filter .3s ease; }
+  .bm-btn-glow:hover { transform: translateY(-2px); filter: brightness(1.07); box-shadow: 0 0 28px rgba(198,142,106,0.6), 0 18px 44px rgba(198,142,106,0.5); }
 
-  <div class="photo"><img class="ph" src="aline.jpg" alt="Foto de Aline Ricarte"></div>
+  @media (min-width: 761px) { .bm-mobile-menu { display: none !important; } }
 
-  <h1>Aline Ricarte</h1>
-  <div class="role">Planos de saúde empresariais</div>
-  <hr class="rule">
-  <p class="bio">Sócia da <strong>Bem Melhor Seguros</strong>.<br>Quer transformar o custo do seu plano de saúde em um <strong>verdadeiro benefício</strong>?</p>
+  /* ── Mobile ── */
+  @media (max-width: 760px) {
+    #topo { flex-wrap: nowrap; padding: 8px 8px 8px 16px; gap: 10px; width: calc(100% - 20px); margin-top: 10px; }
+    #topo > nav { display: none !important; }
+    #topo .bm-burger { display: inline-flex !important; }
+    #topo img { height: 34px; }
+    #topo .bm-btn-glow { font-size: 13px; padding: 6px 6px 6px 15px; }
 
-  <div class="actions">
-    <a class="action primary" href="https://wa.me/message/CTTKBWJ6FYZ5K1" target="_blank" rel="noopener">
-      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.6z"/><path d="M9 8.5c0 3 2.5 6.5 6 6.5l1.2-1.4-1.8-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-1.8z"/></svg></span>
-      <span class="txt"><span class="lbl">WhatsApp</span><span class="val">Fale comigo</span></span>
-      <span class="go">Fale agora</span>
-    </a>
+    /* Hero — kill the desktop nudge, give room below the bar */
+    .hero-left { transform: none !important; max-width: 100% !important; }
+    .hero-sect { min-height: 100vh !important; min-height: 100svh !important; align-items: flex-end !important; padding: 112px 22px 52px !important; }
+    .hero-scrim { background: linear-gradient(90deg, rgba(7,14,34,0.72) 0%, rgba(7,14,34,0.42) 60%, rgba(10,20,48,0.28) 100%), linear-gradient(0deg, rgba(6,12,30,0.96) 4%, rgba(6,12,30,0.62) 34%, transparent 62%) !important; }
+    .hero-sect h1 { font-size: 40px !important; }
+    .hero-cta { width: 100%; }
+    .hero-cta > button, .hero-cta > a { flex: 1 1 auto; justify-content: center; }
 
-    <a class="action" href="https://www.instagram.com/alinemoreira.ricarte/" target="_blank" rel="noopener">
-      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r=".9" fill="currentColor" stroke="none"/></svg></span>
-      <span class="txt"><span class="lbl">Instagram</span><span class="val">@alinemoreira.ricarte</span></span>
-      <span class="go">›</span>
-    </a>
+    /* Marquee — smaller, less overlap */
+    .marquee-wrap { margin: -30px 0 -34px !important; height: 96px !important; }
+    .marquee-row { font-size: 15px !important; gap: 22px !important; }
 
-    <a class="action" href="https://www.linkedin.com/in/aline-ricarte/" target="_blank" rel="noopener">
-      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 10.5V16M8.5 7.8v.1M12 16v-5.5M12 13c0-1.6 1-2.6 2.2-2.6s2 .8 2 2.4V16"/></svg></span>
-      <span class="txt"><span class="lbl">LinkedIn</span><span class="val">Aline Ricarte</span></span>
-      <span class="go">›</span>
-    </a>
+    /* Team — stack photo above text, full width */
+    .team-row { flex-direction: column !important; }
+    .team-row.rev { flex-direction: column-reverse !important; }
+    .team-photo { width: 100% !important; height: 300px !important; flex: none !important; object-position: 50% 20% !important; margin: 0 !important; }
+    .team-text { padding: 30px 26px !important; min-width: 0 !important; }
+    .team-text p { text-align: left !important; }
+  }
+  @media (max-width: 520px) {
+    #topo .bm-btn-glow .bm-btn-label { display: none; }
+    #topo .bm-btn-glow { padding: 6px; }
+    .hero-sect h1 { font-size: 34px !important; }
+    .foot-bottom { justify-content: center !important; text-align: center; }
+  }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
 
-    <button class="action" type="button" id="email-btn" aria-label="Copiar e-mail alinericarte@bemmelhorseguros.com">
-      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="M4 7l8 6 8-6"/></svg></span>
-      <span class="txt"><span class="lbl">E-mail</span><span class="val" id="email-val">alinericarte@bemmelhorseguros.com</span></span>
-      <span class="hint" id="email-hint">Copiar</span>
-    </button>
+<div style="width: 100%; position: relative; overflow-x: hidden;">
 
-    <button class="action light" type="button" id="fs-btn">
-      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="6" y="3.5" width="12" height="17" rx="2"/><path d="M9 8h6M9 11.5h6M9 15h3.5"/></svg></span>
-      <span class="txt"><span class="lbl">Cartão completo</span><span class="val" id="fs-label">Ver em tela cheia</span></span>
-      <span class="go">›</span>
-    </button>
+  <!-- ═══════════ TOP BAR ═══════════ -->
+  <div id="topo" style="position: absolute; top: 0; left: 0; right: 0; z-index: 5; background: #c68e6a; border: 1px solid rgba(255,255,255,0.22); border-radius: 22px; padding: 9px 9px 9px 20px; display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; box-shadow: 0 18px 44px rgba(0,0,0,0.35); box-sizing: border-box; width: calc(100% - 32px); max-width: 1120px; margin: 14px auto 0;">
+    <a href="#topo" style="display: flex; align-items: center; gap: 10px;"><img src="assets/logo-menu.png" alt="Bem Melhor Seguros e Benefícios" style="height: 40px; width: auto;"></a>
+    <nav style="display: flex; align-items: center; gap: 2px; flex-wrap: wrap; justify-content: center;">
+      <a href="#quem-somos" style="font-weight: 600; font-size: 14px; color: rgba(255,255,255,0.9); padding: 7px 13px; border-radius: 999px;" style-hover="background: rgba(255,255,255,0.16); color: #fff;">Quem somos</a>
+      <a href="#diferenca" style="font-weight: 600; font-size: 14px; color: rgba(255,255,255,0.9); padding: 7px 13px; border-radius: 999px;" style-hover="background: rgba(255,255,255,0.16); color: #fff;">Diferença</a>
+      <a href="#pilares" style="font-weight: 600; font-size: 14px; color: rgba(255,255,255,0.9); padding: 7px 13px; border-radius: 999px;" style-hover="background: rgba(255,255,255,0.16); color: #fff;">Pilares</a>
+      <a href="/servicos" style="font-weight: 600; font-size: 14px; color: rgba(255,255,255,0.9); padding: 7px 13px; border-radius: 999px;" style-hover="background: rgba(255,255,255,0.16); color: #fff;">Serviços</a>
+      <a href="#equipe" style="font-weight: 600; font-size: 14px; color: rgba(255,255,255,0.9); padding: 7px 13px; border-radius: 999px;" style-hover="background: rgba(255,255,255,0.16); color: #fff;">Equipe</a>
+      <a href="#contato" style="font-weight: 600; font-size: 14px; color: rgba(255,255,255,0.9); padding: 7px 13px; border-radius: 999px;" style-hover="background: rgba(255,255,255,0.16); color: #fff;">Contato</a>
+    </nav>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <button class="bm-burger" onClick="{{ toggleMenu }}" aria-label="Abrir menu" style="display: none; cursor: pointer; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.30); background: rgba(255,255,255,0.14); color: #fff; align-items: center; justify-content: center; flex: none; padding: 0;" style-hover="background: rgba(255,255,255,0.24);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+      <button class="bm-btn-glow" onClick="{{ openModal }}" style="cursor: pointer; font-family: var(--disp); display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 14px; color: #fff; background: linear-gradient(150deg, #1a3568 0%, #10204a 100%); border: none; padding: 6px 6px 6px 18px; border-radius: 999px; box-shadow: 0 10px 26px rgba(10,20,48,0.34);" style-hover="filter: brightness(1.12);"><span class="bm-btn-label">Quero saber mais</span> <span style="display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--gold-lite); color: var(--ink); font-size: 15px;">↗</span></button>
+    </div>
   </div>
 
-  <section class="ops" aria-label="Principais operadoras">
-    <div class="ops-title">Principais operadoras</div>
-    <div class="grid">
-      <div class="op amil">Amil</div>
-      <div class="op red">Bradesco<small>Saúde</small></div>
-      <div class="op orange">SulAmérica</div>
-      <div class="op blue">Porto<small>Saúde</small></div>
-      <div class="op green">Seguros<small>Unimed</small></div>
-      <div class="op teal">MedSênior</div>
-      <div class="op blue">Unity<small>Saúde</small></div>
-      <div class="op">e outras<small>consulte</small></div>
+  <!-- ═══════════ MENU MOBILE (ilha) ═══════════ -->
+  <sc-if value="{{ menuOpen }}">
+  <div class="bm-mobile-menu" style="position: absolute; top: 72px; left: 10px; right: 10px; z-index: 6; background: #c68e6a; border: 1px solid rgba(255,255,255,0.22); border-radius: 22px; box-shadow: 0 22px 50px rgba(0,0,0,0.4); padding: 8px; display: flex; flex-direction: column; gap: 2px; box-sizing: border-box; animation: bmPop .22s ease;">
+    <a href="#quem-somos" onClick="{{ closeMenu }}" style="font-weight: 600; font-size: 16px; color: rgba(255,255,255,0.95); padding: 13px 16px; border-radius: 14px;" style-hover="background: rgba(255,255,255,0.16); color: #fff;">Quem somos</a>
+    <a href="#diferenca" onClick="{{ closeMenu }}" style="font-weight: 600; font-size: 16px; color: rgba(255,255,255,0.95); padding: 13px 16px; border-radius: 14px;" style-hover="background: rgba(255,255,255,0.16); color: #fff;">Diferença</a>
+    <a href="#pilares" onClick="{{ closeMenu }}" style="font-weight: 600; font-size: 16px; color: rgba(255,255,255,0.95); padding: 13px 16px; border-radius: 14px;" style-hover="background: rgba(255,255,255,0.16); color: #fff;">Pilares</a>
+    <a href="/servicos" onClick="{{ closeMenu }}" style="font-weight: 600; font-size: 16px; color: rgba(255,255,255,0.95); padding: 13px 16px; border-radius: 14px;" style-hover="background: rgba(255,255,255,0.16); color: #fff;">Serviços</a>
+    <a href="#equipe" onClick="{{ closeMenu }}" style="font-weight: 600; font-size: 16px; color: rgba(255,255,255,0.95); padding: 13px 16px; border-radius: 14px;" style-hover="background: rgba(255,255,255,0.16); color: #fff;">Equipe</a>
+    <a href="#contato" onClick="{{ closeMenu }}" style="font-weight: 600; font-size: 16px; color: rgba(255,255,255,0.95); padding: 13px 16px; border-radius: 14px;" style-hover="background: rgba(255,255,255,0.16); color: #fff;">Contato</a>
+  </div>
+  </sc-if>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero-sect" style="position: relative; overflow: hidden; background: #0a1836; min-height: 94vh; display: flex; align-items: center; padding: clamp(160px, 22vh, 240px) clamp(24px, 4vw, 60px) clamp(90px, 13vh, 150px);">
+    <div style="position: absolute; inset: 0; z-index: 0;">
+      <img src="assets/hero-navio.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: bmCarousel 49s infinite; animation-delay: -28s;">
+      <img src="assets/hero-brinde.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: bmCarousel 49s infinite; animation-delay: -7s;">
+      <img src="assets/hero-restaurante.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: bmCarousel 49s infinite; animation-delay: -14s;">
+      <img src="assets/hero-praia.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: bmCarousel 49s infinite; animation-delay: -21s;">
+      <img src="assets/hero-casal.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: bmCarousel 49s infinite; animation-delay: -42s;">
+      <img src="assets/hero-familia-rosa.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 72% 28%; opacity: 0; animation: bmCarousel 49s infinite; animation-delay: -35s;">
+      <img src="assets/hero-gestantes.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; opacity: 0; animation: bmCarousel 49s infinite; animation-delay: 0s;">
+    </div>
+    <div class="hero-scrim" style="position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(7,14,34,0.95) 0%, rgba(7,14,34,0.85) 44%, rgba(10,20,48,0.45) 100%);"></div>
+    <div style="position: absolute; inset: 0; z-index: 1; background: radial-gradient(70% 80% at 82% 30%, rgba(198,142,106,0.16), transparent 70%); pointer-events: none;"></div>
+    <div style="position: relative; z-index: 2; width: 100%;">
+
+      <!-- Left -->
+      <div class="hero-left" style="max-width: 780px; margin: 0 auto; transform: translateX(-150px);">
+        <div style="display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 22px;"><span style="width: 24px; height: 1.5px; background: var(--gold);"></span> Seguros &amp; Benefícios · SUSEP 262180461</div>
+        <h1 style="font-family: var(--serif); font-weight: 500; font-size: clamp(42px, 5.4vw, 74px); line-height: 1.03; letter-spacing: -0.6px; margin: 0; color: #fff;">Transformamos custos em <span style="color: var(--gold-lite); font-style: italic;">benefícios reais</span>.</h1>
+        <p style="font-weight: 300; font-size: clamp(16px, 1.7vw, 20px); line-height: 1.55; color: rgba(244,237,224,0.66); margin: 24px 0 32px; max-width: 520px;">Protegemos pessoas, saúde, bens e renda com um acompanhamento que vai muito além da venda — antes, durante e depois.</p>
+
+        <div class="hero-cta" style="display: flex; flex-wrap: wrap; gap: 14px;">
+          <button class="bm-btn-glow" onClick="{{ openModal }}" style="cursor: pointer; font-family: var(--disp); display: inline-flex; align-items: center; gap: 12px; font-weight: 600; font-size: 17px; color: var(--ink); background: var(--goldgrad); border: none; padding: 8px 10px 8px 26px; border-radius: 999px; box-shadow: 0 16px 40px rgba(198,142,106,0.3);" style-hover="filter: brightness(1.05); transform: translateY(-1px);">Vamos conversar <span style="display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: var(--ink); color: var(--gold-lite); font-size: 17px;">↗</span></button>
+          <a href="#diferenca" style="display: inline-flex; align-items: center; font-family: var(--disp); font-weight: 600; font-size: 17px; color: #fff; border: 1.5px solid var(--line-d); padding: 15px 28px; border-radius: 999px;" style-hover="border-color: var(--gold); color: var(--gold-lite);">Por onde começamos</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <div class="place">Distrito Federal &nbsp;·&nbsp; Bem Melhor Seguros</div>
-    <div class="note">Cartão digital · toque em qualquer botão para falar com a Aline</div>
-  </footer>
-</main>
+  <!-- ═══════════ MARQUEE ═══════════ -->
+  <div class="marquee-wrap" style="position: relative; z-index: 6; margin: -46px 0 -52px; height: 118px; overflow: visible; pointer-events: none;">
+    <div style="position: absolute; top: 22px; left: -8%; width: 116%; transform: rotate(-3deg); background: var(--goldgrad); box-shadow: 0 12px 34px rgba(198,142,106,0.28); overflow: hidden;">
+      <div style="display: flex; width: max-content; animation: bmMarqueeL 34s linear infinite; will-change: transform;">
+        <div class="marquee-row" style="display: flex; align-items: center; gap: 34px; padding: 12px 17px; font-family: var(--disp); font-weight: 600; font-size: 20px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); white-space: nowrap;"><span>Bem Melhor</span><span style="color: rgba(10,20,48,0.55);">✦</span><span>Seguros e Benefícios</span><span style="color: rgba(10,20,48,0.55);">✦</span><span>Cuidamos de pessoas</span><span style="color: rgba(10,20,48,0.55);">✦</span><span>Bem Melhor</span><span style="color: rgba(10,20,48,0.55);">✦</span><span>Seguros e Benefícios</span><span style="color: rgba(10,20,48,0.55);">✦</span><span>Cuidamos de pessoas</span><span style="color: rgba(10,20,48,0.55);">✦</span></div>
+      </div>
+    </div>
+    <div style="position: absolute; top: 52px; left: -8%; width: 116%; transform: rotate(2.4deg); background: var(--ink-3); border-top: 1px solid var(--line-d); border-bottom: 1px solid var(--line-d); overflow: hidden;">
+      <div style="display: flex; width: max-content; animation: bmMarqueeR 40s linear infinite; will-change: transform;">
+        <div class="marquee-row" style="display: flex; align-items: center; gap: 34px; padding: 11px 17px; font-family: var(--disp); font-weight: 500; font-size: 18px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-lite); white-space: nowrap;"><span>Antes, durante e depois</span><span style="color: var(--gold);">✦</span><span>Presença em cada etapa</span><span style="color: var(--gold);">✦</span><span>Proteção 360°</span><span style="color: var(--gold);">✦</span><span>Antes, durante e depois</span><span style="color: var(--gold);">✦</span><span>Presença em cada etapa</span><span style="color: var(--gold);">✦</span><span>Proteção 360°</span><span style="color: var(--gold);">✦</span></div>
+      </div>
+    </div>
+  </div>
 
-<script>
-{
-  const btn=document.getElementById('email-btn'),hint=document.getElementById('email-hint'),val=document.getElementById('email-val');
-  const email='alinericarte@bemmelhorseguros.com';
-  const selectText=()=>{try{const r=document.createRange();r.selectNodeContents(val);const s=getSelection();s.removeAllRanges();s.addRange(r)}catch(e){}};
-  btn.addEventListener('click',()=>{
-    const done=()=>{hint.textContent='Copiado';hint.className='hint copied';setTimeout(()=>{hint.textContent='Copiar';hint.className='hint'},1800)};
-    try{navigator.clipboard.writeText(email).then(done,selectText)}catch(e){selectText()}
-  });
-  const fs=document.getElementById('fs-btn'),fsLabel=document.getElementById('fs-label'),root=document.documentElement;
-  if(!root.requestFullscreen)fs.hidden=true;
-  fs.addEventListener('click',()=>{
-    try{
-      if(document.fullscreenElement)document.exitFullscreen();
-      else{const p=root.requestFullscreen();if(p&&p.catch)p.catch(()=>{fs.hidden=true})}
-    }catch(e){fs.hidden=true}
-  });
-  document.addEventListener('fullscreenchange',()=>{fsLabel.textContent=document.fullscreenElement?'Sair da tela cheia':'Ver em tela cheia'});
+  <!-- ═══════════ MISSÃO BAND ═══════════ -->
+  <section id="quem-somos" style="position: relative; overflow: hidden; background: #f4f1e8; padding: calc(clamp(40px, 4.6vw, 68px) + 100px) clamp(24px, 5vw, 64px); text-align: center; scroll-margin-top: 96px;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(40% 60% at 50% 50%, rgba(198,142,106,0.10), transparent 70%); pointer-events: none;"></div>
+    <div style="position: relative; max-width: 900px; margin: 0 auto;">
+      <div style="font-family: var(--disp); font-weight: 700; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 22px;">Nossa missão</div>
+      <p style="font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 3.2vw, 40px); line-height: 1.2; letter-spacing: -0.3px; color: #10204a; margin: 0 0 30px;">No fim das contas, não trabalhamos só com seguros.<br><span style="color: var(--gold-deep); font-style: italic;">Trabalhamos cuidando de pessoas.</span></p>
+      <div style="display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: clamp(15px, 1.7vw, 18px); color: var(--ink); background: var(--goldgrad); border-radius: 999px; padding: 13px 26px; box-shadow: 0 14px 34px rgba(198,142,106,0.28);">Então a pergunta é: <span style="font-weight: 700;">quem cuida de você?</span></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FRUSTRAÇÕES / SE VOCÊ JÁ PENSOU ═══════════ -->
+  <section style="position: relative; overflow: hidden; background: radial-gradient(80% 90% at 15% 8%, #16295c 0%, #0c1a3a 55%, #0a1836 100%); padding: clamp(48px, 6vw, 90px) clamp(24px, 5vw, 72px);">
+    <div style="position: absolute; top: -60px; right: -60px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(198,142,106,0.12), transparent 68%); pointer-events: none;"></div>
+    <div style="position: relative; text-align: center; margin-bottom: clamp(40px, 5vw, 58px);">
+      <div style="font-family: var(--disp); font-weight: 500; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px;">O mercado hoje</div>
+      <h2 style="font-family: var(--serif); font-weight: 500; font-size: clamp(28px, 3.6vw, 46px); line-height: 1.08; letter-spacing: -0.4px; color: #fff; margin: 0;">Se você já <span style="color: var(--gold-lite); font-style: italic;">passou por isso:</span></h2>
+    </div>
+
+    <div style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; max-width: 940px; margin: 0 auto;">
+      <div class="bm-glow" style="display: flex; align-items: flex-start; gap: 16px; background: #c68e6a; border: 1px solid rgba(18,32,71,0.18); border-radius: 18px; padding: 22px 24px;"><span style="font-family: Georgia, serif; flex: none; width: 40px; height: 40px; border-radius: 10px; background: #12234a; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 30px; line-height: 0; padding-top: 14px;">”</span><span style="font-weight: 400; font-size: 17px; line-height: 1.4; color: #12234a;">“Contratei um seguro e nunca mais falaram comigo.”</span></div>
+      <div class="bm-glow" style="display: flex; align-items: flex-start; gap: 16px; background: #c68e6a; border: 1px solid rgba(18,32,71,0.18); border-radius: 18px; padding: 22px 24px;"><span style="font-family: Georgia, serif; flex: none; width: 40px; height: 40px; border-radius: 10px; background: #12234a; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 30px; line-height: 0; padding-top: 14px;">”</span><span style="font-weight: 400; font-size: 17px; line-height: 1.4; color: #12234a;">“Não sei direito o que o meu plano cobre.”</span></div>
+      <div class="bm-glow" style="display: flex; align-items: flex-start; gap: 16px; background: #c68e6a; border: 1px solid rgba(18,32,71,0.18); border-radius: 18px; padding: 22px 24px;"><span style="font-family: Georgia, serif; flex: none; width: 40px; height: 40px; border-radius: 10px; background: #12234a; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 30px; line-height: 0; padding-top: 14px;">”</span><span style="font-weight: 400; font-size: 17px; line-height: 1.4; color: #12234a;">“Na hora de usar, fiquei sem ninguém para acionar.”</span></div>
+      <div class="bm-glow" style="display: flex; align-items: flex-start; gap: 16px; background: #c68e6a; border: 1px solid rgba(18,32,71,0.18); border-radius: 18px; padding: 22px 24px;"><span style="font-family: Georgia, serif; flex: none; width: 40px; height: 40px; border-radius: 10px; background: #12234a; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 30px; line-height: 0; padding-top: 14px;">”</span><span style="font-weight: 400; font-size: 17px; line-height: 1.4; color: #12234a;">“Sinto que pago caro e recebo só um boleto.”</span></div>
+      <div class="bm-glow" style="display: flex; align-items: flex-start; gap: 16px; background: #c68e6a; border: 1px solid rgba(18,32,71,0.18); border-radius: 18px; padding: 22px 24px;"><span style="font-family: Georgia, serif; flex: none; width: 40px; height: 40px; border-radius: 10px; background: #12234a; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 30px; line-height: 0; padding-top: 14px;">”</span><span style="font-weight: 400; font-size: 17px; line-height: 1.4; color: #12234a;">“Meus benefícios corporativos não têm estratégia nenhuma.”</span></div>
+      <div class="bm-glow" style="display: flex; align-items: flex-start; gap: 16px; background: #c68e6a; border: 1px solid rgba(18,32,71,0.18); border-radius: 18px; padding: 22px 24px;"><span style="font-family: Georgia, serif; flex: none; width: 40px; height: 40px; border-radius: 10px; background: #12234a; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 30px; line-height: 0; padding-top: 14px;">”</span><span style="font-weight: 400; font-size: 17px; line-height: 1.4; color: #12234a;">“Queria alguém que pensasse no longo prazo comigo.”</span></div>
+    </div>
+
+    <div style="position: relative; text-align: center; margin-top: clamp(44px, 5vw, 62px);">
+      <h3 style="font-family: var(--serif); font-weight: 500; font-size: clamp(24px, 3vw, 38px); letter-spacing: -0.3px; color: #fff; margin: 0 0 14px; display: inline-block; border: 1.5px solid var(--gold); border-radius: 999px; padding: 16px 40px;">Então a Bem Melhor é pra você</h3>
+      <p style="font-weight: 300; font-size: clamp(16px, 1.7vw, 19px); line-height: 1.5; color: rgba(244,237,224,0.7); margin: 22px auto 30px; max-width: 620px;">Aqui é onde o seguro deixa de ser um custo e vira relacionamento: estratégia, proximidade e alguém do seu lado em cada etapa.</p>
+      <button class="bm-btn-glow" onClick="{{ openModal }}" style="cursor: pointer; font-family: var(--disp); display: inline-flex; align-items: center; gap: 14px; font-weight: 600; font-size: clamp(16px, 1.8vw, 20px); letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink); background: var(--goldgrad); border: none; padding: 12px 14px 12px 30px; border-radius: 999px; box-shadow: 0 16px 40px rgba(198,142,106,0.3);" style-hover="filter: brightness(1.05); transform: translateY(-1px);">Quero um diagnóstico gratuito <span style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--ink); color: var(--gold-lite); font-size: 18px;">↗</span></button>
+    </div>
+  </section>
+
+  <!-- ═══════════ BRONZE / PRATA / OURO ═══════════ -->
+  <section id="diferenca" style="position: relative; overflow: hidden; background: #f4f1e8; padding: clamp(40px, 4.6vw, 68px) clamp(24px, 4vw, 60px);">
+    <div style="position: absolute; top: 60%; left: 80%; transform: translate(-50%, -50%); width: clamp(360px, 42vw, 540px); aspect-ratio: 1; z-index: 0; pointer-events: none;">
+      <img id="selo-gira-c" src="./assets/selo-blue.png" alt="" aria-hidden="true" style="width: 100%; height: 100%; opacity: 0.09;">
+    </div>
+    <div style="max-width: 760px; margin: 0 auto clamp(38px, 5vw, 56px); text-align: center;">
+      <div style="font-family: var(--disp); font-weight: 700; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 16px;">Existem três tipos de corretora</div>
+      <h2 style="font-family: var(--serif); font-weight: 500; font-size: clamp(28px, 3.6vw, 46px); line-height: 1.08; letter-spacing: -0.4px; color: #10204a; margin: 0;">A gente escolheu ser <span style="color: var(--gold-deep); font-style: italic;">ouro.</span></h2>
+    </div>
+    <div style="position: relative; z-index: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; align-items: stretch; max-width: 920px; margin: 0 auto;">
+      <div class="bm-glow" style="background: #fff; border: 1px solid #e6ddcb; border-radius: 22px; padding: 60px 16px; display: flex; flex-direction: column; box-shadow: 0 12px 30px rgba(13,26,46,0.06);">
+        <div style="display: inline-flex; align-items: center; gap: 9px; align-self: flex-start; background: rgba(13,26,46,0.05); border-radius: 999px; padding: 7px 14px; margin-bottom: 22px;"><span style="width: 11px; height: 11px; border-radius: 50%; background: linear-gradient(140deg, #cd9a6b, #a06a3f);"></span><span style="font-family: var(--disp); font-weight: 600; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #c99a72;">Bronze</span></div>
+        <h3 style="font-family: var(--serif); font-weight: 500; font-size: clamp(20px, 2vw, 25px); color: #10204a; margin: 0 0 12px; letter-spacing: 0.5px;">Vende e desaparece</h3>
+        <p style="font-weight: 300; font-size: 16px; line-height: 1.55; color: #47597a; margin: 0;">Foca só na assinatura do contrato. Depois do fechamento, o cliente fica sem suporte, sem orientação e sem ninguém para acionar na hora de usar o que contratou.</p>
+      </div>
+      <div class="bm-glow" style="background: #fff; border: 1px solid #e6ddcb; border-radius: 22px; padding: 60px 16px; display: flex; flex-direction: column; box-shadow: 0 12px 30px rgba(13,26,46,0.06);">
+        <div style="display: inline-flex; align-items: center; gap: 9px; align-self: flex-start; background: rgba(13,26,46,0.05); border-radius: 999px; padding: 7px 14px; margin-bottom: 22px;"><span style="width: 11px; height: 11px; border-radius: 50%; background: linear-gradient(140deg, #d7dde4, #9aa5b1);"></span><span style="font-family: var(--disp); font-weight: 600; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #6b7684;">Prata</span></div>
+        <h3 style="font-family: var(--serif); font-weight: 500; font-size: clamp(20px, 2vw, 25px); color: #10204a; margin: 0 0 12px; letter-spacing: 0.5px;">Venda e suporte</h3>
+        <p style="font-weight: 300; font-size: 16px; line-height: 1.55; color: #47597a; margin: 0;">Atua de forma mais consultiva: analisa carências, rede credenciada e histórico de reajuste. Oferece suporte pós-venda, implantação e movimentações junto ao RH ou DP.</p>
+      </div>
+      <div class="bm-glow" style="background: linear-gradient(180deg, #cf9d74, #b97e57); border: 2px solid var(--gold); border-radius: 22px; padding: 60px 16px; display: flex; flex-direction: column; box-shadow: 0 24px 56px rgba(13,26,46,0.28); position: relative;">
+        <div style="position: absolute; top: -13px; right: 26px; font-family: var(--disp); font-weight: 600; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--ink); background: var(--goldgrad); padding: 6px 15px; border-radius: 999px;">★ A nossa entrega</div>
+        <div style="display: inline-flex; align-items: center; gap: 9px; align-self: flex-start; background: rgba(18,32,71,0.16); border-radius: 999px; padding: 7px 14px; margin-bottom: 22px;"><span style="width: 11px; height: 11px; border-radius: 50%; background: #12234a;"></span><span style="font-family: var(--disp); font-weight: 600; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #12234a;">Ouro</span></div>
+        <h3 style="font-family: var(--serif); font-weight: 500; font-size: clamp(20px, 2vw, 25px); color: #fff; margin: 0 0 12px; letter-spacing: 0.5px;">Constrói relacionamento de verdade</h3>
+        <p style="font-weight: 300; font-size: 16px; line-height: 1.55; color: rgba(24,38,74,0.92); margin: 0;">Faz tudo do modelo Prata e vai além: cria um ecossistema de acompanhamento, reconhecimento e crescimento em conjunto. Um modelo único, em que o seu investimento passa a fazer mais sentido.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PILARES ═══════════ -->
+  <section id="pilares" style="position: relative; overflow: hidden; background: radial-gradient(90% 120% at 12% 0%, #16295c 0%, #0c1a3a 55%, #0a1836 100%); padding: clamp(40px, 4.6vw, 68px) clamp(24px, 4vw, 60px);">
+    <img src="assets/logo-white.png" alt="" aria-hidden="true" style="position: absolute; bottom: -40px; right: -30px; width: clamp(240px, 30vw, 460px); height: auto; opacity: 0.05; pointer-events: none; z-index: 0;">
+    <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; margin-bottom: clamp(40px, 5vw, 58px);">
+      <div style="max-width: 680px;">
+        <div style="font-family: var(--disp); font-weight: 500; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px;">O que protegemos</div>
+        <h2 style="font-family: var(--serif); font-weight: 500; font-size: clamp(28px, 3.6vw, 46px); line-height: 1.06; letter-spacing: -0.4px; color: #fff; margin: 0;">Os quatro pilares da <span style="color: var(--gold-lite); font-style: italic;">sua segurança</span></h2>
+      </div>
+      <p style="max-width: 560px; font-weight: 300; font-size: 16px; line-height: 1.55; color: rgba(244,237,224,0.66); margin: 0;">Entenda em qual área da sua vida podemos gerar mais impacto. Nossa atuação cobre os quatro pilares da sua tranquilidade.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; max-width: 1040px; margin: 0 auto;">
+      <div class="bm-glow" style="background: #fff; border: 1px solid #e6ddcb; border-radius: 22px; padding: 30px 28px; display: flex; flex-direction: column; box-shadow: 0 14px 34px rgba(13,26,46,0.10);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px;"><span style="width: 44px; height: 44px; border-radius: 12px; background: #16294a; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 20px;">♥</span><span style="font-family: var(--disp); font-weight: 700; font-size: 15px; color: var(--gold-deep);">01</span></div>
+        <h3 style="font-family: var(--serif); font-weight: 500; font-size: clamp(20px, 2vw, 24px); color: var(--navy, #16294a); margin: 0 0 10px; letter-spacing: 0.3px;">Vida e família</h3>
+        <p style="font-weight: 400; font-size: 15px; line-height: 1.5; color: #47597a; margin: 0;">Proteção financeira para os seus dependentes em casos de morte ou invalidez — segurança para quem você mais ama.</p>
+      </div>
+      <div class="bm-glow" style="background: #fff; border: 1px solid #e6ddcb; border-radius: 22px; padding: 30px 28px; display: flex; flex-direction: column; box-shadow: 0 14px 34px rgba(13,26,46,0.10);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px;"><span style="width: 44px; height: 44px; border-radius: 12px; background: #16294a; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 20px;">✚</span><span style="font-family: var(--disp); font-weight: 700; font-size: 15px; color: var(--gold-deep);">02</span></div>
+        <h3 style="font-family: var(--serif); font-weight: 500; font-size: clamp(20px, 2vw, 24px); color: var(--navy, #16294a); margin: 0 0 10px; letter-spacing: 0.3px;">Saúde e bem-estar</h3>
+        <p style="font-weight: 400; font-size: 15px; line-height: 1.5; color: #47597a; margin: 0;">Acesso a cuidados médicos e menos incerteza com despesas de saúde. Prevenção e tranquilidade para usar o plano sem estresse.</p>
+      </div>
+      <div class="bm-glow" style="background: #fff; border: 1px solid #e6ddcb; border-radius: 22px; padding: 30px 28px; display: flex; flex-direction: column; box-shadow: 0 14px 34px rgba(13,26,46,0.10);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px;"><span style="width: 44px; height: 44px; border-radius: 12px; background: #16294a; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 20px;">⌂</span><span style="font-family: var(--disp); font-weight: 700; font-size: 15px; color: var(--gold-deep);">03</span></div>
+        <h3 style="font-family: var(--serif); font-weight: 500; font-size: clamp(20px, 2vw, 24px); color: var(--navy, #16294a); margin: 0 0 10px; letter-spacing: 0.3px;">Patrimônio e conquistas</h3>
+        <p style="font-weight: 400; font-size: 15px; line-height: 1.5; color: #47597a; margin: 0;">Proteção do que você construiu: imóvel, veículo, empresa. Cobertura contra perdas, danos e imprevistos.</p>
+      </div>
+      <div class="bm-glow" style="background: #fff; border: 1px solid #e6ddcb; border-radius: 22px; padding: 30px 28px; display: flex; flex-direction: column; box-shadow: 0 14px 34px rgba(13,26,46,0.10);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px;"><span style="width: 44px; height: 44px; border-radius: 12px; background: #16294a; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 20px;">↗</span><span style="font-family: var(--disp); font-weight: 700; font-size: 15px; color: var(--gold-deep);">04</span></div>
+        <h3 style="font-family: var(--serif); font-weight: 500; font-size: clamp(20px, 2vw, 24px); color: var(--navy, #16294a); margin: 0 0 10px; letter-spacing: 0.3px;">Renda e atividade profissional</h3>
+        <p style="font-weight: 400; font-size: 15px; line-height: 1.5; color: #47597a; margin: 0;">Estabilidade financeira nas situações que afetam a sua capacidade de gerar renda — acidentes, responsabilidades e imprevistos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ EQUIPE ═══════════ -->
+  <section id="equipe" style="position: relative; overflow: hidden; background: #ffffff; padding: clamp(40px, 4.6vw, 68px) clamp(24px, 4vw, 60px);">
+    <div style="text-align: center; max-width: 700px; margin: 0 auto clamp(38px, 5vw, 54px);">
+      <div style="font-family: var(--disp); font-weight: 700; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 16px;">A equipe</div>
+      <h2 style="font-family: var(--serif); font-weight: 500; font-size: clamp(28px, 3.6vw, 46px); line-height: 1.05; letter-spacing: -0.4px; color: #10204a; margin: 0 0 18px;">Quem <span style="color: var(--gold-deep); font-style: italic;">cuida</span> de você?</h2>
+      <p style="font-weight: 400; font-size: clamp(16px, 1.7vw, 19px); line-height: 1.58; color: #37485f; margin: 0;">A Bem Melhor tem à frente duas profissionais especialistas, com trajetórias sólidas, visão estratégica e uma crença em comum: cuidar de clientes vai muito além da venda.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 22px; max-width: 760px; margin: 0 auto;">
+      <div class="team-row bm-glow" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0; background: linear-gradient(160deg, #1a3568 0%, #10204a 100%); border: 1px solid var(--line-d); border-radius: 22px; overflow: hidden; box-shadow: 0 20px 44px rgba(13,26,46,0.22);">
+        <img src="assets/aline.jpg" alt="Aline Ricarte" class="team-photo" style="display:block; flex: 0 1 230px; min-width: 200px; align-self: center; height: 360px; width: 230px; object-fit: cover; object-position: 100% 22%;" />
+        <div class="team-text" style="flex: 0.85 1 130px; min-width: 120px; padding: 52px 30px;">
+          <div style="font-family: var(--serif); font-weight: 500; font-size: clamp(23px, 2.3vw, 29px); color: #fff; letter-spacing: 0.3px;">Aline Ricarte</div>
+          <div style="font-weight: 600; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--gold-lite); margin: 6px 0 18px;">Especialista em Benefícios</div>
+          <p style="font-weight: 400; font-size: 15px; line-height: 1.58; color: rgba(244,237,224,0.72); margin: 0; text-align: justify;">Especialista em desenvolvimento de negócios e relacionamento comercial, é formada em Gestão de Recursos Humanos e soma mais de 4 anos de experiência em planos de saúde e seguros. Com atuação na liderança de equipes comerciais em diferentes regiões do Brasil, constrói relações de confiança duradouras.</p>
+        </div>
+      </div>
+      <div class="team-row rev bm-glow" style="display: flex; flex-wrap: wrap-reverse; align-items: center; gap: 0; background: linear-gradient(160deg, #1a3568 0%, #10204a 100%); border: 1px solid var(--line-d); border-radius: 22px; overflow: hidden; box-shadow: 0 20px 44px rgba(13,26,46,0.22);">
+        <div class="team-text" style="flex: 0.85 1 130px; min-width: 120px; padding: 52px 30px;">
+          <div style="font-family: var(--serif); font-weight: 500; font-size: clamp(23px, 2.3vw, 29px); color: #fff; letter-spacing: 0.3px;">Sabrina Gonçalves</div>
+          <div style="font-weight: 600; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--gold-lite); margin: 6px 0 18px;">Especialista em Benefícios</div>
+          <p style="font-weight: 400; font-size: 15px; line-height: 1.58; color: rgba(244,237,224,0.72); margin: 0; text-align: justify;">Profissional multidisciplinar e fortemente orientada a resultados, com sólida experiência em saúde suplementar e seguros. Conduz diagnósticos, negociações estratégicas e estrutura soluções personalizadas com foco em eficiência real. Seu propósito é transformar o custo com seguros em benefícios genuínos.</p>
+        </div>
+        <img src="assets/sabrina.jpg" alt="Sabrina Gonçalves" class="team-photo" style="display:block; flex: 0 1 230px; min-width: 200px; margin-left: auto; align-self: center; height: 360px; width: 230px; object-fit: cover; object-position: 100% 22%;" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTATO CTA ═══════════ -->
+  <section id="contato" style="position: relative; overflow: hidden; background: radial-gradient(100% 130% at 20% 0%, #1a3568 0%, #0c1a3a 56%, #0a1836 100%); padding: clamp(40px, 4.6vw, 70px) clamp(24px, 4vw, 60px);">
+    <div style="position: absolute; inset: 0; background: radial-gradient(50% 60% at 50% 0%, rgba(198,142,106,0.12), transparent 70%); pointer-events: none;"></div>
+    <img id="selo-gira" src="./assets/selo.png" alt="Selo Bem Melhor Seguros" style="position: absolute; top: -70px; right: -70px; width: clamp(220px, 26vw, 380px); height: auto; opacity: 0.06; pointer-events: none; will-change: transform;">
+    <img id="selo-gira-b" src="./assets/selo.png" alt="" aria-hidden="true" style="position: absolute; bottom: -90px; left: -90px; width: clamp(180px, 20vw, 300px); height: auto; opacity: 0.05; pointer-events: none; will-change: transform;">
+    <div style="position: relative; max-width: 860px; margin: 0 auto clamp(36px, 4vw, 52px); text-align: center;">
+      <div style="font-family: var(--disp); font-weight: 500; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 18px;">Próximo passo</div>
+      <h2 style="font-family: var(--serif); font-weight: 500; font-size: clamp(28px, 3.7vw, 47px); line-height: 1.06; letter-spacing: -0.4px; color: #fff; margin: 0 0 20px;">Você não precisa só de um plano.<br><span style="color: var(--gold-lite); font-style: italic;">Precisa de alguém do seu lado.</span></h2>
+      <p style="font-weight: 300; font-size: clamp(16px, 1.7vw, 19px); line-height: 1.55; color: rgba(244,237,224,0.72); margin: 0;">Nossa proposta começa com um diagnóstico. Entendemos a sua realidade, mapeamos suas necessidades e apresentamos a solução ideal — antes de indicar qualquer produto.</p>
+    </div>
+
+    <div style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; align-items: stretch; max-width: 860px; margin: 0 auto;">
+
+      <!-- Convite / CTA panel -->
+      <div style="position: relative; overflow: hidden; border-radius: 24px; padding: clamp(30px, 3.4vw, 44px); background: var(--goldgrad); box-shadow: 0 24px 56px rgba(198,142,106,0.28); display: flex; flex-direction: column;">
+        <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(10,20,48,0.12), transparent 70%); pointer-events: none;"></div>
+        <div style="position: relative; font-weight: 700; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: rgba(10,20,48,0.6); margin-bottom: 16px;">Comece agora</div>
+        <div style="position: relative; font-family: var(--serif); font-weight: 500; font-size: clamp(24px, 2.5vw, 32px); line-height: 1.14; color: var(--ink); letter-spacing: -0.3px; margin-bottom: 12px;">Agende o seu <span style="font-style: italic;">diagnóstico gratuito.</span></div>
+        <p style="position: relative; font-weight: 400; font-size: 15px; line-height: 1.55; color: rgba(10,20,48,0.72); margin: 0 0 auto;">Comece entendendo a sua realidade. A gente escuta primeiro e só depois apresenta a solução ideal.</p>
+        <div style="position: relative; display: flex; flex-direction: column; gap: 12px; margin-top: 28px;">
+          <button class="bm-btn-glow" onClick="{{ openModal }}" style="cursor: pointer; font-family: var(--disp); display: inline-flex; align-items: center; justify-content: space-between; gap: 14px; font-weight: 700; font-size: clamp(15px, 1.6vw, 18px); letter-spacing: 1px; text-transform: uppercase; color: var(--gold-lite); background: var(--ink); border: none; padding: 12px 12px 12px 26px; border-radius: 999px; box-shadow: 0 14px 30px rgba(10,20,48,0.28);" style-hover="filter: brightness(1.12);">Agendar diagnóstico <span style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--goldgrad); color: var(--ink); font-size: 18px; flex: none;">↗</span></button>
+          <a href="https://wa.me/5561981739796" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--disp); font-weight: 700; font-size: clamp(15px, 1.6vw, 18px); letter-spacing: 1px; text-transform: uppercase; color: var(--ink); border: 1.5px solid rgba(10,20,48,0.35); padding: 14px 26px; border-radius: 999px;" style-hover="background: rgba(10,20,48,0.08);">Chamar no WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Áreas -->
+      <div style="position: relative; border: 1px solid var(--line-d); border-radius: 24px; padding: clamp(26px, 3vw, 36px); background: rgba(255,255,255,0.03); display: flex; flex-direction: column;">
+        <div style="font-family: var(--disp); font-weight: 500; font-size: clamp(16px, 1.8vw, 21px); letter-spacing: 0.3px; text-transform: uppercase; color: #fff; margin-bottom: 6px;">Onde podemos começar?</div>
+        <p style="font-weight: 300; font-size: 14px; line-height: 1.5; color: rgba(244,237,224,0.6); margin: 0 0 22px;">Escolha a área em que quer proteção — a gente cuida do resto.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; flex: 1;">
+          <button class="bm-glow" onClick="{{ openModal }}" style="cursor: pointer; text-align: left; display: flex; flex-direction: column; gap: 8px; background: rgba(255,255,255,0.04); border: 1px solid var(--line-d); border-radius: 16px; padding: 18px 18px;" style-hover="border-color: var(--gold); background: rgba(198,142,106,0.10);"><span style="width: 38px; height: 38px; border-radius: 10px; background: var(--goldgrad); color: var(--ink); display: flex; align-items: center; justify-content: center; font-size: 18px;">♥</span><span style="font-weight: 600; font-size: 15px; color: #fff; letter-spacing: 0.2px;">Vida &amp; Família</span></button>
+          <button class="bm-glow" onClick="{{ openModal }}" style="cursor: pointer; text-align: left; display: flex; flex-direction: column; gap: 8px; background: rgba(255,255,255,0.04); border: 1px solid var(--line-d); border-radius: 16px; padding: 18px 18px;" style-hover="border-color: var(--gold); background: rgba(198,142,106,0.10);"><span style="width: 38px; height: 38px; border-radius: 10px; background: var(--goldgrad); color: var(--ink); display: flex; align-items: center; justify-content: center; font-size: 18px;">✚</span><span style="font-weight: 600; font-size: 15px; color: #fff; letter-spacing: 0.2px;">Saúde</span></button>
+          <button class="bm-glow" onClick="{{ openModal }}" style="cursor: pointer; text-align: left; display: flex; flex-direction: column; gap: 8px; background: rgba(255,255,255,0.04); border: 1px solid var(--line-d); border-radius: 16px; padding: 18px 18px;" style-hover="border-color: var(--gold); background: rgba(198,142,106,0.10);"><span style="width: 38px; height: 38px; border-radius: 10px; background: var(--goldgrad); color: var(--ink); display: flex; align-items: center; justify-content: center; font-size: 18px;">⌂</span><span style="font-weight: 600; font-size: 15px; color: #fff; letter-spacing: 0.2px;">Patrimônio</span></button>
+          <button class="bm-glow" onClick="{{ openModal }}" style="cursor: pointer; text-align: left; display: flex; flex-direction: column; gap: 8px; background: rgba(255,255,255,0.04); border: 1px solid var(--line-d); border-radius: 16px; padding: 18px 18px;" style-hover="border-color: var(--gold); background: rgba(198,142,106,0.10);"><span style="width: 38px; height: 38px; border-radius: 10px; background: var(--goldgrad); color: var(--ink); display: flex; align-items: center; justify-content: center; font-size: 18px;">↗</span><span style="font-weight: 600; font-size: 15px; color: #fff; letter-spacing: 0.2px;">Renda</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div style="position: relative; margin-top: clamp(44px, 5vw, 72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: clamp(28px, 5vw, 72px); border-top: 1px solid var(--line-d); padding-top: clamp(38px, 4vw, 54px); text-align: center;">
+
+      <!-- Marca + tagline -->
+      <div>
+        <img src="assets/logo-white.png" alt="Bem Melhor Seguros e Benefícios" style="height: 96px; width: auto; opacity: 0.95; margin-bottom: 20px;">
+        <p style="font-weight: 300; font-size: 15px; line-height: 1.6; color: rgba(244,237,224,0.6); margin: 0 auto; max-width: 340px;">Protegemos pessoas, saúde, bens e renda com um cuidado que vai muito além da assinatura do contrato.</p>
+      </div>
+
+      <!-- Links rápidos -->
+      <div>
+        <div style="font-family: var(--disp); font-weight: 600; font-size: 16px; color: #fff; margin-bottom: 22px; letter-spacing: 0.2px;">Links Rápidos</div>
+        <a href="#quem-somos" style="display: block; font-weight: 300; font-size: 15px; color: rgba(244,237,224,0.72); margin-bottom: 15px;" style-hover="color: var(--gold-lite);">Quem Somos</a>
+        <a href="#diferenca" style="display: block; font-weight: 300; font-size: 15px; color: rgba(244,237,224,0.72); margin-bottom: 15px;" style-hover="color: var(--gold-lite);">Diferença</a>
+        <a href="#pilares" style="display: block; font-weight: 300; font-size: 15px; color: rgba(244,237,224,0.72); margin-bottom: 15px;" style-hover="color: var(--gold-lite);">Pilares</a>
+        <a href="#equipe" style="display: block; font-weight: 300; font-size: 15px; color: rgba(244,237,224,0.72); margin-bottom: 15px;" style-hover="color: var(--gold-lite);">Equipe</a>
+        <a href="#contato" style="display: block; font-weight: 300; font-size: 15px; color: rgba(244,237,224,0.72);" style-hover="color: var(--gold-lite);">Contato</a>
+      </div>
+
+      <!-- Contato -->
+      <div>
+        <div style="font-family: var(--disp); font-weight: 600; font-size: 16px; color: #fff; margin-bottom: 22px; letter-spacing: 0.2px;">Contato</div>
+        <a href="https://wa.me/5561992932555" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; gap: 12px; font-weight: 300; font-size: 15px; color: rgba(244,237,224,0.72); margin-bottom: 16px;" style-hover="color: var(--gold-lite);"><span style="color: var(--gold);">✆</span> WhatsApp · 61 99293-2555</a>
+        <a href="mailto:atendimento@bemmelhorseguros.com" style="display: flex; align-items: center; justify-content: center; gap: 12px; font-weight: 300; font-size: 15px; color: rgba(244,237,224,0.72); margin-bottom: 16px;" style-hover="color: var(--gold-lite);"><span style="color: var(--gold);">✉</span> atendimento@bemmelhorseguros.com</a>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 12px; font-weight: 300; font-size: 15px; color: rgba(244,237,224,0.72); margin-bottom: 20px;"><span style="color: var(--gold);">⌖</span> Brasília · DF</div>
+        <a href="https://instagram.com/bemmelhorseguros" target="_blank" rel="noopener" style="display: inline-block; font-family: var(--disp); font-weight: 600; font-size: 15px; color: var(--gold-lite);" style-hover="color: var(--gold);">@bemmelhorseguros</a>
+      </div>
+    </div>
+
+    <div class="foot-bottom" style="position: relative; margin-top: clamp(34px, 4vw, 52px); padding-top: clamp(22px, 2.5vw, 30px); border-top: 1px solid var(--line-d); display: flex; flex-wrap: wrap; align-items: center; justify-content: center; text-align: center; gap: 6px 24px;">
+      <div style="font-weight: 300; font-size: 14px; color: rgba(244,237,224,0.45);">© 2025 Bem Melhor Seguros e Benefícios. Todos os direitos reservados.</div>
+      <div style="font-weight: 300; font-size: 14px; color: rgba(244,237,224,0.45);">SUSEP 262180461</div>
+    </div>
+  </section>
+
+  <!-- ═══════════ POPUP ═══════════ -->
+  <sc-if value="{{ open }}">
+    <div onClick="{{ closeModal }}" style="position: fixed; inset: 0; z-index: 90; background: rgba(5,10,20,0.7); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; padding: 20px; animation: bmOverlay .2s ease;">
+      <div onClick="{{ stop }}" style="width: 100%; max-width: 520px; max-height: 92vh; overflow-y: auto; background: #10204a; border: 1px solid var(--line-d); border-radius: 24px; box-shadow: 0 40px 90px rgba(0,0,0,0.6); animation: bmPop .28s cubic-bezier(.2,.8,.2,1);">
+        <div style="background: radial-gradient(120% 130% at 85% 0%, #1a3568, #0c1a3a); padding: 30px 34px 26px; position: relative; border-radius: 24px 24px 0 0; border-bottom: 1px solid var(--line-d);">
+          <button onClick="{{ closeModal }}" aria-label="Fechar" style="position: absolute; top: 20px; right: 20px; cursor: pointer; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line-d); background: rgba(255,255,255,0.05); color: #fff; font-size: 20px; line-height: 1; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(255,255,255,0.14);">×</button>
+          <div style="font-family: var(--disp); font-weight: 500; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px;">Vamos conversar</div>
+          <div style="font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1.12; color: #fff; letter-spacing: -0.3px;">Comece com uma conversa, <span style="color: var(--gold-lite); font-style: italic;">sem compromisso</span></div>
+        </div>
+
+        <sc-if value="{{ sent }}">
+          <div style="padding: 46px 34px 48px; text-align: center;">
+            <div style="width: 66px; height: 66px; margin: 0 auto 22px; border-radius: 50%; background: var(--goldgrad); color: var(--ink); display: flex; align-items: center; justify-content: center; font-size: 34px;">✓</div>
+            <div style="font-family: var(--disp); font-weight: 600; font-size: 24px; text-transform: uppercase; color: #fff; margin-bottom: 12px; letter-spacing: 0.5px;">Recebemos o seu contato!</div>
+            <p style="font-weight: 300; font-size: 17px; line-height: 1.55; color: rgba(244,237,224,0.72); margin: 0 0 28px;">Um especialista da Bem Melhor vai falar com você em breve. Quer agilizar? Chame a gente no WhatsApp.</p>
+            <a href="https://wa.me/5561981739796" target="_blank" rel="noopener" style="display: inline-block; font-family: var(--disp); font-weight: 600; font-size: 16px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink); background: var(--goldgrad); padding: 15px 30px; border-radius: 999px;" style-hover="filter: brightness(1.05);">Chamar no WhatsApp</a>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showForm }}">
+          <form onSubmit="{{ submit }}" style="padding: 30px 34px 36px; display: flex; flex-direction: column; gap: 16px;">
+            <label style="display: flex; flex-direction: column; gap: 7px;">
+              <span style="font-weight: 600; font-size: 14px; color: #fff;">Nome</span>
+              <input type="text" name="nome" required placeholder="Como podemos te chamar?" style="font-family: inherit; font-size: 16px; color: #fff; padding: 13px 16px; border: 1px solid var(--line-d); border-radius: 12px; background: rgba(255,255,255,0.04); outline: none;" style-focus="border-color: var(--gold);">
+            </label>
+            <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+              <label style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 7px;">
+                <span style="font-weight: 600; font-size: 14px; color: #fff;">WhatsApp</span>
+                <input type="tel" name="telefone" required placeholder="(61) 90000-0000" style="width: 100%; font-family: inherit; font-size: 16px; color: #fff; padding: 13px 16px; border: 1px solid var(--line-d); border-radius: 12px; background: rgba(255,255,255,0.04); outline: none;" style-focus="border-color: var(--gold);">
+              </label>
+              <label style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 7px;">
+                <span style="font-weight: 600; font-size: 14px; color: #fff;">E-mail</span>
+                <input type="email" name="email" required placeholder="seu@email.com" style="width: 100%; font-family: inherit; font-size: 16px; color: #fff; padding: 13px 16px; border: 1px solid var(--line-d); border-radius: 12px; background: rgba(255,255,255,0.04); outline: none;" style-focus="border-color: var(--gold);">
+              </label>
+            </div>
+            <label style="display: flex; flex-direction: column; gap: 7px;">
+              <span style="font-weight: 600; font-size: 14px; color: #fff;">Onde podemos ajudar?</span>
+              <select name="interesse" required style="font-family: inherit; font-size: 16px; color: #fff; padding: 13px 16px; border: 1px solid var(--line-d); border-radius: 12px; background: rgba(255,255,255,0.04); outline: none;" style-focus="border-color: var(--gold);">
+                <option value="" style="color: #333;">Selecione uma área</option>
+                <option style="color: #333;">Vida &amp; Família</option>
+                <option style="color: #333;">Saúde</option>
+                <option style="color: #333;">Patrimônio</option>
+                <option style="color: #333;">Renda &amp; atividade profissional</option>
+                <option style="color: #333;">Benefícios para a minha empresa</option>
+              </select>
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 7px;">
+              <span style="font-weight: 600; font-size: 14px; color: #fff;">Código de parceria <span style="font-weight: 300; color: rgba(244,237,224,0.5);">(opcional)</span></span>
+              <input type="text" name="codigo_parceria" placeholder="Tem um código de parceria? Informe aqui" style="font-family: inherit; font-size: 16px; color: #fff; padding: 13px 16px; border: 1px solid var(--line-d); border-radius: 12px; background: rgba(255,255,255,0.04); outline: none; text-transform: uppercase;" style-focus="border-color: var(--gold);">
+            </label>
+            <sc-if value="{{ error }}">
+              <div style="font-weight: 400; font-size: 14px; line-height: 1.45; color: #ffd9d0; background: rgba(190,60,45,0.18); border: 1px solid rgba(255,140,120,0.35); border-radius: 12px; padding: 12px 14px;">{{ error }}</div>
+            </sc-if>
+            <button type="submit" class="bm-btn-glow" style="cursor: pointer; margin-top: 6px; font-family: var(--disp); font-weight: 600; font-size: 18px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink); background: var(--goldgrad); border: none; padding: 16px; border-radius: 12px; box-shadow: 0 12px 26px rgba(198,142,106,0.28);" style-hover="filter: brightness(1.05);">{{ submitLabel }}</button>
+            <div style="font-weight: 300; font-size: 13px; color: rgba(244,237,224,0.5); text-align: center;">Sem compromisso. A gente começa entendendo a sua realidade.</div>
+          </form>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: false, sent: false, menuOpen: false, sending: false, error: '' };
+  componentDidMount() {
+    const root = this.el || document;
+    const spin = () => {
+      const a = document.getElementById('selo-gira');
+      const b = document.getElementById('selo-gira-b');
+      const c = document.getElementById('selo-gira-c');
+      const y = window.pageYOffset || document.documentElement.scrollTop || 0;
+      const deg = -y * 0.08;
+      if (a) a.style.transform = 'rotate(' + deg + 'deg)';
+      if (b) b.style.transform = 'rotate(' + (deg * 1.4) + 'deg)';
+      if (c) c.style.transform = 'rotate(' + (deg * 1.2) + 'deg)';
+    };
+    this._spin = () => window.requestAnimationFrame(spin);
+    window.addEventListener('scroll', this._spin, { passive: true });
+    spin();
+  }
+  componentWillUnmount() {
+    if (this._spin) window.removeEventListener('scroll', this._spin);
+  }
+  async enviarLead(form, origem) {
+    if (this.state.sending) return;
+    const dados = new FormData(form);
+    const campo = (k) => (dados.get(k) || '').toString().trim();
+    this.setState({ sending: true, error: '' });
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nome: campo('nome'),
+          email: campo('email'),
+          telefone: campo('telefone'),
+          interesse: campo('interesse'),
+          codigo_parceria: campo('codigo_parceria'),
+          origem: origem
+        })
+      });
+      if (!res.ok) {
+        const corpo = await res.json().catch(() => ({}));
+        throw new Error(corpo.error || 'Não foi possível enviar agora.');
+      }
+      this.setState({ sending: false, sent: true, error: '' });
+    } catch (err) {
+      this.setState({
+        sending: false,
+        error: (err && err.message ? err.message : 'Não foi possível enviar agora.') +
+          ' Tente novamente ou chame a gente no WhatsApp.'
+      });
+    }
+  }
+  renderVals() {
+    return {
+      open: this.state.open,
+      sent: this.state.sent,
+      menuOpen: this.state.menuOpen,
+      showForm: this.state.open && !this.state.sent,
+      error: this.state.error,
+      submitLabel: this.state.sending ? 'Enviando...' : 'Quero conversar',
+      openModal: () => this.setState({ open: true, sent: false, menuOpen: false, sending: false, error: '' }),
+      closeModal: () => this.setState({ open: false }),
+      toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      submit: (e) => { e.preventDefault(); this.enviarLead(e.currentTarget, 'Site Bem Melhor - Home'); },
+      stop: (e) => e.stopPropagation()
+    };
+  }
 }
 </script>
-</body></html>
+</body>
+</html>
